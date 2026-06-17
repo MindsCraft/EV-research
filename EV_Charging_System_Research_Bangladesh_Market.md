@@ -1,4 +1,4 @@
-# ⚡ Bangladesh EV Charging Market — Strategic Briefing
+# ⚡ EV Charging System Research for Bangladesh Market
 ### Prepared for Board Review | June 2026
 
 ---
