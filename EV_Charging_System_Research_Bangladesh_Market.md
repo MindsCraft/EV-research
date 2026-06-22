@@ -185,7 +185,7 @@ Understanding the full technology stack is essential for evaluating partners and
 │   Charging Management System (CMS)  │  ← Backend platform: billing, monitoring,
 │         / OCPP Backend              │    user management, analytics
 └──────────────────┬──────────────────┘
-                   │ OCPP 1.6J / 2.0.1 protocol
+                   │ OCPP 1.6J / 2.0.1 protocol over WebSocket (WSS)
 ┌──────────────────▼──────────────────┐
 │     EV Charger Hardware (EVSE)      │  ← The physical units we import
 └──────────────────┬──────────────────┘
@@ -196,6 +196,15 @@ Understanding the full technology stack is essential for evaluating partners and
 ```
 
 **OCPP** (Open Charge Point Protocol) is the industry-standard open protocol that connects charger hardware to management software. Sourcing **OCPP-certified hardware** means we are never locked into one supplier — any OCPP-compliant charger works with any OCPP-compliant backend.
+
+### Standard OCPP Message Flow for a Charging Session
+
+1. **BootNotification**: The charger powers up and requests connection to the backend, sharing its vendor, model, serial number, and firmware version.
+2. **StatusNotification**: Sent continuously by the charger to notify the backend of its current state (e.g., `Available`, `Preparing`, `Charging`, `SuspendedEV`, `Faulted`).
+3. **Authorize**: Triggered when a driver scans their RFID card or clicks "Start" in the app. The charger sends the tag ID to the backend to verify account balance and permissions.
+4. **StartTransaction**: Once authorized and plugged in, the charger tells the backend that charging is starting, returning a unique transaction ID.
+5. **MeterValues**: Sent periodically (e.g., every 30 seconds) during the session to report current power draw (kW), total energy delivered (Wh), voltage, and internal temperature.
+6. **StopTransaction**: Sent when the car is full, unplugged, or stopped by the user, providing the final meter value for billing.
 
 ### CMS / Backend Platform Options
 
@@ -251,6 +260,16 @@ Total landed cost:            ~$180 – $300 per unit
 Local selling price:          BDT 45,000 – 75,000 (~$400 – $680)
 Gross margin per unit:        35% – 45%
 ```
+
+### Installation and Capital Costs per Site (CPO Model)
+
+To deploy a single Level 2 public charging point (7kW or 22kW) in Dhaka:
+- **Site Lease / Profit Share**: Typically 10–20% of net revenue, or BDT 2,000–5,000/month flat rate.
+- **Electrical Work & Cable (6mm² copper)**: BDT 15,000–25,000 depending on length of run.
+- **Residual Current Device (Type B RCD)**: BDT 8,000–12,000.
+- **Sub-meter / Energy Meter**: BDT 5,000–8,000.
+- **Mounting Pole & Signage**: BDT 10,000–15,000.
+- **Total Installation Capex**: BDT 38,000–60,000 (~$350–$550) in addition to charger landed cost.
 
 ### Energy Revenue — CPO Model
 

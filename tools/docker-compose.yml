@@ -1,0 +1,37 @@
+version: '3.8'
+
+services:
+  db:
+    image: mariadb:10.6
+    container_name: steve-db
+    command: --character-set-server=utf8mb4 --collation-server=utf8mb4_unicode_ci
+    environment:
+      MYSQL_DATABASE: steve
+      MYSQL_USER: steve
+      MYSQL_PASSWORD: steve_password
+      MYSQL_ROOT_PASSWORD: root_password
+    ports:
+      - "3306:3306"
+    volumes:
+      - db-data:/var/lib/mysql
+    restart: unless-stopped
+
+  steve:
+    image: go9go/steve:latest
+    container_name: steve-server
+    ports:
+      - "8180:8180"
+    environment:
+      - DB_IP=db
+      - DB_PORT=3306
+      - DB_SCHEMA=steve
+      - DB_USER=steve
+      - DB_PASSWORD=steve_password
+      - SERVER_PORT=8180
+      - SERVER_ADDRESS=http://localhost:8180/steve/services/CentralSystemService
+    depends_on:
+      - db
+    restart: unless-stopped
+
+volumes:
+  db-data:
