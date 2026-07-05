@@ -1,0 +1,1137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>EV Charging Bangladesh — Competitive Intelligence Report 2026</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+
+  *{box-sizing:border-box;margin:0;padding:0;}
+  body{font-family:'Inter',sans-serif;background:#f8f9fb;color:#1e293b;line-height:1.7;}
+
+  /* === LAYOUT === */
+  .page{max-width:1040px;margin:0 auto;padding:40px 24px 80px;}
+
+  /* === COVER === */
+  .cover{background:linear-gradient(135deg,#021F3A 0%,#032C4F 60%,#013A45 100%);border-radius:16px;padding:56px 60px;margin-bottom:48px;position:relative;overflow:hidden;}
+  .cover::before{content:'';position:absolute;right:-80px;top:-80px;width:400px;height:400px;border-radius:50%;background:radial-gradient(circle,rgba(2,195,154,0.15),transparent 70%);}
+  .cover-badge{display:inline-block;background:rgba(2,195,154,0.15);border:1px solid rgba(2,195,154,0.4);color:#02C39A;font-family:'Inter',sans-serif;font-size:11px;letter-spacing:0.18em;padding:6px 14px;border-radius:20px;margin-bottom:20px;}
+  .cover h1{font-family:'Inter',sans-serif;font-size:40px;color:#fff;line-height:1.1;margin-bottom:12px;}
+  .cover h1 span{color:#02C39A;}
+  .cover .sub{font-size:16px;color:rgba(255,255,255,0.6);margin-bottom:32px;}
+  .cover-meta{display:flex;gap:32px;flex-wrap:wrap;}
+  .cover-meta-item{font-size:12px;font-family:'Inter',sans-serif;}
+  .cover-meta-item .label{color:rgba(255,255,255,0.4);display:block;margin-bottom:2px;}
+  .cover-meta-item .val{color:#fff;font-weight:500;}
+
+  /* === TOC === */
+  .toc{background:#fff;border-radius:12px;padding:28px 32px;margin-bottom:40px;border:1px solid #e2e8f0;}
+  .toc h3{font-size:14px;color:#64748b;font-family:'Inter',sans-serif;letter-spacing:0.12em;text-transform:uppercase;margin-bottom:16px;}
+  .toc ol{padding-left:20px;}
+  .toc li{font-size:14px;color:#334155;margin-bottom:6px;}
+  .toc li a{color:#028090;text-decoration:none;font-weight:500;}
+  .toc li a:hover{text-decoration:underline;}
+
+  /* === SECTION === */
+  .section{margin-bottom:56px;}
+  .section-header{display:flex;align-items:center;gap:14px;margin-bottom:24px;padding-bottom:16px;border-bottom:2px solid #e2e8f0;}
+  .section-num{font-family:'Inter',sans-serif;font-size:11px;color:#02C39A;background:#f0fdf4;border:1px solid #bbf7d0;padding:4px 10px;border-radius:6px;flex-shrink:0;}
+  .section-title{font-family:'Inter',sans-serif;font-size:26px;color:#021F3A;}
+
+  /* === COMPANY PROFILES === */
+  .company{background:#fff;border-radius:14px;border:1px solid #e2e8f0;margin-bottom:28px;overflow:hidden;}
+  .company-header{padding:22px 28px;border-bottom:1px solid #f1f5f9;display:flex;align-items:flex-start;gap:20px;}
+  .threat-badge{display:inline-flex;align-items:center;gap:6px;padding:5px 12px;border-radius:20px;font-size:12px;font-weight:600;white-space:nowrap;flex-shrink:0;}
+  .threat-red{background:#fef2f2;color:#dc2626;border:1px solid #fecaca;}
+  .threat-amber{background:#fffbeb;color:#d97706;border:1px solid #fde68a;}
+  .threat-green{background:#f0fdf4;color:#16a34a;border:1px solid #bbf7d0;}
+  .threat-blue{background:#eff6ff;color:#2563eb;border:1px solid #bfdbfe;}
+  .company-name{font-family:'Inter',sans-serif;font-size:22px;color:#021F3A;margin-bottom:4px;}
+  .company-type{font-size:12px;color:#64748b;font-family:'Inter',sans-serif;letter-spacing:0.08em;}
+  .company-body{padding:24px 28px;}
+  .company-body p{font-size:14px;color:#334155;margin-bottom:16px;line-height:1.7;}
+
+  /* === FACT GRID === */
+  .facts{display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:12px;margin:16px 0;}
+  .fact{background:#f8f9fb;border-radius:10px;padding:14px 16px;border:1px solid #e2e8f0;}
+  .fact .flabel{font-size:10px;color:#94a3b8;font-family:'Inter',sans-serif;letter-spacing:0.1em;text-transform:uppercase;margin-bottom:4px;}
+  .fact .fval{font-size:13px;color:#1e293b;font-weight:600;line-height:1.4;}
+  .fact .fval.mint{color:#028090;}
+  .fact .fval.red{color:#dc2626;}
+  .fact .fval.amber{color:#d97706;}
+  .fact .fval.green{color:#16a34a;}
+
+  /* === SWOT === */
+  .swot{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:16px;}
+  .swot-q{border-radius:10px;padding:16px;}
+  .swot-q.s{background:#f0fdf4;border:1px solid #bbf7d0;}
+  .swot-q.w{background:#fef2f2;border:1px solid #fecaca;}
+  .swot-q.o{background:#eff6ff;border:1px solid #bfdbfe;}
+  .swot-q.t{background:#fffbeb;border:1px solid #fde68a;}
+  .swot-q h5{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:0.1em;margin-bottom:8px;}
+  .swot-q.s h5{color:#16a34a;}
+  .swot-q.w h5{color:#dc2626;}
+  .swot-q.o h5{color:#2563eb;}
+  .swot-q.t h5{color:#d97706;}
+  .swot-q ul{padding-left:14px;}
+  .swot-q li{font-size:12.5px;color:#334155;margin-bottom:4px;line-height:1.5;}
+
+  /* === SOURCE LINK === */
+  .sources{margin-top:16px;padding:14px 16px;background:#f8f9fb;border-radius:10px;border:1px solid #e2e8f0;}
+  .sources h5{font-size:11px;color:#94a3b8;font-family:'Inter',sans-serif;letter-spacing:0.1em;text-transform:uppercase;margin-bottom:8px;}
+  .src-list{display:flex;flex-wrap:wrap;gap:8px;}
+  .src-pill{display:inline-flex;align-items:center;gap:5px;padding:4px 10px;background:#fff;border:1px solid #cbd5e1;border-radius:20px;font-size:11.5px;color:#028090;text-decoration:none;font-weight:500;}
+  .src-pill:hover{background:#f0fdf4;border-color:#02C39A;}
+  .src-pill::before{content:'🔗';}
+
+  /* === COMPARISON TABLE === */
+  .comp-wrap{background:#fff;border-radius:14px;border:1px solid #e2e8f0;overflow:hidden;}
+  .comp-wrap table{width:100%;border-collapse:collapse;}
+  .comp-wrap th{background:#021F3A;color:#fff;padding:12px 14px;font-size:12px;font-family:'Inter',sans-serif;letter-spacing:0.08em;text-align:left;}
+  .comp-wrap th.us{background:#028090;}
+  .comp-wrap td{padding:11px 14px;font-size:13px;border-bottom:1px solid #f1f5f9;color:#334155;}
+  .comp-wrap td:first-child{font-weight:600;color:#1e293b;}
+  .comp-wrap td.us-col{background:rgba(2,128,144,0.05);}
+  .comp-wrap tr:last-child td{border-bottom:none;}
+  .comp-wrap tr:nth-child(even) td{background:rgba(0,0,0,0.015);}
+  .comp-wrap tr:nth-child(even) td.us-col{background:rgba(2,128,144,0.08);}
+  .chk{color:#16a34a;font-size:16px;}
+  .crs{color:#dc2626;font-size:16px;}
+  .prt{color:#d97706;font-size:16px;}
+
+  /* === STRATEGIC INSIGHT BOX === */
+  .insight{background:linear-gradient(135deg,#021F3A,#032C4F);border-radius:12px;padding:24px 28px;margin:16px 0;color:#fff;}
+  .insight .itag{font-family:'Inter',sans-serif;font-size:10px;color:#02C39A;letter-spacing:0.2em;text-transform:uppercase;margin-bottom:8px;}
+  .insight p{font-size:14px;color:rgba(255,255,255,0.85);line-height:1.7;}
+  .insight strong{color:#02C39A;}
+
+  /* === TIMELINE === */
+  .timeline{position:relative;padding-left:28px;}
+  .timeline::before{content:'';position:absolute;left:8px;top:6px;bottom:0;width:2px;background:#e2e8f0;}
+  .tl-item{position:relative;margin-bottom:20px;}
+  .tl-dot{position:absolute;left:-24px;top:4px;width:12px;height:12px;border-radius:50%;background:#028090;border:2px solid #fff;box-shadow:0 0 0 2px #028090;}
+  .tl-date{font-size:11px;font-family:'Inter',sans-serif;color:#94a3b8;margin-bottom:3px;}
+  .tl-text{font-size:13.5px;color:#334155;line-height:1.6;}
+  .tl-text strong{color:#1e293b;}
+
+  /* === RADAR / MATRIX === */
+  .matrix{background:#fff;border-radius:14px;border:1px solid #e2e8f0;overflow:hidden;margin-bottom:28px;}
+  .matrix-title{background:#f8f9fb;padding:14px 20px;font-size:13px;font-weight:600;color:#334155;border-bottom:1px solid #e2e8f0;}
+  .matrix-body{padding:20px;}
+
+  /* === UTILITY === */
+  h2.subsection{font-family:'Inter',sans-serif;font-size:20px;color:#021F3A;margin:32px 0 14px;}
+  p.intro{font-size:15px;color:#334155;line-height:1.8;margin-bottom:20px;}
+  .callout{background:#f0fdf4;border-left:4px solid #02C39A;padding:14px 18px;border-radius:0 10px 10px 0;margin:16px 0;}
+  .callout p{font-size:13.5px;color:#1e293b;line-height:1.65;}
+  .callout strong{color:#028090;}
+  .warn-box{background:#fffbeb;border-left:4px solid #d97706;padding:14px 18px;border-radius:0 10px 10px 0;margin:16px 0;}
+  .warn-box p{font-size:13.5px;color:#1e293b;line-height:1.65;}
+  .tag{display:inline-block;font-size:11px;padding:2px 8px;border-radius:6px;font-weight:600;margin:2px;}
+  .tag.new{background:#eff6ff;color:#2563eb;}
+  .tag.active{background:#f0fdf4;color:#16a34a;}
+  .tag.watch{background:#fffbeb;color:#d97706;}
+  .tag.oem{background:#faf5ff;color:#7c3aed;}
+
+  @media print{body{background:#fff;}.page{padding:0;max-width:100%;}}
+
+  /* ══════════════════════════════════════
+     MOBILE RESPONSIVE OVERRIDES
+     (appended — does not alter desktop rules above)
+  ══════════════════════════════════════ */
+  @media (max-width: 768px){
+    .page{padding:20px 14px 60px;}
+
+    .cover{padding:32px 22px;border-radius:12px;margin-bottom:28px;}
+    .cover::before{width:220px;height:220px;right:-60px;top:-60px;}
+    .cover h1{font-size:26px;line-height:1.2;}
+    .cover .sub{font-size:14px;margin-bottom:22px;}
+    .cover-meta{gap:16px 24px;}
+
+    .toc{padding:20px 18px;margin-bottom:24px;}
+
+    div[style*="display:flex"][style*="gap:10px"]{row-gap:8px;}
+
+    .section{margin-bottom:36px;}
+    .section-header{gap:10px;margin-bottom:16px;padding-bottom:12px;}
+    .section-title{font-size:20px;}
+
+    .company-header{padding:16px 18px;flex-direction:column;gap:10px;}
+    .company-name{font-size:18px;}
+    .company-body{padding:18px;}
+    .company-body p{font-size:13.5px;}
+
+    .facts{grid-template-columns:repeat(2,1fr);gap:10px;}
+    .fact{padding:12px 13px;}
+
+    .swot{grid-template-columns:1fr;gap:10px;}
+
+    .sources{padding:12px 14px;}
+    .src-list{gap:6px;}
+    .src-pill{font-size:11px;padding:4px 9px;}
+
+    .comp-wrap{overflow-x:auto;-webkit-overflow-scrolling:touch;}
+    .comp-wrap table{min-width:640px;}
+
+    h2.subsection{font-size:17px;}
+    p.intro{font-size:14px;}
+
+    .timeline{padding-left:22px;}
+    .timeline::before{left:6px;}
+    .tl-dot{left:-20px;}
+
+    .insight{padding:18px 20px;}
+    .callout,.warn-box{padding:12px 14px;}
+
+    /* two-column layouts inside sections generally use inline
+       grid-template-columns via <div class="two-col">-like patterns;
+       none exist in this file as separate classes, but guard anyway */
+    [style*="grid-template-columns:1fr 1fr"],
+    [style*="grid-template-columns: 1fr 1fr"]{grid-template-columns:1fr !important;}
+
+    .cover-badge{font-size:10px;padding:5px 12px;}
+  }
+
+  @media (max-width: 480px){
+    .cover h1{font-size:22px;}
+    .facts{grid-template-columns:1fr;}
+    .cover-meta{flex-direction:column;gap:10px;}
+    .company-name{font-size:16px;}
+    .section-title{font-size:18px;}
+  }
+</style>
+</head>
+<body>
+<div class="page">
+
+<!-- COVER -->
+<div class="cover">
+  <div class="cover-badge">CONFIDENTIAL — INTERNAL RESEARCH</div>
+  <h1>EV Charging in Bangladesh<br><span>Competitive Intelligence Report</span></h1>
+  <p class="sub">A deep-dive analysis of every known operator, entrant, and hidden player in the Bangladesh EV charging market — sourced entirely from live internet data.</p>
+  <div class="cover-meta">
+    <div class="cover-meta-item"><span class="label">UPDATED</span><span class="val">June 30, 2026</span></div>
+    <div class="cover-meta-item"><span class="label">COMPANIES COVERED</span><span class="val">11 operators</span></div>
+    <div class="cover-meta-item"><span class="label">SOURCES</span><span class="val">BSS, TBS News, Daily Star, Dhaka Tribune, company sites</span></div>
+    <div class="cover-meta-item"><span class="label">CLASSIFICATION</span><span class="val">Pre-Launch Intelligence — v2</span></div>
+  </div>
+</div>
+
+<!-- WHAT CHANGED BANNER -->
+<div style="background:#fffbeb;border:1px solid #fde68a;border-radius:12px;padding:20px 28px;margin-bottom:40px;">
+  <div style="font-family:'Inter',sans-serif;font-size:11px;color:#d97706;letter-spacing:0.12em;text-transform:uppercase;margin-bottom:10px;">⚡ Updated Since Last Version — 3 Fresh Data Points</div>
+  <p style="font-size:13.5px;color:#1e293b;line-height:1.7;margin-bottom:8px;"><strong>1. Official station count revised upward:</strong> BERC has now approved <strong>32 charging stations</strong> nationwide (up from 14 a year ago), of which <strong>9 are already built and operating</strong>. Source: BEPRC Chairman statement, June 27, 2026 (3 days old).</p>
+  <p style="font-size:13.5px;color:#1e293b;line-height:1.7;margin-bottom:8px;"><strong>2. EV registration still just 669 cars</strong> (excluding 3-wheelers) out of 6.72 million total registered vehicles — confirmed again at a DCCI seminar held June 27, 2026. Adoption remains the real bottleneck, not just infrastructure.</p>
+  <p style="font-size:13.5px;color:#1e293b;line-height:1.7;">3. <strong>Government drafting a formal national EV policy</strong> — Industries Secretary confirmed a draft policy is ready following ministry consultations, and BEPRC has proposed a dedicated inter-agency coordination body for the EV sector. Regulatory clarity is coming faster than expected — get compliant early.</p>
+</div>
+
+<!-- TOC -->
+<div class="toc">
+  <h3>Contents</h3>
+  <ol>
+    <li><a href="#s1">Market State of Play — The Big Picture</a></li>
+    <li><a href="#s2">Company Profiles — Full Deep Dives</a></li>
+    <li><a href="#s3">Feature Comparison Matrix</a></li>
+    <li><a href="#s4">Location Intelligence — Who Has Claimed What</a></li>
+    <li><a href="#s5">Hidden / Quietly Positioning Players</a></li>
+    <li><a href="#s6">Strategic Implications for Your Entry</a></li>
+  </ol>
+</div>
+
+<div style="display:flex;gap:10px;margin-bottom:40px;flex-wrap:wrap;">
+  <span style="font-size:11px;font-family:'Inter',sans-serif;color:#94a3b8;padding-top:4px;">DATA FRESHNESS:</span>
+  <span class="tag active" style="font-size:11px;">●  Current (≤30 days)</span>
+  <span class="tag watch" style="font-size:11px;">●  Recent (1–6 months)</span>
+  <span class="tag new" style="font-size:11px;">●  Aging (6–12 months)</span>
+  <span style="font-size:11px;background:#fef2f2;color:#dc2626;padding:2px 8px;border-radius:6px;font-weight:600;">●  Stale (12+ months, verify before relying on)</span>
+</div>
+
+<!-- SECTION 1 -->
+<div class="section" id="s1">
+  <div class="section-header">
+    <span class="section-num">01</span>
+    <h2 class="section-title">Market State of Play — The Big Picture</h2>
+  </div>
+
+  <p class="intro">As of June 2026, the Bangladesh EV charging market is in its very earliest commercial stages — but moving faster than commonly reported. Official BERC data confirmed just 3 days ago (June 27, 2026) shows <strong>32 charging stations now approved, with 9 already built and operational</strong> — a meaningful jump from the 14-station figure that circulated throughout 2025. The government target remains 1,200 stations. The gap is still enormous, and multiple players are racing to fill it before the competitive window closes.</p>
+
+  <div class="facts">
+    <div class="fact">
+      <div class="flabel">BERC-Approved Stations</div>
+      <div class="fval amber">32 (up from 14 a year ago)</div>
+    </div>
+    <div class="fact">
+      <div class="flabel">Stations Actually Built</div>
+      <div class="fval red">9 of 32 approved (28%)</div>
+    </div>
+    <div class="fact">
+      <div class="flabel">Government Target</div>
+      <div class="fval green">1,200 stations</div>
+    </div>
+    <div class="fact">
+      <div class="flabel">BRTA-Registered EVs</div>
+      <div class="fval mint">669 vehicles (confirmed 3 days ago)</div>
+    </div>
+    <div class="fact">
+      <div class="flabel">Total Registered Vehicles (BD)</div>
+      <div class="fval">6.72 million</div>
+    </div>
+    <div class="fact">
+      <div class="flabel">Import Duty on Chargers</div>
+      <div class="fval green">0% (FY 2026-27)</div>
+    </div>
+    <div class="fact">
+      <div class="flabel">EV Charging Tariff (BERC)</div>
+      <div class="fval mint">BDT 7.70/kWh base + demand charge</div>
+    </div>
+    <div class="fact">
+      <div class="flabel">EV vs. Petrol Operating Cost</div>
+      <div class="fval green">Tk 2.8–3.8/km vs Tk 11–14/km</div>
+    </div>
+    <div class="fact">
+      <div class="flabel">Biggest Operator by Stations</div>
+      <div class="fval">Crack Platoon — 32 live</div>
+    </div>
+    <div class="fact">
+      <div class="flabel">National EV Policy</div>
+      <div class="fval amber">Draft ready — pending finalisation</div>
+    </div>
+  </div>
+
+  <div class="callout">
+    <p><strong>Key Finding:</strong> CrackPlatoon MD Tenver Sahariar Utso confirmed to The Daily Star (May 2026) that "in April 2026, we used around 4 megawatts of electricity to commercially charge nearly 330 vehicles at our stations." This is real, live revenue — not just infrastructure. The market has started generating actual charging sessions.</p>
+  </div>
+
+  <div class="callout">
+    <p><strong>Newest Finding (3 days old):</strong> At a DCCI/BSREA seminar on June 27, 2026, BERC Member (Electricity) Abul Khair Md Aminur Rahman confirmed 32 stations approved, 9 built. Industries Secretary Abdun Naser Khan confirmed a draft national EV policy is ready post-consultation. BEPRC Chairman proposed a dedicated inter-agency coordination body — meaning multiple ministries currently handle EV policy with no single point of contact. This regulatory fragmentation is both a risk (slower approvals) and an opportunity (early movers who build relationships across agencies gain disproportionate advantage).</p>
+  </div>
+
+  <div class="warn-box">
+    <p><strong>Watch Point:</strong> Even with 32 BERC-approved stations, only 9 are physically built — a 72% execution gap. This confirms that regulatory approval is not the bottleneck; physical deployment speed is. Whoever moves fastest from approval to construction wins the location race. This favours operators (like you) who pre-negotiate supplier delivery timelines before seeking approval, rather than after.</p>
+  </div>
+</div>
+
+<!-- SECTION 2 -->
+<div class="section" id="s2">
+  <div class="section-header">
+    <span class="section-num">02</span>
+    <h2 class="section-title">Company Profiles — Full Deep Dives</h2>
+  </div>
+
+  <!-- CRACK PLATOON -->
+  <div class="company">
+    <div class="company-header">
+      <div style="flex:1;">
+        <div class="company-name">Crack Platoon Charging Solution Limited</div>
+        <div class="company-type">FOUNDED 2022 &nbsp;·&nbsp; CPMS + NETWORK OPERATOR &nbsp;·&nbsp; STARTUP BANGLADESH PARTNER &nbsp;·&nbsp; <span class="tag active">● CURRENT — May 2026</span></div>
+      </div>
+      <span class="threat-badge threat-red">🔴 HIGHEST THREAT</span>
+    </div>
+    <div class="company-body">
+      <p><strong>Origin story:</strong> Founded by engineering graduates from Rajshahi University of Engineering & Technology (RUET) — Bangladesh's first Formula SAE team. They built Bangladesh's first electric race car in 2019 and pivoted into commercial EV charging. Their founding team are genuine engineers, not business executives jumping on a trend. This matters — they understand both the hardware and software deeply.</p>
+
+      <div class="facts">
+        <div class="fact"><div class="flabel">Stations Live (June 2026)</div><div class="fval mint">32 active AC + DC chargers</div></div>
+        <div class="fact"><div class="flabel">App</div><div class="fval">ChargeEasy (iOS + Android)</div></div>
+        <div class="fact"><div class="flabel">OCPP Protocol</div><div class="fval">OCPP 1.6-J</div></div>
+        <div class="fact"><div class="flabel">DC Charger Power</div><div class="fval">60kW – 240kW</div></div>
+        <div class="fact"><div class="flabel">AC Charger Range</div><div class="fval">7.4kW – 44kW</div></div>
+        <div class="fact"><div class="flabel">Connector Types</div><div class="fval">CCS2 + Type 2</div></div>
+        <div class="fact"><div class="flabel">IP Rating</div><div class="fval">IP55 (outdoor-ready)</div></div>
+        <div class="fact"><div class="flabel">April 2026 Sessions</div><div class="fval mint">~330 vehicles charged, 4MW used</div></div>
+        <div class="fact"><div class="flabel">Target Network Size</div><div class="fval amber">100+ stations, 30 DC fast</div></div>
+        <div class="fact"><div class="flabel">Government Partner</div><div class="fval">ICT Division + Startup Bangladesh</div></div>
+      </div>
+
+      <p><strong>Key partnerships (all confirmed by press):</strong> Mercedes-Benz / Rancon Motors (primary), DHS Autos / Deepal, MG Bangladesh, GAC, Dhaka Cantonment + DESCO (first station), IPDC Finance (Gulshan HQ station), Radisson Blu Chattogram Bay View. These are premium, high-footfall, locked-in locations.</p>
+
+      <p><strong>Their strategy is highway-first:</strong> According to TBS News (May 2026), their founders believe Bangladesh's EV transformation will happen through highways first — "if you own an EV, you already charge at home. The real problem starts when you want to travel." They are actively deploying on the Dhaka–Chattogram corridor.</p>
+
+      <p><strong>Technology:</strong> They claim to have independently developed their own OCPP platform (not just white-labelled), providing open API environment for remote start/stop, OTA firmware, appointment charging, and permission management. This is a significant technical asset if true.</p>
+
+      <div class="swot">
+        <div class="swot-q s"><h5>Strengths</h5><ul><li>Largest live network (32 stations)</li><li>Mercedes-Benz brand partnership</li><li>Engineer-founded with real EV expertise</li><li>Government (ICT Division) backing</li><li>Highway + city dual strategy</li></ul></div>
+        <div class="swot-q w"><h5>Weaknesses</h5><ul><li>OCPP 1.6J only — not 2.0.1 yet</li><li>Captive to OEM partnerships for locations</li><li>Revenue depends on car brands' success</li><li>Unverified if CPMS is truly proprietary</li></ul></div>
+        <div class="swot-q o"><h5>Opportunities</h5><ul><li>First to 100 stations = market lock-in</li><li>Could become national roaming platform</li><li>Fleet and B2B charging contracts</li></ul></div>
+        <div class="swot-q t"><h5>Threats to You</h5><ul><li>Already in your target hotels/malls</li><li>Government-backed = regulatory access</li><li>Growing fast — closing window</li></ul></div>
+      </div>
+
+      <div class="sources">
+        <h5>Sources</h5>
+        <div class="src-list">
+          <a class="src-pill" href="https://www.tbsnews.net/supplement/crack-platoons-ev-charging-ambition-city-centers-highways-1443081" target="_blank">TBS News — Crack Platoon Ambition (May 2026)</a>
+          <a class="src-pill" href="https://www.thedailystar.net/news/tech-startup/news/evs-are-trending-bangladesh-will-it-sustain-4184956" target="_blank">Daily Star — EVs Trending (May 2026)</a>
+          <a class="src-pill" href="https://www.thedailystar.net/supplements/electric-avenue/news/mercedes-benz-crafting-new-era-high-end-electric-travel-4167801" target="_blank">Daily Star — Mercedes-Benz + CrackPlatoon (May 2026)</a>
+          <a class="src-pill" href="https://www.tbsnews.net/economy/corporates/ipdc-joins-hands-mercedes-benz-1190361" target="_blank">TBS News — IPDC + Mercedes Station (Jul 2025)</a>
+          <a class="src-pill" href="https://www.tbsnews.net/economy/corporates/mercedes-benz-installs-new-ev-charging-hub-radisson-blu-chattogram-1296556" target="_blank">TBS News — Radisson Blu Chattogram (Nov 2025)</a>
+          <a class="src-pill" href="https://crackplatooncsl.com/" target="_blank">crackplatooncsl.com (official)</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- MULYTIC ENERGY -->
+  <div class="company">
+    <div class="company-header">
+      <div style="flex:1;">
+        <div class="company-name">Mulytic Energy</div>
+        <div class="company-type">HQ: MUNICH, GERMANY &nbsp;·&nbsp; OPS HUB: DHAKA &nbsp;·&nbsp; PART OF NASH INVESTMENTS GROUP &nbsp;·&nbsp; <span style="font-size:11px;background:#fef2f2;color:#dc2626;padding:2px 8px;border-radius:6px;font-weight:600;">● STALE — leadership/org details from Jan 2024</span></div>
+      </div>
+      <span class="threat-badge threat-red">🔴 HIGH THREAT</span>
+    </div>
+    <div class="company-body">
+      <p><strong>Who they really are:</strong> This is not a local startup. Mulytic Energy GmbH is headquartered in Munich, Germany, with a subsidiary in New York and a development hub in Dhaka. They are part of the Nash Investments group. Their co-founder and CEO Dr. Rubaiyat Islam Sadat is a Volkswagen executive and Special Advisor to the EU. Co-founder and MD Rahat Ahmed has a US/Bangladesh background. They have existing business relationships with Daimler, Renault, Audi, DHL, and Mercedes-Benz Energy. This is a well-resourced, technically sophisticated company using Bangladesh as an emerging market entry point.</p>
+
+      <div class="facts">
+        <div class="fact"><div class="flabel">Company HQ</div><div class="fval">Munich, Germany</div></div>
+        <div class="fact"><div class="flabel">CEO</div><div class="fval">Dr. Rubaiyat Islam Sadat (VW exec)</div></div>
+        <div class="fact"><div class="flabel">BD Operations Hub</div><div class="fval">Dhaka — ~25 employees</div></div>
+        <div class="fact"><div class="flabel">Tech Stack</div><div class="fval mint">EVision, EV Pay, MosAIx, Nebula, Charge.AI</div></div>
+        <div class="fact"><div class="flabel">Protocol</div><div class="fval">OCPP (expert-level)</div></div>
+        <div class="fact"><div class="flabel">Key BD Partner</div><div class="fval">Genex Infrastructure Limited</div></div>
+        <div class="fact"><div class="flabel">First Station</div><div class="fval">Jashore (Dec 2023) — first outside Dhaka</div></div>
+        <div class="fact"><div class="flabel">Network Status</div><div class="fval amber">"Dozens" in Dhaka, Chittagong, Sylhet</div></div>
+        <div class="fact"><div class="flabel">Industry Body</div><div class="fval">BEMA (Bangladesh Electric Mobility Association)</div></div>
+        <div class="fact"><div class="flabel">Revenue (est.)</div><div class="fval">&lt; $1M (SignalHire estimate)</div></div>
+      </div>
+
+      <p><strong>Technology is their real edge:</strong> Their product suite includes EVision (energy management across all stations), EV Pay (payment processing — cards, mobile wallets, subscriptions), Market Price (dynamic demand/time-of-day pricing), MosAIx (AI analytics on performance/user behaviour/financials), and Nebula (issue tracking and resolution). This is a full enterprise CPMS stack — significantly more sophisticated than anything else in Bangladesh.</p>
+
+      <p><strong>German tech, Bangladesh deployment:</strong> Their chargers are described as "AI-powered, made with German technology, reducing charging expenses by up to 20%." They inaugurated Bangladesh's first out-of-Dhaka charging station in Jashore in collaboration with West Zone Power Distribution Company. This government utility partnership is a significant regulatory advantage.</p>
+
+      <div class="warn-box">
+        <p><strong>New finding — they are selling station ownership:</strong> Mulytic's LinkedIn is actively running ads stating "Contact Us to OWN a Electric Vehicle Charging Station Business," targeting shopping malls, parking lots, highway restaurants, commercial/residential property owners, luxury condos, resorts, 5-star hotels, and cafeterias. This means Mulytic is pursuing a franchise/asset-light model — recruiting property owners as charging station investors rather than owning all hardware themselves. This could let them scale station count faster than competitors who self-fund every site, but also means many "Mulytic" stations may be independently owned with inconsistent service quality.</p>
+      </div>
+
+      <div class="swot">
+        <div class="swot-q s"><h5>Strengths</h5><ul><li>European-grade technology stack</li><li>VW/Audi industry connections globally</li><li>Genex infrastructure partner</li><li>Government utility co-operations</li><li>BEMA founding member</li></ul></div>
+        <div class="swot-q w"><h5>Weaknesses</h5><ul><li>Small Dhaka team (25 people)</li><li>Revenue under $1M — thin resources</li><li>German HQ creates BD execution lag</li><li>Limited public station count confirmed</li></ul></div>
+        <div class="swot-q o"><h5>Opportunities</h5><ul><li>Could supply white-label CPMS to others</li><li>B2B fleet management platform</li></ul></div>
+        <div class="swot-q t"><h5>Threats to You</h5><ul><li>Best tech stack in market</li><li>Genex gives them location access</li><li>BEMA membership = policy influence</li></ul></div>
+      </div>
+
+      <div class="sources">
+        <h5>Sources</h5>
+        <div class="src-list">
+          <a class="src-pill" href="https://www.tbsnews.net/features/panorama/how-mulytic-elevating-bangladeshs-global-presence-smart-technology-784378" target="_blank">TBS News — Mulytic Profile (Jan 2024)</a>
+          <a class="src-pill" href="https://www.mulytic-energy.com/about/" target="_blank">mulytic-energy.com/about</a>
+          <a class="src-pill" href="https://www.mulytic-energy.com/services/" target="_blank">mulytic-energy.com/services</a>
+          <a class="src-pill" href="https://www.mulytic-energy.com/mulytic-energy-and-genex-infrastructure-join-forces-to-bring-ev-charging-solutions-to-bangladesh/" target="_blank">Mulytic + Genex Partnership</a>
+          <a class="src-pill" href="https://www.linkedin.com/company/mulytic-energy?trk=ppro_cprof" target="_blank">LinkedIn — Mulytic "Own a Station" Ads</a>
+          <a class="src-pill" href="https://bd.linkedin.com/company/mulytic-energy" target="_blank">LinkedIn — Mulytic Energy</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- EKHON CHARGE -->
+  <div class="company">
+    <div class="company-header">
+      <div style="flex:1;">
+        <div class="company-name">Ekhon Charge</div>
+        <div class="company-type">OPERATED BY: PROGRESS MOTORS IMPORTS LIMITED (PMIL) &nbsp;·&nbsp; <span class="tag watch">● RECENT — May 2026</span> <span class="tag watch">HIGHWAY FOCUS</span></div>
+      </div>
+      <span class="threat-badge threat-amber">🟡 MEDIUM-HIGH THREAT</span>
+    </div>
+    <div class="company-body">
+      <p><strong>Background:</strong> Progress Motors Imports Limited (PMIL) launched "Ekhon Charge" — Bangladesh's first public DC fast-charging network. They hold the distinction of operating Dhaka's first public EV charging station (Tejgaon, near Nabisco), inaugurated by the Senior Secretary of the Power Division. They have since opened a second 180kW DC fast-charging station on the Dhaka–Chattogram highway at Cheora, Chauddagram. Both stations are fully self-funded with no external investment disclosed.</p>
+
+      <div class="facts">
+        <div class="fact"><div class="flabel">Parent Company</div><div class="fval">Progress Motors Imports Ltd (PMIL)</div></div>
+        <div class="fact"><div class="flabel">First Station</div><div class="fval">Tejgaon, Dhaka (near Nabisco area)</div></div>
+        <div class="fact"><div class="flabel">Second Station</div><div class="fval mint">180kW DC — Cheora, Dhaka-Ctg Highway</div></div>
+        <div class="fact"><div class="flabel">DC Charger Power</div><div class="fval">180kW (fastest in Bangladesh)</div></div>
+        <div class="fact"><div class="flabel">Charge Speed</div><div class="fval">20–80% in 18–28 minutes</div></div>
+        <div class="fact"><div class="flabel">AC Charger Partners</div><div class="fval">Siemens, Volttic, Aurora, TBEA</div></div>
+        <div class="fact"><div class="flabel">Official EV Partner</div><div class="fval amber">BYD Bangladesh (official charging partner)</div></div>
+        <div class="fact"><div class="flabel">App</div><div class="fval">Ekhon Charge (iOS + Android)</div></div>
+        <div class="fact"><div class="flabel">Districts Covered</div><div class="fval">3+ (Dhaka, Cumilla, others)</div></div>
+        <div class="fact"><div class="flabel">Next Expansion</div><div class="fval">Northern + eastern regions, malls, resorts</div></div>
+      </div>
+
+      <p><strong>Critical differentiator — BYD partnership:</strong> Ekhon Charge has been designated as BYD Bangladesh's official charging partner. Given that Runner Group is assembling BYD cars locally from 2027 and BYD is the world's top-selling EV brand entering Bangladesh, this partnership could become very significant. Every BYD owner nationwide will be directed to Ekhon Charge stations.</p>
+
+      <p><strong>Hardware sourcing:</strong> For AC chargers, they sell branded units from Siemens, Volttic, Aurora, and TBEA through their platform. This is a notable strategy — they are not just operating public stations but also selling installation hardware to residences, offices, and commercial properties. This is a revenue stream you should consider too.</p>
+
+      <div class="swot">
+        <div class="swot-q s"><h5>Strengths</h5><ul><li>BYD Bangladesh official partner (huge)</li><li>Fastest DC chargers in BD (180kW)</li><li>First DC highway station — strategic</li><li>Self-funded = no investor pressure</li><li>Siemens hardware credibility</li></ul></div>
+        <div class="swot-q w"><h5>Weaknesses</h5><ul><li>Very few stations (2–3 confirmed live)</li><li>Slow expansion pace so far</li><li>No disclosed CPMS capability</li><li>Highway-only so far, no city hotel presence</li></ul></div>
+        <div class="swot-q o"><h5>Opportunities</h5><ul><li>BYD fleet = guaranteed future sessions</li><li>Mall + resort expansion announced</li></ul></div>
+        <div class="swot-q t"><h5>Threats to You</h5><ul><li>BYD partnership is a moat if BYD succeeds</li><li>Highway stations block intercity charging</li></ul></div>
+      </div>
+
+      <div class="sources">
+        <h5>Sources</h5>
+        <div class="src-list">
+          <a class="src-pill" href="https://www.thedailystar.net/tech-startup/news/ekhon-charge-opens-second-fast-charging-ev-station-dhaka-chattogram-highway" target="_blank">Daily Star — Ekhon Charge Highway Station (May 2026)</a>
+          <a class="src-pill" href="https://www.tbsnews.net/economy/corporates/ekhon-charge-expands-ev-infrastructure-new-fast-charging-station-cumilla-1143031" target="_blank">TBS News — Cumilla Station (May 2025)</a>
+          <a class="src-pill" href="https://www.thedailystar.net/news/bangladesh/news/dhaka-gets-first-ev-charging-station-3396196" target="_blank">Daily Star — Dhaka First EV Station</a>
+          <a class="src-pill" href="https://www.ekhoncharge.com/" target="_blank">ekhoncharge.com (official)</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- GENEX INFRASTRUCTURE -->
+  <div class="company">
+    <div class="company-header">
+      <div style="flex:1;">
+        <div class="company-name">Genex Infrastructure Limited</div>
+        <div class="company-type">EPC CONTRACTOR + CHARGING NETWORK ENABLER &nbsp;·&nbsp; MULTIPLE PARTNERSHIPS &nbsp;·&nbsp; <span class="tag active">ACTIVE</span></div>
+      </div>
+      <span class="threat-badge threat-amber">🟡 MEDIUM THREAT (Enabler + Potential Competitor)</span>
+    </div>
+    <div class="company-body">
+      <p><strong>The operator behind multiple operators:</strong> Genex is the single most active infrastructure builder in the Bangladesh EV charging space — but they operate behind brands, not in front of them. They are the EPC (engineering, procurement, construction) contractor and infrastructure partner behind the Mulytic Energy network, the CG Runner/BYD network, and the Rancon/Mercedes-Benz network. MD Mohammed Tanzidul Alam leads the company.</p>
+
+      <div class="facts">
+        <div class="fact"><div class="flabel">Role</div><div class="fval">EPC + Infrastructure Partner</div></div>
+        <div class="fact"><div class="flabel">Partnership 1</div><div class="fval">Mulytic Energy — CPMS tech + infra</div></div>
+        <div class="fact"><div class="flabel">Partnership 2</div><div class="fval">CG Runner / BYD — 10 highway stations</div></div>
+        <div class="fact"><div class="flabel">Partnership 3</div><div class="fval mint">Rancon Motors / Mercedes-Benz — 21 stations</div></div>
+        <div class="fact"><div class="flabel">MD</div><div class="fval">Mohammed Tanzidul Alam</div></div>
+        <div class="fact"><div class="flabel">COO</div><div class="fval">Syed Shafiqul Hassan</div></div>
+        <div class="fact"><div class="flabel">DGM Finance</div><div class="fval">Mahmudul Hasan Lorance</div></div>
+        <div class="fact"><div class="flabel">BEMA Membership</div><div class="fval">Yes</div></div>
+      </div>
+
+      <p><strong>Watch risk:</strong> Genex currently operates as the infrastructure backbone for others. But with access to multiple automotive brand partners, government contacts, and proven EPC capability, they could easily launch their own branded CPO operation. If they do, they would immediately be the most connected and capable operator in Bangladesh.</p>
+
+      <div class="sources">
+        <h5>Sources</h5>
+        <div class="src-list">
+          <a class="src-pill" href="https://www.tbsnews.net/bangladesh/energy/genex-infrastructure-set-10-ev-charging-stations-march-eying-byd-ev-users-776446" target="_blank">TBS News — Genex + CG Runner (Jan 2024)</a>
+          <a class="src-pill" href="https://www.thedailystar.net/business/economy/news/rancon-teams-genex-set-21-ev-charging-stations-3544781" target="_blank">Daily Star — Rancon + Genex (Feb 2024)</a>
+          <a class="src-pill" href="https://www.mulytic-energy.com/mulytic-energy-and-genex-infrastructure-join-forces-to-bring-ev-charging-solutions-to-bangladesh/" target="_blank">Mulytic + Genex Joint Press</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- DHS AUTOS / DEEPAL -->
+  <div class="company">
+    <div class="company-header">
+      <div style="flex:1;">
+        <div class="company-name">DHS Autos Limited (Deepal / Changan)</div>
+        <div class="company-type">EV VEHICLE DISTRIBUTOR + CAPTIVE CHARGING NETWORK &nbsp;·&nbsp; <span class="tag active">ACTIVE</span> <span class="tag oem">OEM-TIED</span></div>
+      </div>
+      <span class="threat-badge threat-amber">🟡 MEDIUM THREAT (Captive, but growing)</span>
+    </div>
+    <div class="company-body">
+      <p><strong>Background:</strong> DHS Autos is the official distributor of Changan Automobiles (and its EV sub-brand Deepal) in Bangladesh. CEO Imran Zaman Khan is also the former Divisional Director of Rancon Motors — giving him deep contacts across Bangladesh's auto sector. They launched Deepal S07 and L07 EVs in February 2025, and the Deepal S05 PHEV in November 2025.</p>
+
+      <div class="facts">
+        <div class="fact"><div class="flabel">Parent Brand</div><div class="fval">Changan Automobiles (Deepal)</div></div>
+        <div class="fact"><div class="flabel">CEO</div><div class="fval">Imran Zaman Khan (ex-Rancon)</div></div>
+        <div class="fact"><div class="flabel">Charging Network</div><div class="fval mint">22 locations nationwide (confirmed)</div></div>
+        <div class="fact"><div class="flabel">Free Home Charger</div><div class="fval">Yes — with every Deepal purchase</div></div>
+        <div class="fact"><div class="flabel">Charging Partner</div><div class="fval">Crack Platoon (network maintenance)</div></div>
+        <div class="fact"><div class="flabel">Showroom</div><div class="fval">Rangs Babylonia, Tejgaon, Dhaka</div></div>
+        <div class="fact"><div class="flabel">Cities</div><div class="fval">Dhaka + Chittagong</div></div>
+      </div>
+
+      <p><strong>The 22-location network:</strong> DHS Autos confirmed to multiple press outlets that they have established a charging network across 22 locations in Bangladesh. These are primarily captive stations for Deepal customers, but their partnership with CrackPlatoon for network maintenance means stations are likely OCPP-enabled and could be opened to the wider network over time.</p>
+
+      <div class="sources">
+        <h5>Sources</h5>
+        <div class="src-list">
+          <a class="src-pill" href="https://www.thedailystar.net/tech-startup/news/deepal-launches-s05-plug-hybrid-bangladesh-4030026" target="_blank">Daily Star — Deepal S05 Launch (Nov 2025)</a>
+          <a class="src-pill" href="https://www.tbsnews.net/economy/corporates/deepal-launches-plug-hybrid-s05-bangladesh-1280991" target="_blank">TBS News — Deepal S05 + 22 Charging Locations</a>
+          <a class="src-pill" href="https://www.dhakatribune.com/business/375105/changan-automobiles-launches-deepal-s07-l07-in" target="_blank">Dhaka Tribune — Deepal S07/L07</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- RANCON / MERCEDES -->
+  <div class="company">
+    <div class="company-header">
+      <div style="flex:1;">
+        <div class="company-name">Rancon Motors Ltd / Mercedes-Benz Bangladesh</div>
+        <div class="company-type">PREMIUM EV BRAND + CHARGING PARTNER OF CRACK PLATOON &nbsp;·&nbsp; <span class="tag oem">OEM-TIED</span></div>
+      </div>
+      <span class="threat-badge threat-amber">🟡 MEDIUM — Premium Segment Only</span>
+    </div>
+    <div class="company-body">
+      <p>Rancon Motors is the sole distributor of Mercedes-Benz in Bangladesh, chaired by Romo Rouf Chowdhury. They launched the full Mercedes EQ lineup (6 models) in April 2024 and have built 32 charging stations (in partnership with CrackPlatoon) across premium hotels, corporate offices, and tourism destinations. Their stations are primarily for Mercedes EQ customers but are compatible with all EVs. Their strategy is premium location lock-in — Radisson Blu Chattogram, IPDC Finance Gulshan HQ, and high-end hotels.</p>
+
+      <div class="facts">
+        <div class="fact"><div class="flabel">Stations via CrackPlatoon</div><div class="fval mint">32 live (AC + DC)</div></div>
+        <div class="fact"><div class="flabel">Target Locations</div><div class="fval">Premium hotels, corporate HQs, tourism</div></div>
+        <div class="fact"><div class="flabel">Confirmed Locations</div><div class="fval">IPDC Gulshan, Radisson Blu Ctg, Unimart Gulshan 2</div></div>
+        <div class="fact"><div class="flabel">App</div><div class="fval">ChargeEasy (via CrackPlatoon)</div></div>
+      </div>
+
+      <div class="insight">
+        <div class="itag">⚠ Key Strategic Insight</div>
+        <p>Rancon is actively targeting <strong>the exact same premium hotels, shopping centres, and corporate locations</strong> you are. They have first-mover advantage at Radisson Blu Chattogram and IPDC Gulshan. The window for Bashundhara City, Le Méridien, InterContinental, and similar locations is closing. These must be approached within weeks of your board decision.</p>
+      </div>
+
+      <div class="sources">
+        <h5>Sources</h5>
+        <div class="src-list">
+          <a class="src-pill" href="https://www.thedailystar.net/supplements/electric-avenue/news/mercedes-benz-crafting-new-era-high-end-electric-travel-4167801" target="_blank">Daily Star — Mercedes EV Strategy (May 2026)</a>
+          <a class="src-pill" href="https://www.tbsnews.net/economy/corporates/mercedes-benz-installs-new-ev-charging-hub-radisson-blu-chattogram-1296556" target="_blank">TBS — Radisson Blu MoU (Nov 2025)</a>
+          <a class="src-pill" href="https://www.tbsnews.net/economy/corporates/ipdc-joins-hands-mercedes-benz-1190361" target="_blank">TBS — IPDC Station (Jul 2025)</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- BYD / CG RUNNER -->
+  <div class="company">
+    <div class="company-header">
+      <div style="flex:1;">
+        <div class="company-name">BYD Bangladesh / CG Runner</div>
+        <div class="company-type">VEHICLE BRAND WITH CAPTIVE CHARGING &nbsp;·&nbsp; <span class="tag oem">OEM-TIED</span> <span class="tag watch">LOCAL ASSEMBLY INCOMING</span></div>
+      </div>
+      <span class="threat-badge threat-amber">🟡 MEDIUM — Growing Fast After 2027</span>
+    </div>
+    <div class="company-body">
+      <p>CG Runner Bangladesh (chaired by Hafizur Rahman Khan) is the sole BYD distributor in Bangladesh. They signed an MoU with Genex Infrastructure for 10 highway charging stations covering major national highways. In March 2026, Runner Automobiles announced plans to assemble BYD EVs locally from 2027 — which would dramatically lower BYD vehicle prices and accelerate adoption. Their charging partner is Ekhon Charge (BYD's official partner). BYD stations are in Dhaka, Cumilla, Chattogram, Bogra, and Cox's Bazar.</p>
+
+      <div class="facts">
+        <div class="fact"><div class="flabel">Distributor</div><div class="fval">CG Runner Bangladesh Ltd</div></div>
+        <div class="fact"><div class="flabel">Chairman</div><div class="fval">Hafizur Rahman Khan</div></div>
+        <div class="fact"><div class="flabel">Charging Partner</div><div class="fval mint">Ekhon Charge (official)</div></div>
+        <div class="fact"><div class="flabel">Genex MoU</div><div class="fval">10 highway stations</div></div>
+        <div class="fact"><div class="flabel">Local Assembly</div><div class="fval amber">Announced for 2027</div></div>
+        <div class="fact"><div class="flabel">Station Cities</div><div class="fval">Dhaka, Cumilla, Ctg, Bogra, Cox's Bazar</div></div>
+      </div>
+
+      <div class="sources">
+        <h5>Sources</h5>
+        <div class="src-list">
+          <a class="src-pill" href="https://www.tbsnews.net/bangladesh/energy/genex-infrastructure-set-10-ev-charging-stations-march-eying-byd-ev-users-776446" target="_blank">TBS — Genex + CG Runner MoU</a>
+          <a class="src-pill" href="https://www.thedailystar.net/news/tech-startup/news/evs-are-trending-bangladesh-will-it-sustain-4184956" target="_blank">Daily Star — BYD Local Assembly 2027</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- GLOBAL CYNAX -->
+  <div class="company">
+    <div class="company-header">
+      <div style="flex:1;">
+        <div class="company-name">Global Cynax Bangladesh Ltd.</div>
+        <div class="company-type">HARDWARE IMPORTER + INSTALLER + SERVICE &nbsp;·&nbsp; 17 YEARS IN ENGINEERING &nbsp;·&nbsp; <span class="tag watch">WATCH</span></div>
+      </div>
+      <span class="threat-badge threat-green">🟢 LOW-MEDIUM THREAT</span>
+    </div>
+    <div class="company-body">
+      <p>Global Cynax claims to be "the only professional company in Bangladesh providing not just world-class EV chargers but comprehensive service support — complete turnkey solutions." They have 17 years of engineering experience in power, energy, and industrial sectors. They offer 24/7 technical assistance, local spare parts, and in-country engineers. Offices in Dhaka (Topkhana Road corporate + Ring Road), Chittagong (Jubilee Road), Dhamrai, and Bangkok (Thailand). Their DC charger range goes up to enterprise-grade installations. They are currently a hardware/installation company but are positioned to become a CPO easily.</p>
+
+      <div class="facts">
+        <div class="fact"><div class="flabel">Founded (Engineering)</div><div class="fval">17+ years experience</div></div>
+        <div class="fact"><div class="flabel">Dhaka HQ</div><div class="fval">Meherba Plaza, 33 Topkhana Rd</div></div>
+        <div class="fact"><div class="flabel">Corporate Office</div><div class="fval">Ring Tower, 32-35 Ring Road, Adabor</div></div>
+        <div class="fact"><div class="flabel">Chittagong Office</div><div class="fval">Kader Tower, 128 Jubilee Road</div></div>
+        <div class="fact"><div class="flabel">Bangkok Office</div><div class="fval">Bang Na BTS area (Thailand ops)</div></div>
+        <div class="fact"><div class="flabel">Phone</div><div class="fval">+880 1786 100 017</div></div>
+      </div>
+
+      <div class="sources">
+        <h5>Sources</h5>
+        <div class="src-list">
+          <a class="src-pill" href="https://www.globalcynax.com/dc-ev-charger/" target="_blank">globalcynax.com (official)</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- CITA EV -->
+  <div class="company">
+    <div class="company-header">
+      <div style="flex:1;">
+        <div class="company-name">CITA EV</div>
+        <div class="company-type">UK-ENGINEERED / GERMAN-MANUFACTURED &nbsp;·&nbsp; 70+ COUNTRIES &nbsp;·&nbsp; <span class="tag new">MARKETING ONLY IN BD</span></div>
+      </div>
+      <span class="threat-badge threat-green">🟢 LOW NOW — Watch 2027+</span>
+    </div>
+    <div class="company-body">
+      <p>CITA EV is a UK-engineered brand manufactured to German quality standards, operating in 70+ countries with hubs in the UK and Dubai. They are aggressively marketing in Bangladesh across the full spectrum: 7kW home chargers to 360kW DC superfast chargers. They have a CPMS and mobile app. They claim "authorised partners across Bangladesh" for installation, but there is no confirmed network of public stations. They are currently a hardware sales operation with CPO ambitions. First mover who signs an exclusive distribution agreement with them gains a significant quality hardware advantage.</p>
+
+      <div class="facts">
+        <div class="fact"><div class="flabel">Engineering Origin</div><div class="fval">UK (manufactured to German standards)</div></div>
+        <div class="fact"><div class="flabel">Global Presence</div><div class="fval">70+ countries</div></div>
+        <div class="fact"><div class="flabel">AC Chargers</div><div class="fval">7kW home chargers</div></div>
+        <div class="fact"><div class="flabel">DC Chargers</div><div class="fval">Up to 360kW superfast</div></div>
+        <div class="fact"><div class="flabel">Software</div><div class="fval mint">CITA EV App + CPMS</div></div>
+        <div class="fact"><div class="flabel">BD Public Stations</div><div class="fval red">None confirmed</div></div>
+      </div>
+
+      <div class="sources">
+        <h5>Sources</h5>
+        <div class="src-list">
+          <a class="src-pill" href="https://citaevcharger.com/bangladesh/" target="_blank">citaevcharger.com/bangladesh</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- BREB + BPDB -->
+  <div class="company">
+    <div class="company-header">
+      <div style="flex:1;">
+        <div class="company-name">BREB + BPDB (Government Bodies)</div>
+        <div class="company-type">GOVERNMENT-OWNED POWER UTILITIES &nbsp;·&nbsp; SOLAR EV STATIONS &nbsp;·&nbsp; <span class="tag active">ACTIVE</span></div>
+      </div>
+      <span class="threat-badge threat-blue">🔵 NOT A COMPETITOR — Potential Partner</span>
+    </div>
+    <div class="company-body">
+      <p>Bangladesh Rural Electrification Board (BREB) installed a 21kW Solar Charging Station in Keranigonj. BREB is also installing a 120kW DC + 22kW AC charger for commercial EV needs. Bangladesh Power Development Board (BPDB) has two solar charging stations in Chittagong and one in Sylhet (20kW each). These are primarily for e-bikes and easy bikes in rural areas — not competing with premium urban EV charging. West Zone Power Distribution Company Limited collaborated with Mulytic Energy for the Jashore station. These utilities are your partners for grid connection, not competitors.</p>
+
+      <div class="sources">
+        <h5>Sources</h5>
+        <div class="src-list">
+          <a class="src-pill" href="https://ep-bd.com/view/details/article/OTgyMQ==/title?q=breb+to+open+ev+charging+station" target="_blank">Energy & Power — BREB EV Station</a>
+          <a class="src-pill" href="https://www.unescap.org/sites/default/d8files/event-documents/22%20_Electric%20_mobility%20_&%20_shift%20_to%20_electrification,%20_Bangladesh.pdf" target="_blank">UNESCAP — BD EV Electrification Report</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- CHARGING KOI -->
+  <div class="company">
+    <div class="company-header">
+      <div style="flex:1;">
+        <div class="company-name">Charging Koi</div>
+        <div class="company-type">EMERGING STARTUP — LIMITED PUBLIC INFORMATION &nbsp;·&nbsp; <span class="tag new">NEW</span></div>
+      </div>
+      <span class="threat-badge threat-green">🟢 UNKNOWN — Stealth Stage</span>
+    </div>
+    <div class="company-body">
+      <p>"Charging Koi" appears in a GISUser article (April 2025) as an emerging company in the Bangladesh EV charging space — listed alongside CrackPlatoon, Mulytic, Ekhon Charge, and Global Cynax as a notable name. Described as "a newer company, but quickly getting noticed" that is "working on building user-friendly stations." No website, no press coverage, and no confirmed stations found beyond this single mention. This is a stealth-stage player — either pre-launch or operating very quietly without public announcements. Worth monitoring on LinkedIn and RJSC company filings.</p>
+
+      <div class="sources">
+        <h5>Sources</h5>
+        <div class="src-list">
+          <a class="src-pill" href="https://gisuser.com/2025/04/what-are-the-top-ev-charging-service-providers-in-bangladesh/" target="_blank">GISUser — Top EV Charging Providers BD</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- AUDI BANGLADESH -->
+  <div class="company">
+    <div class="company-header">
+      <div style="flex:1;">
+        <div class="company-name">Audi Bangladesh</div>
+        <div class="company-type">PREMIUM OEM — CAPTIVE CHARGING ONLY &nbsp;·&nbsp; <span class="tag oem">OEM-TIED</span></div>
+      </div>
+      <span class="threat-badge threat-green">🟢 LOW — Premium Only</span>
+    </div>
+    <div class="company-body">
+      <p>Audi Bangladesh operates a 60kW DC fast charger at their Tejgaon service centre — one of the first DC fast chargers in Bangladesh. It supports Audi e-tron and compatible EVs (Mercedes EQ, BMW iX). Charges from 0–80% in approximately 45 minutes. This is a captive service-centre charger, not a public network. Not a strategic competitor for general EV charging infrastructure.</p>
+
+      <div class="sources">
+        <h5>Sources</h5>
+        <div class="src-list">
+          <a class="src-pill" href="https://crackplatooncsl.com/fastest-ev-charging-stations-in-bangladesh/" target="_blank">Crack Platoon — Fastest Stations BD</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div><!-- /section 2 -->
+
+<!-- SECTION 3 — COMPARISON MATRIX -->
+<div class="section" id="s3">
+  <div class="section-header">
+    <span class="section-num">03</span>
+    <h2 class="section-title">Feature Comparison Matrix</h2>
+  </div>
+
+  <div class="comp-wrap">
+    <table>
+      <thead>
+        <tr>
+          <th style="width:22%;">Feature / Capability</th>
+          <th class="us" style="text-align:center;">You (Target)</th>
+          <th style="text-align:center;">Crack Platoon</th>
+          <th style="text-align:center;">Mulytic Energy</th>
+          <th style="text-align:center;">Ekhon Charge</th>
+          <th style="text-align:center;">DHS/Deepal</th>
+          <th style="text-align:center;">Global Cynax</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Full CPMS Platform</td>
+          <td class="us-col" style="text-align:center;"><span class="chk">✔</span></td>
+          <td style="text-align:center;"><span class="prt">~</span></td>
+          <td style="text-align:center;"><span class="chk">✔</span></td>
+          <td style="text-align:center;"><span class="crs">✘</span></td>
+          <td style="text-align:center;"><span class="crs">✘</span></td>
+          <td style="text-align:center;"><span class="crs">✘</span></td>
+        </tr>
+        <tr>
+          <td>Remote Monitoring</td>
+          <td class="us-col" style="text-align:center;"><span class="chk">✔</span></td>
+          <td style="text-align:center;"><span class="chk">✔</span></td>
+          <td style="text-align:center;"><span class="chk">✔</span></td>
+          <td style="text-align:center;"><span class="crs">✘</span></td>
+          <td style="text-align:center;"><span class="crs">✘</span></td>
+          <td style="text-align:center;"><span class="crs">✘</span></td>
+        </tr>
+        <tr>
+          <td>AI Analytics / MosAIx</td>
+          <td class="us-col" style="text-align:center;"><span class="prt">~</span></td>
+          <td style="text-align:center;"><span class="crs">✘</span></td>
+          <td style="text-align:center;"><span class="chk">✔</span></td>
+          <td style="text-align:center;"><span class="crs">✘</span></td>
+          <td style="text-align:center;"><span class="crs">✘</span></td>
+          <td style="text-align:center;"><span class="crs">✘</span></td>
+        </tr>
+        <tr>
+          <td>Dynamic Load Balancing</td>
+          <td class="us-col" style="text-align:center;"><span class="chk">✔</span></td>
+          <td style="text-align:center;"><span class="crs">✘</span></td>
+          <td style="text-align:center;"><span class="chk">✔</span></td>
+          <td style="text-align:center;"><span class="crs">✘</span></td>
+          <td style="text-align:center;"><span class="crs">✘</span></td>
+          <td style="text-align:center;"><span class="crs">✘</span></td>
+        </tr>
+        <tr>
+          <td>bKash / Nagad Payment</td>
+          <td class="us-col" style="text-align:center;"><span class="chk">✔</span></td>
+          <td style="text-align:center;"><span class="chk">✔</span></td>
+          <td style="text-align:center;"><span class="chk">✔</span></td>
+          <td style="text-align:center;"><span class="chk">✔</span></td>
+          <td style="text-align:center;"><span class="crs">✘</span></td>
+          <td style="text-align:center;"><span class="crs">✘</span></td>
+        </tr>
+        <tr>
+          <td>Guest QR Web Flow (no app)</td>
+          <td class="us-col" style="text-align:center;"><span class="chk">✔</span></td>
+          <td style="text-align:center;"><span class="crs">✘</span></td>
+          <td style="text-align:center;"><span class="crs">✘</span></td>
+          <td style="text-align:center;"><span class="crs">✘</span></td>
+          <td style="text-align:center;"><span class="crs">✘</span></td>
+          <td style="text-align:center;"><span class="crs">✘</span></td>
+        </tr>
+        <tr>
+          <td>Automated Host Payouts</td>
+          <td class="us-col" style="text-align:center;"><span class="chk">✔</span></td>
+          <td style="text-align:center;"><span class="crs">✘</span></td>
+          <td style="text-align:center;"><span class="prt">~</span></td>
+          <td style="text-align:center;"><span class="crs">✘</span></td>
+          <td style="text-align:center;"><span class="crs">✘</span></td>
+          <td style="text-align:center;"><span class="crs">✘</span></td>
+        </tr>
+        <tr>
+          <td>OEM White-Label Hardware</td>
+          <td class="us-col" style="text-align:center;"><span class="chk">✔</span></td>
+          <td style="text-align:center;"><span class="crs">✘</span></td>
+          <td style="text-align:center;"><span class="crs">✘</span></td>
+          <td style="text-align:center;"><span class="crs">✘</span></td>
+          <td style="text-align:center;"><span class="crs">✘</span></td>
+          <td style="text-align:center;"><span class="crs">✘</span></td>
+        </tr>
+        <tr>
+          <td>DC Fast Charging (60kW+)</td>
+          <td class="us-col" style="text-align:center;"><span class="chk">✔</span></td>
+          <td style="text-align:center;"><span class="chk">✔</span></td>
+          <td style="text-align:center;"><span class="prt">~</span></td>
+          <td style="text-align:center;"><span class="chk">✔</span></td>
+          <td style="text-align:center;"><span class="crs">✘</span></td>
+          <td style="text-align:center;"><span class="chk">✔</span></td>
+        </tr>
+        <tr>
+          <td>Open Network (All EV Brands)</td>
+          <td class="us-col" style="text-align:center;"><span class="chk">✔</span></td>
+          <td style="text-align:center;"><span class="chk">✔</span></td>
+          <td style="text-align:center;"><span class="chk">✔</span></td>
+          <td style="text-align:center;"><span class="chk">✔</span></td>
+          <td style="text-align:center;"><span class="crs">✘</span></td>
+          <td style="text-align:center;"><span class="crs">✘</span></td>
+        </tr>
+        <tr>
+          <td>Highway Presence</td>
+          <td class="us-col" style="text-align:center;"><span class="prt">~</span></td>
+          <td style="text-align:center;"><span class="chk">✔</span></td>
+          <td style="text-align:center;"><span class="crs">✘</span></td>
+          <td style="text-align:center;"><span class="chk">✔</span></td>
+          <td style="text-align:center;"><span class="crs">✘</span></td>
+          <td style="text-align:center;"><span class="crs">✘</span></td>
+        </tr>
+        <tr>
+          <td>Govt / Policy Access</td>
+          <td class="us-col" style="text-align:center;"><span class="prt">~</span></td>
+          <td style="text-align:center;"><span class="chk">✔</span></td>
+          <td style="text-align:center;"><span class="chk">✔</span></td>
+          <td style="text-align:center;"><span class="prt">~</span></td>
+          <td style="text-align:center;"><span class="crs">✘</span></td>
+          <td style="text-align:center;"><span class="crs">✘</span></td>
+        </tr>
+        <tr>
+          <td>Local BD Business Est.</td>
+          <td class="us-col" style="text-align:center;"><span class="chk">✔</span></td>
+          <td style="text-align:center;"><span class="chk">✔</span></td>
+          <td style="text-align:center;"><span class="chk">✔</span></td>
+          <td style="text-align:center;"><span class="chk">✔</span></td>
+          <td style="text-align:center;"><span class="chk">✔</span></td>
+          <td style="text-align:center;"><span class="chk">✔</span></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <p style="font-size:12px;color:#94a3b8;margin-top:8px;">✔ = Confirmed &nbsp; ✘ = Not present &nbsp; ~ = Partial / unclear from public sources</p>
+</div>
+
+<!-- SECTION 4 — LOCATION INTELLIGENCE -->
+<div class="section" id="s4">
+  <div class="section-header">
+    <span class="section-num">04</span>
+    <h2 class="section-title">Location Intelligence — Who Has Claimed What</h2>
+  </div>
+
+  <p class="intro">The most valuable asset in EV charging is location. Once a site has a charger installed and signed an agreement, it is extremely difficult for a second operator to enter. Here is every confirmed location identified from press coverage as of June 2026.</p>
+
+  <h2 class="subsection">Claimed Locations — Confirmed by Press</h2>
+
+  <div class="timeline">
+    <div class="tl-item">
+      <div class="tl-dot"></div>
+      <div class="tl-date">Crack Platoon — Dhaka</div>
+      <div class="tl-text"><strong>RANGS Parking Lot, Tejgaon Industrial Area</strong> — Mercedes-Benz showroom parking. AC charger. Private (Mercedes vehicles).</div>
+    </div>
+    <div class="tl-item">
+      <div class="tl-dot"></div>
+      <div class="tl-date">Crack Platoon — Dhaka</div>
+      <div class="tl-text"><strong>Mercedes-Benz Workshop, Bijoy Sarani–Tejgaon Link Rd</strong> — AC charger. Workshop facility.</div>
+    </div>
+    <div class="tl-item">
+      <div class="tl-dot"></div>
+      <div class="tl-date">Crack Platoon — Dhaka</div>
+      <div class="tl-text"><strong>Unimart, Gulshan 2</strong> — AC charger inside Unimart shopping mall parking. <span style="color:#dc2626;font-weight:600;">🔴 Premium shopping location — LOCKED.</span></div>
+    </div>
+    <div class="tl-item">
+      <div class="tl-dot"></div>
+      <div class="tl-date">Crack Platoon — Dhaka</div>
+      <div class="tl-text"><strong>MG Bangladesh Showroom, Tejgaon</strong> — Private AC charger.</div>
+    </div>
+    <div class="tl-item">
+      <div class="tl-dot"></div>
+      <div class="tl-date">Crack Platoon — Dhaka</div>
+      <div class="tl-text"><strong>Chef's Table Courtside, Madani Avenue</strong> — Near United International University.</div>
+    </div>
+    <div class="tl-item">
+      <div class="tl-dot"></div>
+      <div class="tl-date">Crack Platoon — Dhaka</div>
+      <div class="tl-text"><strong>Dhaka Cantonment + Sumatra Filling Station, Matikata</strong> — First-ever commercial station, in partnership with DESCO.</div>
+    </div>
+    <div class="tl-item">
+      <div class="tl-dot"></div>
+      <div class="tl-date">IPDC Finance — Gulshan (Jul 2025)</div>
+      <div class="tl-text"><strong>IPDC Finance HQ, Gulshan, Dhaka</strong> — AC charger. Crack Platoon + Rancon/Mercedes partnership. <span style="color:#dc2626;font-weight:600;">🔴 LOCKED.</span></div>
+    </div>
+    <div class="tl-item">
+      <div class="tl-dot"></div>
+      <div class="tl-date">Rancon/Crack Platoon — Chattogram (Nov 2025)</div>
+      <div class="tl-text"><strong>Radisson Blu Chattogram Bay View</strong> — MoU signed. AC + DC fast chargers. Premium international hotel. <span style="color:#dc2626;font-weight:600;">🔴 LOCKED.</span></div>
+    </div>
+    <div class="tl-item">
+      <div class="tl-dot"></div>
+      <div class="tl-date">Ekhon Charge (2023)</div>
+      <div class="tl-text"><strong>Tejgaon, Dhaka (near Nabisco)</strong> — Progress Motors Imports Ltd. First public DC fast-charging station in Dhaka.</div>
+    </div>
+    <div class="tl-item">
+      <div class="tl-dot"></div>
+      <div class="tl-date">Ekhon Charge (May 2025)</div>
+      <div class="tl-text"><strong>Kabab Express, Cheora, Chauddagram, Cumilla</strong> — 180kW DC fast. On Dhaka–Chattogram highway. <span style="color:#d97706;font-weight:600;">🟡 KEY HIGHWAY LOCATION — LOCKED.</span></div>
+    </div>
+    <div class="tl-item">
+      <div class="tl-dot"></div>
+      <div class="tl-date">Mulytic Energy (Dec 2023)</div>
+      <div class="tl-text"><strong>Khoyertala, Jashore</strong> — In partnership with West Zone Power Distribution Company. First out-of-Dhaka public station.</div>
+    </div>
+    <div class="tl-item">
+      <div class="tl-dot"></div>
+      <div class="tl-date">Crack Platoon — Multiple Cities</div>
+      <div class="tl-text"><strong>Narayanganj, Comilla, Chittagong, Sylhet, Bogura, Rajshahi, Khulna, Cox's Bazar</strong> — AC chargers across these cities. Exact locations unconfirmed in press.</div>
+    </div>
+  </div>
+
+  <div class="insight" style="margin-top:24px;">
+    <div class="itag">📍 Open Targets — Not Yet Claimed (as of public sources)</div>
+    <p>Based on research, the following premium location categories appear <strong>unclaimed by any confirmed operator</strong>: Bashundhara City Mall, Jamuna Future Park, Pan Pacific Sonargaon Hotel, InterContinental Dhaka, Le Méridien Dhaka, Four Points by Sheraton Dhaka, Dhaka North City Corporation parking facilities, and major residential towers in Gulshan/Banani (Sena Kalyan, etc.). These should be your Day 1 targets.</p>
+  </div>
+</div>
+
+<!-- SECTION 5 — HIDDEN PLAYERS -->
+<div class="section" id="s5">
+  <div class="section-header">
+    <span class="section-num">05</span>
+    <h2 class="section-title">Hidden / Quietly Positioning Players</h2>
+  </div>
+
+  <p class="intro">Beyond the public names, these are entities that are either working quietly without press coverage or are positioned to enter the market rapidly with major resources once conditions ripen.</p>
+
+  <div class="company">
+    <div class="company-header">
+      <div style="flex:1;">
+        <div class="company-name">Charging Koi</div>
+        <div class="company-type">STEALTH STAGE — NO WEBSITE, ONE SOURCE MENTION &nbsp;·&nbsp; <span class="tag new">UNKNOWN</span></div>
+      </div>
+      <span class="threat-badge threat-blue">🔵 MONITOR</span>
+    </div>
+    <div class="company-body">
+      <p>Mentioned in a single industry roundup (GISUser, April 2025) as an emerging EV charging provider in Bangladesh. Described as "user-friendly" with ambitions to expand availability. No website, no press, no LinkedIn profile found. Could be operating under RJSC registration with no public-facing digital footprint. Recommended action: search RJSC company registry and monitor LinkedIn for any "Charging Koi" job postings.</p>
+    </div>
+  </div>
+
+  <div class="company">
+    <div class="company-header">
+      <div style="flex:1;">
+        <div class="company-name">Charging Bangladesh (chargingbd)</div>
+        <div class="company-type">LINKEDIN PROFILE FOUND — MINIMAL DETAIL &nbsp;·&nbsp; <span class="tag new">EMERGING</span></div>
+      </div>
+      <span class="threat-badge threat-blue">🔵 MONITOR</span>
+    </div>
+    <div class="company-body">
+      <p>A LinkedIn company page for "Charging Bangladesh" (handle: chargingbd) exists. Also referenced in the Crack Platoon article about best EV charging companies in Bangladesh. No press coverage, no confirmed stations, no website found. This is either a pre-launch brand or a very early-stage operator. Could be a white-label operator using CrackPlatoon's backend. Monitor LinkedIn for hiring activity and follower growth.</p>
+      <div class="sources">
+        <h5>Sources</h5>
+        <div class="src-list">
+          <a class="src-pill" href="https://www.linkedin.com/company/chargingbd" target="_blank">LinkedIn — Charging Bangladesh</a>
+          <a class="src-pill" href="https://crackplatooncsl.com/best-ev-charging-companies-in-bangladesh/" target="_blank">Crack Platoon — Best EV Companies BD</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="company">
+    <div class="company-header">
+      <div style="flex:1;">
+        <div class="company-name">VinFast (Vietnam) — Future Risk</div>
+        <div class="company-type">GLOBAL EV BRAND — NO BD PRESENCE YET &nbsp;·&nbsp; <span class="tag watch">WATCH 2027+</span></div>
+      </div>
+      <span class="threat-badge threat-amber">🟡 FUTURE THREAT</span>
+    </div>
+    <div class="company-body">
+      <p>VinFast has 150,000+ charging ports across all 63 Vietnamese provinces. Future Startup (April 2026) identifies them as "a serious regional player" reshaping the South Asian EV market. They have not announced Bangladesh operations but given their aggressive emerging market expansion, a BD entry by 2027–2028 is plausible. If they enter, they will do exactly what they did in Vietnam — lock every premium location before local operators can react.</p>
+    </div>
+  </div>
+
+  <div class="company">
+    <div class="company-header">
+      <div style="flex:1;">
+        <div class="company-name">Chinese EV Brands (Leapmotor, XPeng, NIO)</div>
+        <div class="company-type">GLOBAL EV MANUFACTURERS — NO BD PRESENCE YET &nbsp;·&nbsp; <span class="tag watch">WATCH 2027+</span></div>
+      </div>
+      <span class="threat-badge threat-green">🟢 LOW NOW</span>
+    </div>
+    <div class="company-body">
+      <p>TBS News (May 2026) reports that "Chinese EV manufacturers are already aggressively expanding into emerging markets" and specifically names Leapmotor, XPeng, and NIO as reshaping the global landscape with Bangladesh as an attractive long-term opportunity. These brands bring their own charging infrastructure when they enter new markets. They are not here yet — but they represent the wave arriving after you establish your position.</p>
+      <div class="sources">
+        <h5>Sources</h5>
+        <div class="src-list">
+          <a class="src-pill" href="https://www.tbsnews.net/supplement/why-bangladeshs-ev-market-finally-gaining-momentum-1443051" target="_blank">TBS News — BD EV Market Momentum (May 2026)</a>
+          <a class="src-pill" href="https://futurestartup.com/2026/04/28/bangladeshs-electric-vehicle-market-structure-forces-and-the-future/" target="_blank">Future Startup — BD EV Market Structure (Apr 2026)</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="company">
+    <div class="company-header">
+      <div style="flex:1;">
+        <div class="company-name">BEMA (Bangladesh Electric Mobility Association)</div>
+        <div class="company-type">INDUSTRY BODY — POLICY SHAPER &nbsp;·&nbsp; <span class="tag watch">JOIN IMMEDIATELY</span></div>
+      </div>
+      <span class="threat-badge threat-blue">🔵 JOIN — Not Compete</span>
+    </div>
+    <div class="company-body">
+      <p>BEMA is a newly formed industry association co-founded by automotive industry veterans including Mr. Abdul Matlub Ahmad and Mr. Hafizur Rahman Khan (CG Runner Chairman). Mulytic Energy is a founding member. The LinkedIn post from Mulytic confirms this is a serious industry formation — not just a ceremonial body. Being inside BEMA means: early sight of regulatory drafts, access to policy conversations, and relationship-building with every major player in the market simultaneously. You should join this association immediately after board approval.</p>
+      <div class="sources">
+        <h5>Sources</h5>
+        <div class="src-list">
+          <a class="src-pill" href="https://www.linkedin.com/company/mulytic-energy" target="_blank">Mulytic LinkedIn — BEMA Announcement</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<!-- SECTION 6 — STRATEGIC IMPLICATIONS -->
+<div class="section" id="s6">
+  <div class="section-header">
+    <span class="section-num">06</span>
+    <h2 class="section-title">Strategic Implications for Your Entry</h2>
+  </div>
+
+  <div class="insight">
+    <div class="itag">🎯 The Honest Assessment</div>
+    <p>The window is narrowing but not closed. Crack Platoon has 32 stations and the Mercedes brand behind them. Mulytic has German technology and Genex infrastructure muscle. But <strong>neither has automated host payouts, guest QR web flow, or OEM-branded hardware</strong>. Neither has locked the biggest shopping malls, the 5-star international hotel chains, or the premium residential towers. Those are your first-month targets. The window closes when someone else signs those MoUs.</p>
+  </div>
+
+  <div class="facts" style="margin:20px 0;">
+    <div class="fact">
+      <div class="flabel">WEEK 1 Priority 1</div>
+      <div class="fval red">Apply for IRC from CCI&amp;E</div>
+    </div>
+    <div class="fact">
+      <div class="flabel">WEEK 1 Priority 2</div>
+      <div class="fval red">Contact Autel Energy — BD exclusivity</div>
+    </div>
+    <div class="fact">
+      <div class="flabel">WEEK 1 Priority 3</div>
+      <div class="fval red">Approach Bashundhara City + Jamuna Future Park</div>
+    </div>
+    <div class="fact">
+      <div class="flabel">WEEK 1 Priority 4</div>
+      <div class="fval red">Contact InterContinental + Pan Pacific Sonargaon</div>
+    </div>
+    <div class="fact">
+      <div class="flabel">WEEK 2</div>
+      <div class="fval amber">Evaluate CPMS — Ampeco vs Virta</div>
+    </div>
+    <div class="fact">
+      <div class="flabel">WEEK 2</div>
+      <div class="fval amber">Apply to join BEMA</div>
+    </div>
+    <div class="fact">
+      <div class="flabel">WEEK 2</div>
+      <div class="fval amber">Order 2–4 sample units — Joint Tech + Iocharger</div>
+    </div>
+    <div class="fact">
+      <div class="flabel">WEEK 3</div>
+      <div class="fval amber">Initiate SREDA licensing process</div>
+    </div>
+    <div class="fact">
+      <div class="flabel">MONTH 1–2</div>
+      <div class="fval green">3 pilot sites live with billing</div>
+    </div>
+    <div class="fact">
+      <div class="flabel">MONITOR WEEKLY</div>
+      <div class="fval">Charging Koi + Charging Bangladesh LinkedIn activity</div>
+    </div>
+  </div>
+
+  <div class="callout">
+    <p><strong>The BYD Factor:</strong> Runner is assembling BYD locally from 2027. This will dramatically cut BYD prices and accelerate EV sales. Whoever owns the best Dhaka charging locations in 2026 will capture the majority of BYD sessions in 2027–2028. Ekhon Charge has the official BYD partnership, but their network has only 2 confirmed stations. You can out-locate them on urban premium sites where BYD buyers live and work.</p>
+  </div>
+
+  <div class="callout">
+    <p><strong>The Mulytic Threat You Should Track Most Carefully:</strong> Their CEO is a Volkswagen executive with EU advisory access. When VW Group brings EVs to Bangladesh (Audi is already here), Mulytic will be their natural charging partner. This could make Mulytic the premium B2B platform very quickly. Your counter: lock the hotel and mall sites, own the B2C experience, and establish brand recognition with everyday EV users before Mulytic's enterprise play matures.</p>
+  </div>
+
+  <div class="insight">
+    <div class="itag">🏛️ Policy Window — Move Before the Coordination Body Forms</div>
+    <p>As of June 27, 2026, the government still lacks a single coordinating body for EV policy — multiple ministries (Power Division, Industries, BERC, SREDA, BRTA) each handle a piece. A draft national EV policy is ready but not finalised, and BEPRC has formally proposed an inter-agency coordination body. <strong>Once that body forms, approval processes will likely tighten and formalise</strong> — good for long-term legitimacy, but it could also mean slower, more bureaucratic approvals for new entrants. Your IRC and SREDA applications should be filed in the current fragmented-but-faster window, not after consolidation.</p>
+  </div>
+
+</div>
+
+<!-- FOOTER -->
+<div style="text-align:center;padding:32px 0;border-top:1px solid #e2e8f0;margin-top:40px;">
+  <p style="font-size:12px;font-family:'Inter',sans-serif;color:#94a3b8;">EV Charging Bangladesh — Competitive Intelligence Report (v2 — Updated) &nbsp;·&nbsp; June 30, 2026 &nbsp;·&nbsp; Confidential &nbsp;·&nbsp; For Internal Use Only</p>
+  <p style="font-size:11px;color:#cbd5e1;margin-top:8px;">All data sourced from publicly available internet sources: BSS, The Daily Star, The Business Standard, Dhaka Tribune, Future Startup, company websites, LinkedIn, GISUser. Compiled and refreshed June 30, 2026.</p>
+</div>
+
+</div><!-- /page -->
+</body>
+</html>
