@@ -3,830 +3,489 @@
         <head>
             <meta charset="UTF-8">
             <title>&#x1f3ed; OEM Partner Shortlist &mdash; Bangladesh EV Charging Rollout</title>
-            <style>
-/* From extension vscode.github */
-/*---------------------------------------------------------------------------------------------
- *  Copyright (c) Microsoft Corporation. All rights reserved.
- *  Licensed under the MIT License. See License.txt in the project root for license information.
- *--------------------------------------------------------------------------------------------*/
+        <style>
+/* ============================================================================
+   OEM Partner Shortlist — Design System
+   Navy / Teal palette · Inter font · 14px rounded cards · mobile-responsive
+   ============================================================================ */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap');
 
-.vscode-dark img[src$=\#gh-light-mode-only],
-.vscode-light img[src$=\#gh-dark-mode-only],
-.vscode-high-contrast:not(.vscode-high-contrast-light) img[src$=\#gh-light-mode-only],
-.vscode-high-contrast-light img[src$=\#gh-dark-mode-only] {
-	display: none;
-}
-
-/* From extension zhuangtongfa.material-theme */
-.vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body, .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body, .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body, .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body {
-  box-sizing: border-box;
-  min-width: 200px;
-}
-.vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body blockquote, .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body blockquote, .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body blockquote, .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body blockquote {
-  background-color: initial;
-}
-.vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body pre, .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body pre, .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body pre, .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body pre {
-  color: initial;
-}
-.vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body code, .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body code, .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body code, .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body code {
-  color: inherit;
-}
-.vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body pre code, .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body pre code, .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body pre code, .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body pre code {
-  color: initial;
-}
-.vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body code > div, .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body code > div, .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body code > div, .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body code > div {
-  background: none;
-}
-.vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body table th, .vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body table td, .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body table th, .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body table td, .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body table th, .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body table td, .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body table th, .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body table td {
-  border: 1px solid rgba(171, 178, 191, 0.5) !important;
-}
-.vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body.showEditorSelection .code-active-line:before, .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body.showEditorSelection .code-active-line:before, .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body.showEditorSelection .code-active-line:before, .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body.showEditorSelection .code-active-line:before {
-  border-left: none;
-}
-.vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body.showEditorSelection .code-line:hover:before, .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body.showEditorSelection .code-line:hover:before, .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body.showEditorSelection .code-line:hover:before, .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body.showEditorSelection .code-line:hover:before {
-  border-left: none;
-}
-.vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body.showEditorSelection .code-line .code-line:hover:before, .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body.showEditorSelection .code-line .code-line:hover:before, .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body.showEditorSelection .code-line .code-line:hover:before, .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body.showEditorSelection .code-line .code-line:hover:before {
-  border-left: none;
-}
-.vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body p, .vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body blockquote, .vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body ul, .vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body ol, .vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body dl, .vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body table, .vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body pre, .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body p, .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body blockquote, .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body ul, .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body ol, .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body dl, .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body table, .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body pre, .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body p, .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body blockquote, .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body ul, .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body ol, .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body dl, .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body table, .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body pre, .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body p, .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body blockquote, .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body ul, .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body ol, .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body dl, .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body table, .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body pre {
-  margin-top: 16px;
-  margin-bottom: 16px;
+:root {
+  --bg-base: #021F3A;
+  --bg-card: #ffffff;
+  --bg-soft: #f4f7fa;
+  --bg-muted: #eef2f6;
+  --text-primary: #0f172a;
+  --text-secondary: #475569;
+  --text-muted: #64748b;
+  --text-inverse: #ffffff;
+  --border: #e2e8f0;
+  --border-strong: #cbd5e1;
+  --teal: #02C39A;
+  --teal-dark: #028090;
+  --teal-soft: rgba(2, 195, 154, 0.10);
+  --teal-glow: rgba(2, 195, 154, 0.25);
+  --amber: #d97706;
+  --amber-soft: rgba(217, 119, 6, 0.10);
+  --red: #dc2626;
+  --red-soft: rgba(220, 38, 38, 0.10);
+  --blue: #2563eb;
+  --blue-soft: rgba(37, 99, 235, 0.10);
+  --shadow-sm: 0 1px 2px rgba(2, 31, 58, 0.06);
+  --shadow-md: 0 4px 12px rgba(2, 31, 58, 0.08);
+  --shadow-lg: 0 12px 32px rgba(2, 31, 58, 0.12);
+  --radius: 14px;
+  --radius-sm: 8px;
+  --radius-lg: 20px;
+  --max-width: 1100px;
 }
 
-/* Generated from 'node_modules/github-markdown-css/github-markdown.css' */
-@font-face {
-  font-family: octicons-link;
-  src: url(data:font/woff;charset=utf-8;base64,d09GRgABAAAAAAZwABAAAAAACFQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABEU0lHAAAGaAAAAAgAAAAIAAAAAUdTVUIAAAZcAAAACgAAAAoAAQAAT1MvMgAAAyQAAABJAAAAYFYEU3RjbWFwAAADcAAAAEUAAACAAJThvmN2dCAAAATkAAAABAAAAAQAAAAAZnBnbQAAA7gAAACyAAABCUM+8IhnYXNwAAAGTAAAABAAAAAQABoAI2dseWYAAAFsAAABPAAAAZwcEq9taGVhZAAAAsgAAAA0AAAANgh4a91oaGVhAAADCAAAABoAAAAkCA8DRGhtdHgAAAL8AAAADAAAAAwGAACfbG9jYQAAAsAAAAAIAAAACABiATBtYXhwAAACqAAAABgAAAAgAA8ASm5hbWUAAAToAAABQgAAAlXu73sOcG9zdAAABiwAAAAeAAAAME3QpOBwcmVwAAAEbAAAAHYAAAB/aFGpk3jaTY6xa8JAGMW/O62BDi0tJLYQincXEypYIiGJjSgHniQ6umTsUEyLm5BV6NDBP8Tpts6F0v+k/0an2i+itHDw3v2+9+DBKTzsJNnWJNTgHEy4BgG3EMI9DCEDOGEXzDADU5hBKMIgNPZqoD3SilVaXZCER3/I7AtxEJLtzzuZfI+VVkprxTlXShWKb3TBecG11rwoNlmmn1P2WYcJczl32etSpKnziC7lQyWe1smVPy/Lt7Kc+0vWY/gAgIIEqAN9we0pwKXreiMasxvabDQMM4riO+qxM2ogwDGOZTXxwxDiycQIcoYFBLj5K3EIaSctAq2kTYiw+ymhce7vwM9jSqO8JyVd5RH9gyTt2+J/yUmYlIR0s04n6+7Vm1ozezUeLEaUjhaDSuXHwVRgvLJn1tQ7xiuVv/ocTRF42mNgZGBgYGbwZOBiAAFGJBIMAAizAFoAAABiAGIAznjaY2BkYGAA4in8zwXi+W2+MjCzMIDApSwvXzC97Z4Ig8N/BxYGZgcgl52BCSQKAA3jCV8CAABfAAAAAAQAAEB42mNgZGBg4f3vACQZQABIMjKgAmYAKEgBXgAAeNpjYGY6wTiBgZWBg2kmUxoDA4MPhGZMYzBi1AHygVLYQUCaawqDA4PChxhmh/8ODDEsvAwHgMKMIDnGL0x7gJQCAwMAJd4MFwAAAHjaY2BgYGaA4DAGRgYQkAHyGMF8NgYrIM3JIAGVYYDT+AEjAwuDFpBmA9KMDEwMCh9i/v8H8sH0/4dQc1iAmAkALaUKLgAAAHjaTY9LDsIgEIbtgqHUPpDi3gPoBVyRTmTddOmqTXThEXqrob2gQ1FjwpDvfwCBdmdXC5AVKFu3e5MfNFJ29KTQT48Ob9/lqYwOGZxeUelN2U2R6+cArgtCJpauW7UQBqnFkUsjAY/kOU1cP+DAgvxwn1chZDwUbd6CFimGXwzwF6tPbFIcjEl+vvmM/byA48e6tWrKArm4ZJlCbdsrxksL1AwWn/yBSJKpYbq8AXaaTb8AAHja28jAwOC00ZrBeQNDQOWO//sdBBgYGRiYWYAEELEwMTE4uzo5Zzo5b2BxdnFOcALxNjA6b2ByTswC8jYwg0VlNuoCTWAMqNzMzsoK1rEhNqByEyerg5PMJlYuVueETKcd/89uBpnpvIEVomeHLoMsAAe1Id4AAAAAAAB42oWQT07CQBTGv0JBhagk7HQzKxca2sJCE1hDt4QF+9JOS0nbaaYDCQfwCJ7Au3AHj+LO13FMmm6cl7785vven0kBjHCBhfpYuNa5Ph1c0e2Xu3jEvWG7UdPDLZ4N92nOm+EBXuAbHmIMSRMs+4aUEd4Nd3CHD8NdvOLTsA2GL8M9PODbcL+hD7C1xoaHeLJSEao0FEW14ckxC+TU8TxvsY6X0eLPmRhry2WVioLpkrbp84LLQPGI7c6sOiUzpWIWS5GzlSgUzzLBSikOPFTOXqly7rqx0Z1Q5BAIoZBSFihQYQOOBEdkCOgXTOHA07HAGjGWiIjaPZNW13/+lm6S9FT7rLHFJ6fQbkATOG1j2OFMucKJJsxIVfQORl+9Jyda6Sl1dUYhSCm1dyClfoeDve4qMYdLEbfqHf3O/AdDumsjAAB42mNgYoAAZQYjBmyAGYQZmdhL8zLdDEydARfoAqIAAAABAAMABwAKABMAB///AA8AAQAAAAAAAAAAAAAAAAABAAAAAA==) format("woff");
-}
-.vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body, .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body, .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body, .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body {
-  -ms-text-size-adjust: 100%;
-  -webkit-text-size-adjust: 100%;
-  line-height: 1.5;
-  color: rgb(171, 178, 191);
-  line-height: 1.5;
-  word-wrap: break-word;
-  background: #282c34;
-  padding-top: 20px;
-}
-.vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body .pl-c, .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body .pl-c, .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body .pl-c, .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body .pl-c {
-  color: #6a737d;
-}
-.vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body .pl-c1, .vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body .pl-s .pl-v, .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body .pl-c1, .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body .pl-s .pl-v, .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body .pl-c1, .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body .pl-s .pl-v, .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body .pl-c1, .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body .pl-s .pl-v {
-  color: #005cc5;
-}
-.vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body .pl-e, .vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body .pl-en, .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body .pl-e, .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body .pl-en, .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body .pl-e, .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body .pl-en, .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body .pl-e, .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body .pl-en {
-  color: #6f42c1;
-}
-.vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body .pl-smi, .vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body .pl-s .pl-s1, .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body .pl-smi, .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body .pl-s .pl-s1, .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body .pl-smi, .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body .pl-s .pl-s1, .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body .pl-smi, .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body .pl-s .pl-s1 {
-  color: #24292e;
-}
-.vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body .pl-ent, .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body .pl-ent, .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body .pl-ent, .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body .pl-ent {
-  color: #22863a;
-}
-.vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body .pl-k, .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body .pl-k, .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body .pl-k, .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body .pl-k {
-  color: #d73a49;
-}
-.vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body .pl-s, .vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body .pl-pds, .vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body .pl-s .pl-pse .pl-s1, .vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body .pl-sr, .vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body .pl-sr .pl-cce, .vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body .pl-sr .pl-sre, .vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body .pl-sr .pl-sra, .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body .pl-s, .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body .pl-pds, .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body .pl-s .pl-pse .pl-s1, .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body .pl-sr, .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body .pl-sr .pl-cce, .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body .pl-sr .pl-sre, .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body .pl-sr .pl-sra, .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body .pl-s, .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body .pl-pds, .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body .pl-s .pl-pse .pl-s1, .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body .pl-sr, .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body .pl-sr .pl-cce, .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body .pl-sr .pl-sre, .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body .pl-sr .pl-sra, .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body .pl-s, .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body .pl-pds, .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body .pl-s .pl-pse .pl-s1, .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body .pl-sr, .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body .pl-sr .pl-cce, .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body .pl-sr .pl-sre, .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body .pl-sr .pl-sra {
-  color: #032f62;
-}
-.vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body .pl-v, .vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body .pl-smw, .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body .pl-v, .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body .pl-smw, .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body .pl-v, .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body .pl-smw, .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body .pl-v, .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body .pl-smw {
-  color: #e36209;
-}
-.vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body .pl-bu, .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body .pl-bu, .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body .pl-bu, .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body .pl-bu {
-  color: #b31d28;
-}
-.vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body .pl-ii, .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body .pl-ii, .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body .pl-ii, .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body .pl-ii {
-  color: #fafbfc;
-  background-color: #b31d28;
-}
-.vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body .pl-c2, .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body .pl-c2, .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body .pl-c2, .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body .pl-c2 {
-  color: #fafbfc;
-  background-color: #d73a49;
-}
-.vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body .pl-c2::before, .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body .pl-c2::before, .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body .pl-c2::before, .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body .pl-c2::before {
-  content: "^M";
-}
-.vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body .pl-sr .pl-cce, .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body .pl-sr .pl-cce, .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body .pl-sr .pl-cce, .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body .pl-sr .pl-cce {
-  font-weight: bold;
-  color: #22863a;
-}
-.vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body .pl-ml, .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body .pl-ml, .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body .pl-ml, .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body .pl-ml {
-  color: #735c0f;
-}
-.vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body .pl-mh, .vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body .pl-mh .pl-en, .vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body .pl-ms, .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body .pl-mh, .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body .pl-mh .pl-en, .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body .pl-ms, .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body .pl-mh, .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body .pl-mh .pl-en, .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body .pl-ms, .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body .pl-mh, .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body .pl-mh .pl-en, .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body .pl-ms {
-  font-weight: bold;
-  color: #005cc5;
-}
-.vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body .pl-mi, .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body .pl-mi, .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body .pl-mi, .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body .pl-mi {
-  font-style: italic;
-  color: #24292e;
-}
-.vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body .pl-mb, .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body .pl-mb, .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body .pl-mb, .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body .pl-mb {
-  font-weight: bold;
-  color: #24292e;
-}
-.vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body .pl-md, .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body .pl-md, .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body .pl-md, .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body .pl-md {
-  color: #b31d28;
-  background-color: #ffeef0;
-}
-.vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body .pl-mi1, .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body .pl-mi1, .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body .pl-mi1, .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body .pl-mi1 {
-  color: #22863a;
-  background-color: #f0fff4;
-}
-.vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body .pl-mc, .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body .pl-mc, .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body .pl-mc, .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body .pl-mc {
-  color: #e36209;
-  background-color: #ffebda;
-}
-.vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body .pl-mi2, .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body .pl-mi2, .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body .pl-mi2, .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body .pl-mi2 {
-  color: #f6f8fa;
-  background-color: #005cc5;
-}
-.vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body .pl-mdr, .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body .pl-mdr, .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body .pl-mdr, .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body .pl-mdr {
-  font-weight: bold;
-  color: #6f42c1;
-}
-.vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body .pl-ba, .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body .pl-ba, .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body .pl-ba, .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body .pl-ba {
-  color: #586069;
-}
-.vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body .pl-sg, .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body .pl-sg, .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body .pl-sg, .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body .pl-sg {
-  color: #959da5;
-}
-.vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body .pl-corl, .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body .pl-corl, .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body .pl-corl, .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body .pl-corl {
-  text-decoration: underline;
-  color: #032f62;
-}
-.vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body .octicon, .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body .octicon, .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body .octicon, .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body .octicon {
-  display: inline-block;
-  vertical-align: text-top;
-  fill: currentColor;
-}
-.vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body a, .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body a, .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body a, .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body a {
-  background-color: transparent;
-}
-.vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body a:active, .vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body a:hover, .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body a:active, .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body a:hover, .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body a:active, .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body a:hover, .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body a:active, .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body a:hover {
-  outline-width: 0;
-}
-.vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body strong, .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body strong, .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body strong, .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body strong {
-  font-weight: inherit;
-}
-.vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body strong, .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body strong, .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body strong, .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body strong {
-  font-weight: bolder;
-}
-.vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body h1, .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body h1, .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body h1, .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body h1 {
-  margin: 0.67em 0;
-}
-.vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body img, .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body img, .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body img, .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body img {
-  border-style: none;
-}
-.vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body hr, .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body hr, .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body hr, .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body hr {
-  box-sizing: content-box;
-  height: 0;
-  overflow: visible;
-}
-.vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body input, .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body input, .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body input, .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body input {
-  font: inherit;
+* { box-sizing: border-box; }
+
+html, body {
   margin: 0;
-}
-.vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body input, .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body input, .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body input, .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body input {
-  overflow: visible;
-}
-.vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body [type=checkbox], .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body [type=checkbox], .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body [type=checkbox], .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body [type=checkbox] {
-  box-sizing: border-box;
   padding: 0;
+  background: var(--bg-base);
+  color: var(--text-primary);
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
 }
-.vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body *, .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body *, .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body *, .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body * {
-  box-sizing: border-box;
+
+body {
+  background: linear-gradient(180deg, #021F3A 0%, #03284d 100%);
+  min-height: 100vh;
+  padding: 32px 20px 64px;
 }
-.vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body input, .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body input, .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body input, .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body input {
-  font-family: inherit;
-  line-height: inherit;
-}
-.vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body a, .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body a, .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body a, .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body a {
-  color: #528bff;
-  text-decoration: none;
-}
-.vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body a:hover, .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body a:hover, .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body a:hover, .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body a:hover {
-  text-decoration: underline;
-}
-.vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body strong, .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body strong, .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body strong, .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body strong {
-  font-weight: 600;
-}
-.vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body hr, .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body hr, .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body hr, .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body hr {
-  height: 0;
-  margin: 15px 0;
+
+body > *:not(.page) { max-width: var(--max-width); margin-left: auto; margin-right: auto; }
+
+.page {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  background: var(--bg-card);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-lg);
   overflow: hidden;
-  background: transparent;
-  border: 0;
-  border-bottom: 1px solid #dfe2e5;
 }
-.vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body hr::before, .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body hr::before, .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body hr::before, .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body hr::before {
-  display: table;
-  content: "";
-}
-.vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body hr::after, .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body hr::after, .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body hr::after, .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body hr::after {
-  display: table;
-  clear: both;
-  content: "";
-}
-.vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body table, .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body table, .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body table, .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body table {
-  border-spacing: 0;
-  border-collapse: collapse;
-}
-.vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body td, .vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body th, .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body td, .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body th, .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body td, .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body th, .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body td, .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body th {
-  padding: 0;
-}
-.vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body h1, .vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body h2, .vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body h3, .vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body h4, .vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body h5, .vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body h6, .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body h1, .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body h2, .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body h3, .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body h4, .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body h5, .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body h6, .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body h1, .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body h2, .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body h3, .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body h4, .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body h5, .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body h6, .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body h1, .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body h2, .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body h3, .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body h4, .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body h5, .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body h6 {
-  margin-top: 0;
-  margin-bottom: 0;
-}
-.vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body h1, .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body h1, .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body h1, .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body h1 {
-  font-weight: 600;
-}
-.vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body h2, .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body h2, .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body h2, .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body h2 {
-  font-weight: 600;
-}
-.vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body h3, .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body h3, .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body h3, .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body h3 {
-  font-weight: 600;
-}
-.vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body h4, .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body h4, .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body h4, .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body h4 {
-  font-weight: 600;
-}
-.vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body h5, .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body h5, .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body h5, .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body h5 {
-  font-weight: 600;
-}
-.vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body h6, .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body h6, .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body h6, .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body h6 {
-  font-weight: 600;
-}
-.vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body p, .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body p, .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body p, .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body p {
-  margin-top: 0;
-  margin-bottom: 10px;
-}
-.vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body blockquote, .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body blockquote, .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body blockquote, .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body blockquote {
-  margin: 0;
-}
-.vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body ul, .vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body ol, .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body ul, .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body ol, .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body ul, .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body ol, .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body ul, .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body ol {
-  padding-left: 0;
-  margin-top: 0;
-  margin-bottom: 0;
-}
-.vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body ol ol, .vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body ul ol, .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body ol ol, .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body ul ol, .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body ol ol, .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body ul ol, .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body ol ol, .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body ul ol {
-  list-style-type: lower-roman;
-}
-.vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body ul ul ol, .vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body ul ol ol, .vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body ol ul ol, .vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body ol ol ol, .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body ul ul ol, .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body ul ol ol, .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body ol ul ol, .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body ol ol ol, .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body ul ul ol, .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body ul ol ol, .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body ol ul ol, .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body ol ol ol, .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body ul ul ol, .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body ul ol ol, .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body ol ul ol, .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body ol ol ol {
-  list-style-type: lower-alpha;
-}
-.vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body dd, .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body dd, .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body dd, .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body dd {
-  margin-left: 0;
-}
-.vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body pre, .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body pre, .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body pre, .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body pre {
-  margin-top: 0;
-  margin-bottom: 0;
-}
-.vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body .octicon, .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body .octicon, .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body .octicon, .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body .octicon {
-  vertical-align: text-bottom;
-}
-.vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body .pl-0, .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body .pl-0, .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body .pl-0, .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body .pl-0 {
-  padding-left: 0 !important;
-}
-.vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body .pl-1, .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body .pl-1, .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body .pl-1, .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body .pl-1 {
-  padding-left: 4px !important;
-}
-.vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body .pl-2, .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body .pl-2, .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body .pl-2, .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body .pl-2 {
-  padding-left: 8px !important;
-}
-.vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body .pl-3, .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body .pl-3, .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body .pl-3, .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body .pl-3 {
-  padding-left: 16px !important;
-}
-.vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body .pl-4, .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body .pl-4, .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body .pl-4, .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body .pl-4 {
-  padding-left: 24px !important;
-}
-.vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body .pl-5, .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body .pl-5, .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body .pl-5, .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body .pl-5 {
-  padding-left: 32px !important;
-}
-.vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body .pl-6, .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body .pl-6, .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body .pl-6, .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body .pl-6 {
-  padding-left: 40px !important;
-}
-.vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body::before, .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body::before, .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body::before, .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body::before {
-  display: table;
-  content: "";
-}
-.vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body::after, .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body::after, .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body::after, .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body::after {
-  display: table;
-  clear: both;
-  content: "";
-}
-.vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body > *:first-child, .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body > *:first-child, .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body > *:first-child, .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body > *:first-child {
-  margin-top: 0 !important;
-}
-.vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body > *:last-child, .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body > *:last-child, .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body > *:last-child, .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body > *:last-child {
-  margin-bottom: 0 !important;
-}
-.vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body a:not([href]), .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body a:not([href]), .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body a:not([href]), .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body a:not([href]) {
-  color: inherit;
-  text-decoration: none;
-}
-.vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body .anchor, .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body .anchor, .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body .anchor, .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body .anchor {
-  float: left;
-  padding-right: 4px;
-  margin-left: -20px;
-  line-height: 1;
-}
-.vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body .anchor:focus, .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body .anchor:focus, .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body .anchor:focus, .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body .anchor:focus {
-  outline: none;
-}
-.vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body p, .vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body blockquote, .vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body ul, .vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body ol, .vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body dl, .vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body table, .vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body pre, .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body p, .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body blockquote, .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body ul, .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body ol, .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body dl, .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body table, .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body pre, .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body p, .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body blockquote, .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body ul, .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body ol, .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body dl, .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body table, .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body pre, .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body p, .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body blockquote, .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body ul, .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body ol, .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body dl, .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body table, .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body pre {
-  margin-top: 0;
-  margin-bottom: 16px;
-}
-.vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body hr, .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body hr, .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body hr, .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body hr {
-  height: 0.25em;
-  padding: 0;
-  margin: 24px 0;
-  background-color: #e1e4e8;
-  border: 0;
-}
-.vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body blockquote, .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body blockquote, .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body blockquote, .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body blockquote {
-  /* padding: 0 1em;
-  color: #6a737d;
-  border-left: 0.25em solid #dfe2e5; */
-  padding: 8.5px 17px;
-  margin: 1.5em 0;
-  color: #7c879c;
-  border-color: #4b5362;
-  border-width: 4px;
-  border-left: 5px solid #4b5362;
-  background: transparent;
-}
-.vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body blockquote > :first-child, .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body blockquote > :first-child, .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body blockquote > :first-child, .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body blockquote > :first-child {
-  margin-top: 0;
-}
-.vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body blockquote > :last-child, .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body blockquote > :last-child, .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body blockquote > :last-child, .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body blockquote > :last-child {
-  margin-bottom: 0;
-}
-.vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body kbd, .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body kbd, .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body kbd, .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body kbd {
-  display: inline-block;
-  padding: 3px 5px;
-  line-height: 10px;
-  color: #444d56;
-  vertical-align: middle;
-  background-color: #fafbfc;
-  border: solid 1px #c6cbd1;
-  border-bottom-color: #959da5;
-  border-radius: 3px;
-  box-shadow: inset 0 -1px 0 #959da5;
-}
-.vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body h1, .vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body h2, .vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body h3, .vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body h4, .vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body h5, .vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body h6, .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body h1, .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body h2, .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body h3, .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body h4, .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body h5, .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body h6, .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body h1, .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body h2, .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body h3, .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body h4, .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body h5, .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body h6, .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body h1, .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body h2, .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body h3, .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body h4, .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body h5, .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body h6 {
-  margin-top: 24px;
-  margin-bottom: 16px;
-  font-weight: 600;
-  line-height: 1.25;
-  color: rgb(240, 240, 240);
-  border-bottom: none;
-}
-.vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body h1 .octicon-link, .vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body h2 .octicon-link, .vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body h3 .octicon-link, .vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body h4 .octicon-link, .vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body h5 .octicon-link, .vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body h6 .octicon-link, .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body h1 .octicon-link, .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body h2 .octicon-link, .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body h3 .octicon-link, .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body h4 .octicon-link, .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body h5 .octicon-link, .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body h6 .octicon-link, .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body h1 .octicon-link, .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body h2 .octicon-link, .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body h3 .octicon-link, .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body h4 .octicon-link, .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body h5 .octicon-link, .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body h6 .octicon-link, .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body h1 .octicon-link, .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body h2 .octicon-link, .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body h3 .octicon-link, .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body h4 .octicon-link, .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body h5 .octicon-link, .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body h6 .octicon-link {
-  color: #1b1f23;
-  vertical-align: middle;
-  visibility: hidden;
-}
-.vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body h1:hover .anchor, .vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body h2:hover .anchor, .vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body h3:hover .anchor, .vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body h4:hover .anchor, .vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body h5:hover .anchor, .vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body h6:hover .anchor, .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body h1:hover .anchor, .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body h2:hover .anchor, .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body h3:hover .anchor, .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body h4:hover .anchor, .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body h5:hover .anchor, .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body h6:hover .anchor, .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body h1:hover .anchor, .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body h2:hover .anchor, .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body h3:hover .anchor, .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body h4:hover .anchor, .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body h5:hover .anchor, .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body h6:hover .anchor, .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body h1:hover .anchor, .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body h2:hover .anchor, .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body h3:hover .anchor, .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body h4:hover .anchor, .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body h5:hover .anchor, .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body h6:hover .anchor {
-  text-decoration: none;
-}
-.vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body h1:hover .anchor .octicon-link, .vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body h2:hover .anchor .octicon-link, .vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body h3:hover .anchor .octicon-link, .vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body h4:hover .anchor .octicon-link, .vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body h5:hover .anchor .octicon-link, .vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body h6:hover .anchor .octicon-link, .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body h1:hover .anchor .octicon-link, .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body h2:hover .anchor .octicon-link, .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body h3:hover .anchor .octicon-link, .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body h4:hover .anchor .octicon-link, .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body h5:hover .anchor .octicon-link, .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body h6:hover .anchor .octicon-link, .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body h1:hover .anchor .octicon-link, .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body h2:hover .anchor .octicon-link, .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body h3:hover .anchor .octicon-link, .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body h4:hover .anchor .octicon-link, .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body h5:hover .anchor .octicon-link, .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body h6:hover .anchor .octicon-link, .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body h1:hover .anchor .octicon-link, .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body h2:hover .anchor .octicon-link, .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body h3:hover .anchor .octicon-link, .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body h4:hover .anchor .octicon-link, .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body h5:hover .anchor .octicon-link, .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body h6:hover .anchor .octicon-link {
-  visibility: visible;
-}
-.vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body h1, .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body h1, .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body h1, .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body h1 {
-  padding-bottom: 0.3em;
-}
-.vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body h2, .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body h2, .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body h2, .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body h2 {
-  padding-bottom: 0.3em;
-}
-.vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body h6, .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body h6, .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body h6, .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body h6 {
-  color: #6a737d;
-}
-.vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body ul, .vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body ol, .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body ul, .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body ol, .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body ul, .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body ol, .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body ul, .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body ol {
-  padding-left: 2em;
-}
-.vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body ul ul, .vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body ul ol, .vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body ol ol, .vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body ol ul, .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body ul ul, .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body ul ol, .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body ol ol, .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body ol ul, .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body ul ul, .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body ul ol, .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body ol ol, .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body ol ul, .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body ul ul, .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body ul ol, .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body ol ol, .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body ol ul {
-  margin-top: 0;
-  margin-bottom: 0;
-}
-.vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body li, .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body li, .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body li, .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body li {
-  word-wrap: break-all;
-}
-.vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body li > p, .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body li > p, .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body li > p, .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body li > p {
-  margin-top: 16px;
-}
-.vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body li + li, .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body li + li, .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body li + li, .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body li + li {
-  margin-top: 0.25em;
-}
-.vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body dl, .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body dl, .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body dl, .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body dl {
-  padding: 0;
-}
-.vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body dl dt, .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body dl dt, .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body dl dt, .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body dl dt {
-  padding: 0;
-  margin-top: 16px;
-  font-style: italic;
-  font-weight: 600;
-}
-.vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body dl dd, .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body dl dd, .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body dl dd, .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body dl dd {
-  padding: 0 16px;
-  margin-bottom: 16px;
-}
-.vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body table, .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body table, .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body table, .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body table {
-  display: block;
-  width: 100%;
-  overflow: auto;
-}
-.vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body table th, .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body table th, .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body table th, .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body table th {
-  font-weight: 700;
-}
-.vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body table th, .vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body table td, .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body table th, .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body table td, .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body table th, .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body table td, .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body table th, .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body table td {
-  padding: 6px 13px;
-  /* border: 1px solid #dfe2e5; */
-}
-.vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body img, .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body img, .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body img, .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body img {
-  max-width: 100%;
-  box-sizing: content-box;
-  display: inline-block;
-}
-.vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body img[align=right], .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body img[align=right], .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body img[align=right], .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body img[align=right] {
-  padding-left: 20px;
-}
-.vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body img[align=left], .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body img[align=left], .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body img[align=left], .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body img[align=left] {
-  padding-right: 20px;
-}
-.vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body code, .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body code, .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body code, .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body code {
-  padding: 0.2em 0.4em;
-  margin: 0;
-  background-color: #3a3f4b;
-  border-radius: 3px;
-  color: white;
-  margin: 0 1px;
-}
-.vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body pre, .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body pre, .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body pre, .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body pre {
-  word-wrap: normal;
-}
-.vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body pre > code, .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body pre > code, .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body pre > code, .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body pre > code {
-  padding: 0;
-  margin: 0;
-  word-break: normal;
-  white-space: pre;
-  background: transparent;
-  border: 0;
-}
-.vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body .highlight, .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body .highlight, .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body .highlight, .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body .highlight {
-  margin-bottom: 16px;
-}
-.vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body .highlight pre, .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body .highlight pre, .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body .highlight pre, .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body .highlight pre {
-  margin-bottom: 0;
-  word-break: normal;
-}
-.vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body .highlight pre, .vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body pre, .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body .highlight pre, .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body pre, .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body .highlight pre, .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body pre, .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body .highlight pre, .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body pre {
-  padding: 16px;
-  overflow: auto;
-  line-height: 1.45;
-  /* background-color: #f6f8fa; */
-  border-radius: 3px;
-  background-color: #31363f;
-}
-.vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body pre code, .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body pre code, .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body pre code, .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body pre code {
-  display: inline;
-  max-width: auto;
-  padding: 0;
-  margin: 0;
-  overflow: visible;
-  line-height: inherit;
-  word-wrap: normal;
-  background-color: transparent;
-  border: 0;
-  color: rgb(171, 178, 191);
-}
-.vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body .full-commit .btn-outline:not(:disabled):hover, .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body .full-commit .btn-outline:not(:disabled):hover, .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body .full-commit .btn-outline:not(:disabled):hover, .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body .full-commit .btn-outline:not(:disabled):hover {
-  color: #005cc5;
-  border-color: #005cc5;
-}
-.vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body kbd, .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body kbd, .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body kbd, .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body kbd {
-  display: inline-block;
-  padding: 3px 5px;
-  line-height: 10px;
-  color: #444d56;
-  vertical-align: middle;
-  background-color: #fafbfc;
-  border: solid 1px #d1d5da;
-  border-bottom-color: #c6cbd1;
-  border-radius: 3px;
-  box-shadow: inset 0 -1px 0 #c6cbd1;
-}
-.vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body :checked + .radio-label, .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body :checked + .radio-label, .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body :checked + .radio-label, .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body :checked + .radio-label {
+
+/* ====================== COVER ====================== */
+.cover {
+  padding: 56px 48px 48px;
+  background: linear-gradient(135deg, #021F3A 0%, #03284d 60%, #04395f 100%);
+  color: var(--text-inverse);
   position: relative;
-  z-index: 1;
-  border-color: #0366d6;
+  border-bottom: 4px solid var(--teal);
 }
-.vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body .task-list-item, .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body .task-list-item, .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body .task-list-item, .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body .task-list-item {
-  list-style-type: none;
+.cover h1 {
+  margin: 0 0 16px;
+  font-size: 2.4rem;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  line-height: 1.15;
+  color: #ffffff;
 }
-.vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body .task-list-item + .task-list-item, .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body .task-list-item + .task-list-item, .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body .task-list-item + .task-list-item, .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body .task-list-item + .task-list-item {
-  margin-top: 3px;
+.cover .cover-sub {
+  font-size: 1.1rem;
+  color: rgba(255, 255, 255, 0.82);
+  margin: 0 0 28px;
+  font-weight: 500;
 }
-.vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body .task-list-item input, .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body .task-list-item input, .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body .task-list-item input, .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body .task-list-item input {
-  margin: 0 0.2em 0.25em -1.6em;
+.cover-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 8px;
+}
+.cover-meta .pill {
+  background: rgba(2, 195, 154, 0.16);
+  border: 1px solid rgba(2, 195, 154, 0.4);
+  color: #5eead4;
+  padding: 6px 14px;
+  border-radius: 999px;
+  font-size: 0.82rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+}
+
+/* ====================== TYPOGRAPHY ====================== */
+h1 { color: var(--text-primary); }
+h2 {
+  color: var(--teal-dark);
+  font-size: 1.55rem;
+  font-weight: 700;
+  margin: 36px 0 16px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid var(--teal);
+  letter-spacing: -0.01em;
+}
+h3 {
+  color: var(--text-primary);
+  font-size: 1.18rem;
+  font-weight: 700;
+  margin: 28px 0 12px;
+  letter-spacing: -0.005em;
+}
+h4 {
+  color: var(--text-secondary);
+  font-size: 1rem;
+  font-weight: 700;
+  margin: 20px 0 8px;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+p { margin: 0 0 14px; color: var(--text-primary); }
+strong { color: var(--text-primary); font-weight: 700; }
+em { color: var(--text-secondary); }
+a { color: var(--teal-dark); text-decoration: none; border-bottom: 1px solid rgba(2, 128, 144, 0.3); }
+a:hover { color: var(--teal); border-bottom-color: var(--teal); }
+
+/* ====================== BODY CONTAINER ====================== */
+.page-body { padding: 40px 48px 64px; }
+
+/* ====================== TOC ====================== */
+.toc {
+  background: var(--bg-soft);
+  border: 1px solid var(--border);
+  border-left: 4px solid var(--teal);
+  border-radius: var(--radius);
+  padding: 20px 24px;
+  margin: 0 0 36px;
+}
+.toc h2 { margin-top: 0; font-size: 1.15rem; border-bottom: none; padding-bottom: 0; }
+.toc ul { list-style: none; padding: 0; margin: 0; }
+.toc li { padding: 4px 0; }
+.toc a { color: var(--text-primary); border-bottom: none; font-weight: 500; }
+.toc a:hover { color: var(--teal-dark); }
+
+/* ====================== SECTION ====================== */
+.section {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 24px 28px;
+  margin: 24px 0;
+  box-shadow: var(--shadow-sm);
+}
+.section h2 { margin-top: 0; }
+
+/* ====================== COMPANY CARD ====================== */
+.company {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-left: 5px solid var(--teal);
+  border-radius: var(--radius);
+  padding: 22px 26px;
+  margin: 18px 0;
+  box-shadow: var(--shadow-sm);
+  position: relative;
+  transition: box-shadow 0.2s, transform 0.2s;
+}
+.company:hover { box-shadow: var(--shadow-md); transform: translateY(-1px); }
+.company.top-pick { border-left-color: var(--teal); background: linear-gradient(180deg, var(--teal-soft) 0%, #ffffff 60%); }
+.company.removed { border-left-color: var(--red); background: linear-gradient(180deg, var(--red-soft) 0%, #ffffff 60%); opacity: 0.85; }
+.company.removed h3 { text-decoration: line-through; color: var(--text-muted); }
+.company h3 { margin-top: 0; }
+
+/* ====================== PICK BANNER ====================== */
+.pick-banner {
+  display: inline-block;
+  background: linear-gradient(90deg, var(--teal) 0%, var(--teal-dark) 100%);
+  color: #ffffff;
+  padding: 4px 12px;
+  border-radius: 6px;
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin-left: 8px;
   vertical-align: middle;
-}
-.vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body hr, .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body hr, .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body hr, .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body hr {
-  border-bottom-color: #eee;
+  box-shadow: 0 2px 6px rgba(2, 195, 154, 0.35);
 }
 
-/*
+/* ====================== STATUS BADGES ====================== */
+.status-badge {
+  display: inline-block;
+  padding: 3px 10px;
+  border-radius: 999px;
+  font-size: 0.78rem;
+  font-weight: 700;
+  margin-left: 6px;
+  vertical-align: middle;
+  letter-spacing: 0.01em;
+}
+.status-badge.ok { background: var(--teal-soft); color: var(--teal-dark); border: 1px solid var(--teal); }
+.status-badge.warn { background: var(--amber-soft); color: var(--amber); border: 1px solid var(--amber); }
+.status-badge.bad { background: var(--red-soft); color: var(--red); border: 1px solid var(--red); }
+.status-badge.info { background: var(--blue-soft); color: var(--blue); border: 1px solid var(--blue); }
 
-Atom One Dark by Daniel Gamage
-Original One Dark Syntax theme from https://github.com/atom/one-dark-syntax
+/* ====================== FACTS GRID ====================== */
+.facts {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 10px 18px;
+  margin: 12px 0 16px;
+  padding: 14px 18px;
+  background: var(--bg-soft);
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--border);
+}
+.facts li {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  font-size: 0.92rem;
+  line-height: 1.5;
+}
+.facts li::before { content: "▸ "; color: var(--teal); font-weight: 700; }
 
-base:    #282c34
-mono-1:  #abb2bf
-mono-2:  #818896
-mono-3:  #5c6370
-hue-1:   #56b6c2
-hue-2:   #61aeee
-hue-3:   #c678dd
-hue-4:   #98c379
-hue-5:   #e06c75
-hue-5-2: #be5046
-hue-6:   #d19a66
-hue-6-2: #e6c07b
+/* ====================== CALLOUT / BOXES ====================== */
+.callout {
+  background: linear-gradient(180deg, var(--teal-soft) 0%, rgba(2, 195, 154, 0.04) 100%);
+  border: 1px solid var(--teal);
+  border-left: 5px solid var(--teal);
+  border-radius: var(--radius);
+  padding: 18px 22px;
+  margin: 18px 0;
+}
+.callout p:last-child { margin-bottom: 0; }
+.callout strong { color: var(--teal-dark); }
 
-*/
-.vscode-dark[data-vscode-theme-name="One Dark Pro Mix"] .hljs, .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"] .hljs, .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"] .hljs, .vscode-dark[data-vscode-theme-name="One Dark Pro"] .hljs {
-  display: block;
+.info-box {
+  background: var(--blue-soft);
+  border: 1px solid var(--blue);
+  border-left: 5px solid var(--blue);
+  border-radius: var(--radius);
+  padding: 16px 22px;
+  margin: 18px 0;
+}
+.info-box p:last-child { margin-bottom: 0; }
+.info-box strong { color: var(--blue); }
+
+.warn-box {
+  background: var(--amber-soft);
+  border: 1px solid var(--amber);
+  border-left: 5px solid var(--amber);
+  border-radius: var(--radius);
+  padding: 16px 22px;
+  margin: 18px 0;
+}
+.warn-box p:last-child { margin-bottom: 0; }
+.warn-box strong { color: var(--amber); }
+
+/* ====================== COMPARE TABLE WRAPPER ====================== */
+.comp-wrap {
   overflow-x: auto;
-  padding: 0.5em;
-  color: #abb2bf;
-  background: #282c34;
-}
-.vscode-dark[data-vscode-theme-name="One Dark Pro Mix"] .hljs-comment,
-.vscode-dark[data-vscode-theme-name="One Dark Pro Mix"] .hljs-quote, .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"] .hljs-comment,
-.vscode-dark[data-vscode-theme-name="One Dark Pro Flat"] .hljs-quote, .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"] .hljs-comment,
-.vscode-dark[data-vscode-theme-name="One Dark Pro Darker"] .hljs-quote, .vscode-dark[data-vscode-theme-name="One Dark Pro"] .hljs-comment,
-.vscode-dark[data-vscode-theme-name="One Dark Pro"] .hljs-quote {
-  color: #5c6370;
-  font-style: italic;
-}
-.vscode-dark[data-vscode-theme-name="One Dark Pro Mix"] .hljs-doctag,
-.vscode-dark[data-vscode-theme-name="One Dark Pro Mix"] .hljs-keyword,
-.vscode-dark[data-vscode-theme-name="One Dark Pro Mix"] .hljs-formula, .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"] .hljs-doctag,
-.vscode-dark[data-vscode-theme-name="One Dark Pro Flat"] .hljs-keyword,
-.vscode-dark[data-vscode-theme-name="One Dark Pro Flat"] .hljs-formula, .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"] .hljs-doctag,
-.vscode-dark[data-vscode-theme-name="One Dark Pro Darker"] .hljs-keyword,
-.vscode-dark[data-vscode-theme-name="One Dark Pro Darker"] .hljs-formula, .vscode-dark[data-vscode-theme-name="One Dark Pro"] .hljs-doctag,
-.vscode-dark[data-vscode-theme-name="One Dark Pro"] .hljs-keyword,
-.vscode-dark[data-vscode-theme-name="One Dark Pro"] .hljs-formula {
-  color: #c678dd;
-}
-.vscode-dark[data-vscode-theme-name="One Dark Pro Mix"] .hljs-section,
-.vscode-dark[data-vscode-theme-name="One Dark Pro Mix"] .hljs-name,
-.vscode-dark[data-vscode-theme-name="One Dark Pro Mix"] .hljs-selector-tag,
-.vscode-dark[data-vscode-theme-name="One Dark Pro Mix"] .hljs-deletion,
-.vscode-dark[data-vscode-theme-name="One Dark Pro Mix"] .hljs-subst, .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"] .hljs-section,
-.vscode-dark[data-vscode-theme-name="One Dark Pro Flat"] .hljs-name,
-.vscode-dark[data-vscode-theme-name="One Dark Pro Flat"] .hljs-selector-tag,
-.vscode-dark[data-vscode-theme-name="One Dark Pro Flat"] .hljs-deletion,
-.vscode-dark[data-vscode-theme-name="One Dark Pro Flat"] .hljs-subst, .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"] .hljs-section,
-.vscode-dark[data-vscode-theme-name="One Dark Pro Darker"] .hljs-name,
-.vscode-dark[data-vscode-theme-name="One Dark Pro Darker"] .hljs-selector-tag,
-.vscode-dark[data-vscode-theme-name="One Dark Pro Darker"] .hljs-deletion,
-.vscode-dark[data-vscode-theme-name="One Dark Pro Darker"] .hljs-subst, .vscode-dark[data-vscode-theme-name="One Dark Pro"] .hljs-section,
-.vscode-dark[data-vscode-theme-name="One Dark Pro"] .hljs-name,
-.vscode-dark[data-vscode-theme-name="One Dark Pro"] .hljs-selector-tag,
-.vscode-dark[data-vscode-theme-name="One Dark Pro"] .hljs-deletion,
-.vscode-dark[data-vscode-theme-name="One Dark Pro"] .hljs-subst {
-  color: #e06c75;
-}
-.vscode-dark[data-vscode-theme-name="One Dark Pro Mix"] .hljs-literal, .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"] .hljs-literal, .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"] .hljs-literal, .vscode-dark[data-vscode-theme-name="One Dark Pro"] .hljs-literal {
-  color: #56b6c2;
-}
-.vscode-dark[data-vscode-theme-name="One Dark Pro Mix"] .hljs-string,
-.vscode-dark[data-vscode-theme-name="One Dark Pro Mix"] .hljs-regexp,
-.vscode-dark[data-vscode-theme-name="One Dark Pro Mix"] .hljs-addition,
-.vscode-dark[data-vscode-theme-name="One Dark Pro Mix"] .hljs-attribute,
-.vscode-dark[data-vscode-theme-name="One Dark Pro Mix"] .hljs-meta-string, .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"] .hljs-string,
-.vscode-dark[data-vscode-theme-name="One Dark Pro Flat"] .hljs-regexp,
-.vscode-dark[data-vscode-theme-name="One Dark Pro Flat"] .hljs-addition,
-.vscode-dark[data-vscode-theme-name="One Dark Pro Flat"] .hljs-attribute,
-.vscode-dark[data-vscode-theme-name="One Dark Pro Flat"] .hljs-meta-string, .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"] .hljs-string,
-.vscode-dark[data-vscode-theme-name="One Dark Pro Darker"] .hljs-regexp,
-.vscode-dark[data-vscode-theme-name="One Dark Pro Darker"] .hljs-addition,
-.vscode-dark[data-vscode-theme-name="One Dark Pro Darker"] .hljs-attribute,
-.vscode-dark[data-vscode-theme-name="One Dark Pro Darker"] .hljs-meta-string, .vscode-dark[data-vscode-theme-name="One Dark Pro"] .hljs-string,
-.vscode-dark[data-vscode-theme-name="One Dark Pro"] .hljs-regexp,
-.vscode-dark[data-vscode-theme-name="One Dark Pro"] .hljs-addition,
-.vscode-dark[data-vscode-theme-name="One Dark Pro"] .hljs-attribute,
-.vscode-dark[data-vscode-theme-name="One Dark Pro"] .hljs-meta-string {
-  color: #98c379;
-}
-.vscode-dark[data-vscode-theme-name="One Dark Pro Mix"] .hljs-built_in,
-.vscode-dark[data-vscode-theme-name="One Dark Pro Mix"] .hljs-class .hljs-title, .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"] .hljs-built_in,
-.vscode-dark[data-vscode-theme-name="One Dark Pro Flat"] .hljs-class .hljs-title, .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"] .hljs-built_in,
-.vscode-dark[data-vscode-theme-name="One Dark Pro Darker"] .hljs-class .hljs-title, .vscode-dark[data-vscode-theme-name="One Dark Pro"] .hljs-built_in,
-.vscode-dark[data-vscode-theme-name="One Dark Pro"] .hljs-class .hljs-title {
-  color: #e6c07b;
-}
-.vscode-dark[data-vscode-theme-name="One Dark Pro Mix"] .hljs-attr,
-.vscode-dark[data-vscode-theme-name="One Dark Pro Mix"] .hljs-variable,
-.vscode-dark[data-vscode-theme-name="One Dark Pro Mix"] .hljs-template-variable,
-.vscode-dark[data-vscode-theme-name="One Dark Pro Mix"] .hljs-type,
-.vscode-dark[data-vscode-theme-name="One Dark Pro Mix"] .hljs-selector-class,
-.vscode-dark[data-vscode-theme-name="One Dark Pro Mix"] .hljs-selector-attr,
-.vscode-dark[data-vscode-theme-name="One Dark Pro Mix"] .hljs-selector-pseudo,
-.vscode-dark[data-vscode-theme-name="One Dark Pro Mix"] .hljs-number, .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"] .hljs-attr,
-.vscode-dark[data-vscode-theme-name="One Dark Pro Flat"] .hljs-variable,
-.vscode-dark[data-vscode-theme-name="One Dark Pro Flat"] .hljs-template-variable,
-.vscode-dark[data-vscode-theme-name="One Dark Pro Flat"] .hljs-type,
-.vscode-dark[data-vscode-theme-name="One Dark Pro Flat"] .hljs-selector-class,
-.vscode-dark[data-vscode-theme-name="One Dark Pro Flat"] .hljs-selector-attr,
-.vscode-dark[data-vscode-theme-name="One Dark Pro Flat"] .hljs-selector-pseudo,
-.vscode-dark[data-vscode-theme-name="One Dark Pro Flat"] .hljs-number, .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"] .hljs-attr,
-.vscode-dark[data-vscode-theme-name="One Dark Pro Darker"] .hljs-variable,
-.vscode-dark[data-vscode-theme-name="One Dark Pro Darker"] .hljs-template-variable,
-.vscode-dark[data-vscode-theme-name="One Dark Pro Darker"] .hljs-type,
-.vscode-dark[data-vscode-theme-name="One Dark Pro Darker"] .hljs-selector-class,
-.vscode-dark[data-vscode-theme-name="One Dark Pro Darker"] .hljs-selector-attr,
-.vscode-dark[data-vscode-theme-name="One Dark Pro Darker"] .hljs-selector-pseudo,
-.vscode-dark[data-vscode-theme-name="One Dark Pro Darker"] .hljs-number, .vscode-dark[data-vscode-theme-name="One Dark Pro"] .hljs-attr,
-.vscode-dark[data-vscode-theme-name="One Dark Pro"] .hljs-variable,
-.vscode-dark[data-vscode-theme-name="One Dark Pro"] .hljs-template-variable,
-.vscode-dark[data-vscode-theme-name="One Dark Pro"] .hljs-type,
-.vscode-dark[data-vscode-theme-name="One Dark Pro"] .hljs-selector-class,
-.vscode-dark[data-vscode-theme-name="One Dark Pro"] .hljs-selector-attr,
-.vscode-dark[data-vscode-theme-name="One Dark Pro"] .hljs-selector-pseudo,
-.vscode-dark[data-vscode-theme-name="One Dark Pro"] .hljs-number {
-  color: #d19a66;
-}
-.vscode-dark[data-vscode-theme-name="One Dark Pro Mix"] .hljs-symbol,
-.vscode-dark[data-vscode-theme-name="One Dark Pro Mix"] .hljs-bullet,
-.vscode-dark[data-vscode-theme-name="One Dark Pro Mix"] .hljs-link,
-.vscode-dark[data-vscode-theme-name="One Dark Pro Mix"] .hljs-meta,
-.vscode-dark[data-vscode-theme-name="One Dark Pro Mix"] .hljs-selector-id,
-.vscode-dark[data-vscode-theme-name="One Dark Pro Mix"] .hljs-title, .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"] .hljs-symbol,
-.vscode-dark[data-vscode-theme-name="One Dark Pro Flat"] .hljs-bullet,
-.vscode-dark[data-vscode-theme-name="One Dark Pro Flat"] .hljs-link,
-.vscode-dark[data-vscode-theme-name="One Dark Pro Flat"] .hljs-meta,
-.vscode-dark[data-vscode-theme-name="One Dark Pro Flat"] .hljs-selector-id,
-.vscode-dark[data-vscode-theme-name="One Dark Pro Flat"] .hljs-title, .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"] .hljs-symbol,
-.vscode-dark[data-vscode-theme-name="One Dark Pro Darker"] .hljs-bullet,
-.vscode-dark[data-vscode-theme-name="One Dark Pro Darker"] .hljs-link,
-.vscode-dark[data-vscode-theme-name="One Dark Pro Darker"] .hljs-meta,
-.vscode-dark[data-vscode-theme-name="One Dark Pro Darker"] .hljs-selector-id,
-.vscode-dark[data-vscode-theme-name="One Dark Pro Darker"] .hljs-title, .vscode-dark[data-vscode-theme-name="One Dark Pro"] .hljs-symbol,
-.vscode-dark[data-vscode-theme-name="One Dark Pro"] .hljs-bullet,
-.vscode-dark[data-vscode-theme-name="One Dark Pro"] .hljs-link,
-.vscode-dark[data-vscode-theme-name="One Dark Pro"] .hljs-meta,
-.vscode-dark[data-vscode-theme-name="One Dark Pro"] .hljs-selector-id,
-.vscode-dark[data-vscode-theme-name="One Dark Pro"] .hljs-title {
-  color: #61aeee;
-}
-.vscode-dark[data-vscode-theme-name="One Dark Pro Mix"] .hljs-emphasis, .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"] .hljs-emphasis, .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"] .hljs-emphasis, .vscode-dark[data-vscode-theme-name="One Dark Pro"] .hljs-emphasis {
-  font-style: italic;
-}
-.vscode-dark[data-vscode-theme-name="One Dark Pro Mix"] .hljs-strong, .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"] .hljs-strong, .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"] .hljs-strong, .vscode-dark[data-vscode-theme-name="One Dark Pro"] .hljs-strong {
-  font-weight: bold;
-}
-.vscode-dark[data-vscode-theme-name="One Dark Pro Mix"] .hljs-link, .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"] .hljs-link, .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"] .hljs-link, .vscode-dark[data-vscode-theme-name="One Dark Pro"] .hljs-link {
-  text-decoration: underline;
+  margin: 18px 0 24px;
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow-sm);
 }
 
-</style>
+/* ====================== TABLES ====================== */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 0;
+  background: var(--bg-card);
+  font-size: 0.94rem;
+}
+table th {
+  background: linear-gradient(180deg, var(--teal-dark) 0%, #026670 100%);
+  color: #ffffff;
+  text-align: left;
+  padding: 12px 14px;
+  font-weight: 700;
+  font-size: 0.88rem;
+  letter-spacing: 0.02em;
+  border: none;
+  white-space: nowrap;
+}
+table td {
+  padding: 11px 14px;
+  border-bottom: 1px solid var(--border);
+  border-top: none;
+  color: var(--text-primary);
+  vertical-align: top;
+}
+table tbody tr:nth-child(even) td { background: var(--bg-soft); }
+table tbody tr:hover td { background: var(--teal-soft); }
+table tbody tr:last-child td { border-bottom: none; }
+
+/* ====================== CHECKLIST ====================== */
+.checklist { list-style: none; padding: 0; margin: 12px 0; }
+.checklist li {
+  padding: 6px 0 6px 28px;
+  position: relative;
+  border-bottom: 1px dashed var(--border);
+}
+.checklist li:last-child { border-bottom: none; }
+.checklist li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  top: 6px;
+  width: 20px;
+  height: 20px;
+  background: var(--teal);
+  color: #ffffff;
+  border-radius: 50%;
+  text-align: center;
+  font-size: 0.78rem;
+  font-weight: 700;
+  line-height: 20px;
+}
+
+/* ====================== SOURCES ====================== */
+.sources {
+  background: var(--bg-muted);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 18px 24px;
+  margin: 18px 0;
+}
+.sources h2,
+.sources h3 { margin-top: 0; }
+.sources ul { padding-left: 18px; margin: 8px 0; }
+.sources li { margin: 6px 0; font-size: 0.92rem; color: var(--text-secondary); }
+
+.src-pill {
+  display: inline-block;
+  background: var(--bg-card);
+  border: 1px solid var(--border-strong);
+  color: var(--text-secondary);
+  padding: 2px 10px;
+  border-radius: 999px;
+  font-size: 0.78rem;
+  font-family: 'JetBrains Mono', monospace;
+  margin: 0 2px;
+  white-space: nowrap;
+}
+
+/* ====================== TAGS ====================== */
+.tag {
+  display: inline-block;
+  background: var(--teal-soft);
+  color: var(--teal-dark);
+  padding: 2px 10px;
+  border-radius: 999px;
+  font-size: 0.78rem;
+  font-weight: 600;
+  margin: 0 4px 4px 0;
+  border: 1px solid rgba(2, 195, 154, 0.3);
+}
+.tag.amber { background: var(--amber-soft); color: var(--amber); border-color: rgba(217, 119, 6, 0.3); }
+.tag.red { background: var(--red-soft); color: var(--red); border-color: rgba(220, 38, 38, 0.3); }
+.tag.blue { background: var(--blue-soft); color: var(--blue); border-color: rgba(37, 99, 235, 0.3); }
+
+/* ====================== BLOCKQUOTE ====================== */
+blockquote {
+  background: var(--bg-soft);
+  border-left: 5px solid var(--teal);
+  border-radius: var(--radius-sm);
+  padding: 16px 22px;
+  margin: 18px 0;
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+}
+blockquote p { margin: 4px 0; color: var(--text-secondary); }
+blockquote strong { color: var(--text-primary); }
+
+/* ====================== CODE ====================== */
+code {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.86em;
+  background: var(--bg-muted);
+  padding: 2px 7px;
+  border-radius: 4px;
+  color: var(--teal-dark);
+  border: 1px solid var(--border);
+}
+pre {
+  background: var(--bg-base);
+  color: #e2e8f0;
+  padding: 18px 22px;
+  border-radius: var(--radius-sm);
+  overflow-x: auto;
+  font-size: 0.88rem;
+  line-height: 1.55;
+}
+pre code { background: transparent; border: none; color: inherit; padding: 0; }
+
+/* ====================== HR ====================== */
+hr {
+  border: none;
+  height: 2px;
+  background: linear-gradient(90deg, transparent 0%, var(--border) 50%, transparent 100%);
+  margin: 32px 0;
+}
+
+/* ====================== FOOTER ====================== */
+.page-footer {
+  background: var(--bg-base);
+  color: rgba(255, 255, 255, 0.7);
+  padding: 28px 48px;
+  text-align: center;
+  font-size: 0.88rem;
+}
+.page-footer em { color: rgba(255, 255, 255, 0.55); }
+
+/* ====================== MOBILE ====================== */
+@media (max-width: 768px) {
+  body { padding: 16px 8px 32px; }
+  .cover { padding: 36px 24px 28px; }
+  .cover h1 { font-size: 1.6rem; }
+  .cover .cover-sub { font-size: 0.95rem; }
+  .page-body { padding: 24px 20px 40px; }
+  .section, .company { padding: 18px 16px; }
+  .facts { grid-template-columns: 1fr; }
+  h2 { font-size: 1.25rem; }
+  h3 { font-size: 1.05rem; }
+  table { font-size: 0.85rem; }
+  table th, table td { padding: 8px 10px; }
+  .page-footer { padding: 20px 24px; }
+}
+@media (max-width: 480px) {
+  .cover h1 { font-size: 1.4rem; }
+  .cover-meta .pill { font-size: 0.74rem; padding: 4px 10px; }
+  .pick-banner { font-size: 0.66rem; padding: 3px 8px; }
+  .status-badge { font-size: 0.7rem; padding: 2px 8px; }
+}
+
+/* ====================== PRINT ====================== */
+@media print {
+  body { background: #ffffff; padding: 0; }
+  .page { box-shadow: none; border-radius: 0; max-width: 100%; }
+  .cover { background: #021F3A !important; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  .company, .section { break-inside: avoid; box-shadow: none; }
+  table th { background: var(--teal-dark) !important; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+}
+
+        </style>
+
             <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex/dist/katex.min.css">
 <link href="https://cdn.jsdelivr.net/npm/katex-copytex@latest/dist/katex-copytex.min.css" rel="stylesheet" type="text/css">
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Microsoft/vscode/extensions/markdown-language-features/media/markdown.css">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Microsoft/vscode/extensions/markdown-language-features/media/highlight.css">
-<style>
-            body {
-                font-family: -apple-system, BlinkMacSystemFont, 'Segoe WPC', 'Segoe UI', system-ui, 'Ubuntu', 'Droid Sans', sans-serif;
-                font-size: 14px;
-                line-height: 1.6;
-            }
-        </style>
-        <style>
-.task-list-item {
-    list-style-type: none;
-}
 
-.task-list-item-checkbox {
-    margin-left: -20px;
-    vertical-align: middle;
-    pointer-events: none;
-}
-</style>
-<style>
-:root {
-  --color-note: #0969da;
-  --color-tip: #1a7f37;
-  --color-warning: #9a6700;
-  --color-severe: #bc4c00;
-  --color-caution: #d1242f;
-  --color-important: #8250df;
-}
-
-</style>
-<style>
-@media (prefers-color-scheme: dark) {
-  :root {
-    --color-note: #2f81f7;
-    --color-tip: #3fb950;
-    --color-warning: #d29922;
-    --color-severe: #db6d28;
-    --color-caution: #f85149;
-    --color-important: #a371f7;
-  }
-}
-
-</style>
-<style>
-.markdown-alert {
-  padding: 0.5rem 1rem;
-  margin-bottom: 16px;
-  color: inherit;
-  border-left: .25em solid #888;
-}
-
-.markdown-alert>:first-child {
-  margin-top: 0
-}
-
-.markdown-alert>:last-child {
-  margin-bottom: 0
-}
-
-.markdown-alert .markdown-alert-title {
-  display: flex;
-  font-weight: 500;
-  align-items: center;
-  line-height: 1
-}
-
-.markdown-alert .markdown-alert-title .octicon {
-  margin-right: 0.5rem;
-  display: inline-block;
-  overflow: visible !important;
-  vertical-align: text-bottom;
-  fill: currentColor;
-}
-
-.markdown-alert.markdown-alert-note {
-  border-left-color: var(--color-note);
-}
-
-.markdown-alert.markdown-alert-note .markdown-alert-title {
-  color: var(--color-note);
-}
-
-.markdown-alert.markdown-alert-important {
-  border-left-color: var(--color-important);
-}
-
-.markdown-alert.markdown-alert-important .markdown-alert-title {
-  color: var(--color-important);
-}
-
-.markdown-alert.markdown-alert-warning {
-  border-left-color: var(--color-warning);
-}
-
-.markdown-alert.markdown-alert-warning .markdown-alert-title {
-  color: var(--color-warning);
-}
-
-.markdown-alert.markdown-alert-tip {
-  border-left-color: var(--color-tip);
-}
-
-.markdown-alert.markdown-alert-tip .markdown-alert-title {
-  color: var(--color-tip);
-}
-
-.markdown-alert.markdown-alert-caution {
-  border-left-color: var(--color-caution);
-}
-
-.markdown-alert.markdown-alert-caution .markdown-alert-title {
-  color: var(--color-caution);
-}
-
-</style>
-        
         </head>
-        <body class="vscode-body vscode-light">
-            <h1 id="-oem-partner-shortlist--bangladesh-ev-charging-rollout">🏭 OEM Partner Shortlist — Bangladesh EV Charging Rollout</h1>
+        <body>
+<div class="page">
+            <div class="cover">
+<h1 id="-oem-partner-shortlist--bangladesh-ev-charging-rollout">🏭 OEM Partner Shortlist — Bangladesh EV Charging Rollout</h1>
 <h3 id="3-product-categories--5-candidates-each--ranked-by-bangladesh-fit">3 Product Categories · 5 Candidates Each · Ranked by Bangladesh Fit</h3>
-<blockquote>
+<div class="callout">
 <p><strong>Asset for:</strong> Procurement / Supply-Chain · Bangladesh CPO Phase 1 (Jul 2026 → Dec 2027)
 <strong>Standards context:</strong> Type 2 (AC) + CCS2 (DC) only. OCPP 1.6J minimum, OCPP 2.0.1 preferred. Duty: 0% (FY 2026-27).
 <strong>Evidence base:</strong> <code>Office-Ready/01_EV_Hardware_Supplier_Directory.md</code> + <code>Chinese_EV_Charger_Manufacturer_Directory.md</code> + <code>04_EV_Charger_Vendor_Comparison_Board_Brief.md</code>
 <strong>Confidence note:</strong> Pricing, lead time, Bangladesh-presence claims sourced from vendor websites / trade press as of June 2026. Where unverified, flagged as <strong>&quot;vendor-claimed&quot;</strong> or <strong>&quot;no evidence found.&quot;</strong></p>
-</blockquote>
+</div>
+</div>
+<div class="page-body">
 <hr>
 <h2 id="-recommendation-at-a-glance">📊 Recommendation at a Glance</h2>
-<table>
+<div class="comp-wrap"><table>
 <thead>
 <tr>
 <th style="text-align:left">Category</th>
@@ -859,14 +518,14 @@ hue-6-2: #e6c07b
 <td style="text-align:left">Autel / TGOOD ⚠️ / 🔴</td>
 </tr>
 </tbody>
-</table>
-<blockquote>
+</table></div>
+<div class="callout">
 <p><strong>Consolidation play:</strong> Joint Tech + Pheilix + Iocharger cover all three categories from three factories (Xiamen + Shanghai + Xiamen) — one shipping route through Shanghai/Xiamen port, three purchase orders, three warranty pools. Recommended for Q3 2026 launch.</p>
-</blockquote>
-<blockquote>
+</div>
+<div class="callout">
 <p><strong>🔍 Verification summary (full report:</strong> <code>OEM_Partners_Verification_Report.md</code>)
 Verified 27 July 2026 against live vendor sites: <strong>7 of 11 OEMs CONFIRMED</strong> (Joint Tech, Iocharger, Pheilix, ZECONEX, Electrly, StarCharge HQ, BESEN domain), <strong>2 PARTIAL</strong> (EVB site opaque to scraper), <strong>1 DEFUNCT</strong> (EV-TOP — domain is parked at WPX hosting, no website installed), <strong>1 NO DIRECT EVIDENCE</strong> (TGOOD connection refused; Autel page aborted). <strong>All prices flagged as vendor-claimed</strong> — none of these vendors publishes FOB pricing on their public website. <strong>Recommendation:</strong> swap EV-TOP for Pheilix in Cat 2; verify BESEN in a real browser before locking the RFQ.</p>
-</blockquote>
+</div>
 <hr>
 <h2 id="1️⃣-7-kw-wall-mount-home-charging-kit">1️⃣ 7 kW Wall-Mount Home Charging Kit</h2>
 <p><strong>Specs we need:</strong> AC single-phase, ~7 kW (32A), Type 2 socket or tethered cable, OCPP 1.6J (ideally 2.0.1), IP65/66 for monsoon, smart-app + RFID, OEM white-label, <strong>low FOB $150–450</strong>.</p>
@@ -878,9 +537,10 @@ Verified 27 July 2026 against live vendor sites: <strong>7 of 11 OEMs CONFIRMED<
 <li>CE + UKCA useful for diaspora Bangladesh buyers as reference</li>
 <li>MOQ ≤ 50 units to qualify for Phase 1 pilot pricing</li>
 </ul>
-<blockquote>
+<div class="callout">
 <p><strong>Confidence key:</strong> ✅ CONFIRMED on primary site · ⚠️ PARTIALLY confirmed · 🔴 UNCONFIRMED — needs browser-verification before RFQ</p>
-</blockquote>
+</div>
+<div class="company top-pick">
 <h3 id="oem-1--joint-tech-xiamen-joint-technology--top-pick-">OEM 1 — Joint Tech (Xiamen Joint Technology) ⭐ TOP PICK ✅</h3>
 <ul>
 <li><strong>HQ:</strong> Xiamen, Fujian, China · 🌐 <a href="http://jointcharging.com">jointcharging.com</a> · ✅ Address <code>Building 2, No.9 Yangtai Road, Xinyang Street, Haicang District, Xiamen 361028</code> confirmed on current site (27 Jul 2026).</li>
@@ -893,6 +553,8 @@ Verified 27 July 2026 against live vendor sites: <strong>7 of 11 OEMs CONFIRMED<
 <li><strong>Cons:</strong> Brand recognition limited outside Southeast Asia / EU; sample-test turnaround can run 3–4 weeks during peak season.</li>
 <li><strong>Status:</strong> <strong>ADD — engage this week.</strong></li>
 </ul>
+
+</div><div class="company">
 <h3 id="oem-2--evb--beny-new-energy--2-️">OEM 2 — EVB / Beny New Energy ⭐ #2 ⚠️</h3>
 <ul>
 <li><strong>HQ:</strong> Zhejiang, China · 🌐 <a href="http://evb.com">evb.com</a> / <a href="http://beny.com">beny.com</a> · ⚠️ HQ address not visible on current <code>evb.com</code> landing page; comes from Office-Ready 01 background dossier (not independently re-verified 27 Jul 2026).</li>
@@ -905,6 +567,7 @@ Verified 27 July 2026 against live vendor sites: <strong>7 of 11 OEMs CONFIRMED<
 <li><strong>Cons:</strong> OCPP 2.0.1 stack only on newer SKUs — must specify firmware version at RFQ; QC variability reported at Tier 2 lines.</li>
 <li><strong>Status:</strong> <strong>ADD — pilot with 2 SKUs</strong> (request brochure PDF from vendor before sample order).</li>
 </ul>
+</div>
 <h3 id="oem-3--autel-energy--3-premium-upgrade-path-️">OEM 3 — Autel Energy ⭐ #3 (premium upgrade path) ⚠️</h3>
 <ul>
 <li><strong>HQ:</strong> Shenzhen, China + IMEA office Dubai · 🌐 <a href="http://autelenergy.com">autelenergy.com</a> · ✉ <a href="mailto:commercialEVsupport@autel.com">commercialEVsupport@autel.com</a> · ⚠️ <code>autelenergy.com/global</code> returned <code>ERR_ABORTED</code> during verification; HQ and IMEA office come from Office-Ready 01 — <strong>not re-verified live on 27 Jul 2026</strong>.</li>
@@ -958,9 +621,10 @@ Verified 27 July 2026 against live vendor sites: <strong>7 of 11 OEMs CONFIRMED<
 <li>RCD must be <strong>Type A (AC + pulsating DC sensitive)</strong> — many Bangladeshi garages lack proper grounding</li>
 <li>Warranty + RMA handling must work cross-border</li>
 </ul>
-<blockquote>
+<div class="callout">
 <p><strong>Confidence key:</strong> ✅ CONFIRMED on primary site · ⚠️ PARTIALLY confirmed · 🔴 UNCONFIRMED — needs browser-verification before RFQ</p>
-</blockquote>
+</div>
+<div class="company top-pick">
 <h3 id="oem-1--besen-group--top-pick-">OEM 1 — BESEN Group ⭐ TOP PICK 🔴</h3>
 <ul>
 <li><strong>HQ:</strong> Nanjing, Jiangsu, China · 🌐 <a href="http://besen-group.com">besen-group.com</a> · ✉ <a href="mailto:info@besen-group.com">info@besen-group.com</a> · 🔴 <strong>Verification flag (27 Jul 2026):</strong> domain is live but every page returned empty during automated fetch — likely a JS-rendered SPA + bot challenge. <strong>Manual browser check required before locking the RFQ.</strong> Open <code>besen-group.com</code> in real Chrome; if the cert page loads cleanly, keep the TOP PICK. If not, demote to backup and elevate <strong>Pheilix</strong> to TOP PICK.</li>
@@ -973,6 +637,8 @@ Verified 27 July 2026 against live vendor sites: <strong>7 of 11 OEMs CONFIRMED<
 <li><strong>Cons:</strong> CE/RoHS ceiling → high-end retailers will demand TÜV upgrade; basic firmware only; site not currently scraper-friendly — paperwork exchange may need to be email-driven.</li>
 <li><strong>Status:</strong> <strong>ADD — but only after browser-verifying the cert page renders cleanly.</strong></li>
 </ul>
+
+</div><div class="company">
 <h3 id="oem-2--pheilix-technology-shanghai--2--promoted-27-jul-2026--replaces-ev-top-">OEM 2 — Pheilix Technology (Shanghai) ⭐ #2 ✅ <em>(promoted 27 Jul 2026 — replaces EV-TOP)</em></h3>
 <ul>
 <li><strong>HQ:</strong> Shanghai, China · 🌐 <a href="http://pheilix.com">pheilix.com</a> · ✉ <a href="mailto:jack@pheilix.com">jack@pheilix.com</a> / <a href="mailto:magen@pheilix.com">magen@pheilix.com</a> / <a href="mailto:jackson@pheilix.com">jackson@pheilix.com</a> · ✅ Address <code>No. 328, Luji Road, Pudong District, Shanghai</code> + master <code>R614, No. 212, Baiye Road, Pudong District, Shanghai</code> confirmed 27 Jul 2026. Phones <code>+86-21-61722311</code>, <code>+86-135-8899-9744</code>, <code>+86-157-5777-4078</code>.</li>
@@ -985,10 +651,14 @@ Verified 27 July 2026 against live vendor sites: <strong>7 of 11 OEMs CONFIRMED<
 <li><strong>Cons:</strong> Slow-updating footer (© 2023); OCPP 1.6J only — no 2.0.1 yet on the public page; cross-confirm Bangladesh-export experience before treating as primary.</li>
 <li><strong>Status:</strong> <strong>ADD — strong #2 pick; promote to TOP PICK if BESEN browser-verification fails.</strong></li>
 </ul>
+</div>
+<div class="company removed">
 <h3 id="-oem-2-former--ev-top--removed-from-shortlist">~~OEM 2 (former) — EV-TOP~~ 🔴🔴 REMOVED from shortlist</h3>
 <ul>
 <li><strong>Why withdrawn (27 Jul 2026 verification pass):</strong> <code>ev-top.com</code> returns the WPX hosting "no website installed" error page. Domain is registered and hosting subscription active, but no live OEM site exists. <strong>Recommendation:</strong> remove from the primary shortlist. If the buyer still wants EV-TOP, treat them as a B2B-only / Alibaba storefront seller and qualify via Made-in-China / Alibaba contract terms rather than vendor-direct.</li>
 </ul>
+
+</div><div class="company">
 <h3 id="oem-3--zeconex--3-compliance-specialist-">OEM 3 — ZECONEX ⭐ #3 (compliance specialist) ⚠️</h3>
 <ul>
 <li><strong>HQ:</strong> Shenzhen, Guangdong, China · 🌐 <a href="http://zeconex.com">zeconex.com</a> · ✉ <a href="mailto:sales@zeconex.com">sales@zeconex.com</a> · ⚠️ Address <code>Floor 2-3, Block A, Hongtian Lixin Industrial Park, Longtian Community, Longgang District, Shenzhen</code> confirmed 27 Jul 2026; CE / UL / TUV claim on FAQ page <strong>not yet line-verified</strong> — request scan at RFQ.</li>
@@ -1001,6 +671,7 @@ Verified 27 July 2026 against live vendor sites: <strong>7 of 11 OEMs CONFIRMED<
 <li><strong>Cons:</strong> Not a portable-cable specialist — diversifying from core AC/DC competence; quality reviews thin.</li>
 <li><strong>Status:</strong> <strong>WATCH — secondary channel partner.</strong></li>
 </ul>
+</div>
 <h3 id="oem-4--joint-tech-cross-sell-">OEM 4 — Joint Tech (cross-sell) ✅</h3>
 <ul>
 <li>Already in the Category 1 shortlist; they produce a 5 m portable Mode 2 cable as a complementary SKU. Buying cables + wallbox from the same vendor simplifies the warranty service operation (one RMA channel, one freight route).</li>
@@ -1026,6 +697,7 @@ Verified 27 July 2026 against live vendor sites: <strong>7 of 11 OEMs CONFIRMED<
 <li>Local-service partner: warranty RMA needs shipping lane (Shenzhen ↔ Chittagong ~14–21 days); avoid vendors with 8-week RMA loops</li>
 <li>DLB-critical: must allow 3–4 chargers on a single 100–200 kW sanctioned grid connection</li>
 </ul>
+<div class="company top-pick">
 <h3 id="oem-1--iocharger-xiamen-luobin-technology--top-pick">OEM 1 — Iocharger (Xiamen Luobin Technology) ⭐ TOP PICK</h3>
 <ul>
 <li><strong>HQ:</strong> Xiamen, Fujian, China · 🌐 <a href="http://iocharger.com">iocharger.com</a> · ✉ <a href="mailto:sales@iocharger.com">sales@iocharger.com</a> · ✅ <strong>Fully confirmed 27 Jul 2026:</strong> <strong>Eichrecht approval 29 Nov 2025</strong> (world-class legal metering), <strong>world-first OCPP 2.0.1 Full Profiles</strong> certified by OCA, <strong>world-first ISO 15118</strong>, VDE, TÜV SÜD, TÜV Rheinland, UKCA, CE, ETL, SGS, FCC, Energy Star, Hubject EVSE-CHECK, OCPI.</li>
@@ -1038,7 +710,8 @@ Verified 27 July 2026 against live vendor sites: <strong>7 of 11 OEMs CONFIRMED<
 <li><strong>Cons:</strong> 120 kW SKU is recent — first serial-production units only 2026; Iocharger 120 kW track record is thin.</li>
 <li><strong>Status:</strong> <strong>ADD — single non-negotiable for Phase 1 DC stack.</strong></li>
 </ul>
-<h3 id="oem-2--evb--beny-new-energy--2-">OEM 2 — EVB / Beny New Energy ⭐ #2 ⚠️</h3>
+
+</div><h3 id="oem-2--evb--beny-new-energy--2-">OEM 2 — EVB / Beny New Energy ⭐ #2 ⚠️</h3>
 <ul>
 <li><strong>HQ:</strong> Zhejiang, China · 🌐 <a href="http://evb.com">evb.com</a> / <a href="http://beny.com">beny.com</a> · ✉ Pending · ⚠️ HQ address not visible on current <code>evb.com</code> landing page (Office-Ready 01 dossier only); product detail pages JS-heavy, returned blog-header-only on the 27 Jul 2026 verification sweep. <strong>Request full vendor deck at RFQ before locking.</strong></li>
 <li><strong>Why it fits:</strong> Sits between Iocharger and Autel on price. DC 60–600 kW range — covers the entire Bangladesh deployment profile (60 kW mall, 120 kW highway, 240 kW truck) from a single supplier. Same vendor relationship as Category 1 — freight + warranty consolidation.</li>
@@ -1050,6 +723,7 @@ Verified 27 July 2026 against live vendor sites: <strong>7 of 11 OEMs CONFIRMED<
 <li><strong>Cons:</strong> OCPP 2.0.1 only on newest SKUs — must verify at RFQ; QC variabilities reported.</li>
 <li><strong>Status:</strong> <strong>ADD — second-source DC.</strong></li>
 </ul>
+<div class="company">
 <h3 id="oem-3--starcharge-wanbang-digital-energy--3-volume--oem-pedigree-">OEM 3 — StarCharge (Wanbang Digital Energy) ⭐ #3 (volume &amp; OEM pedigree) ⚠️</h3>
 <ul>
 <li><strong>HQ:</strong> Changzhou, Jiangsu, China · 🌐 <a href="http://starcharge.com">starcharge.com</a> · ✉ <a href="mailto:starcharge@wbstar.com">starcharge@wbstar.com</a> · ⚠️ <strong>Domain live but only banner images on fetched pages</strong> (home + about + product) on 27 Jul 2026; product detail content scraper-unfriendly. HQ + 70+ country presence claim <strong>not independently re-verified live</strong>; CharIN-membership status also not confirmed in this round — <strong>cross-verify via charin directory before RFQ.</strong></li>
@@ -1062,6 +736,8 @@ Verified 27 July 2026 against live vendor sites: <strong>7 of 11 OEMs CONFIRMED<
 <li><strong>Cons:</strong> Pricing is project-quoted, not list — slower RFQ loop; SEA expansion team not yet BD-mapped; this round didn't surface product-detail content from the live site.</li>
 <li><strong>Status:</strong> <strong>WATCH — verify CharIN membership + BD coverage via phone before locking the RFQ.</strong></li>
 </ul>
+</div>
+<div class="company">
 <h3 id="oem-4--autel-energy-premium-city-hub-upgrade-">OEM 4 — Autel Energy (premium-city-hub upgrade) ⚠️</h3>
 <ul>
 <li>Already in the Category 1 shortlist. MaxiCharger DC Compact 47–50 kW and DC Fast 60–120 kW give a tier-1 build-quality play for flagship city-hub or premium hotel sites. Same Dubai IMEA office access as AC side. ⚠️ <code>autelenergy.com/global</code> returned <code>ERR_ABORTED</code> on 27 Jul 2026 — HQ and IMEA office claim comes from Office-Ready 01 only; <strong>not re-verified live</strong>.</li>
@@ -1073,6 +749,8 @@ Verified 27 July 2026 against live vendor sites: <strong>7 of 11 OEMs CONFIRMED<
 <li><strong>Cons:</strong> 1.5–2× Iocharger's price; not the value pick unless brand / RMA justify the premium.</li>
 <li><strong>Status:</strong> <strong>WATCH — premium-segment SKUs only.</strong></li>
 </ul>
+</div>
+<div class="company">
 <h3 id="oem-5--tgood--teld-infrastructure-grade-backup-">OEM 5 — TGOOD / TELD (infrastructure-grade backup) 🔴</h3>
 <ul>
 <li><strong>HQ:</strong> Hong Kong + Qingdao, China · 🌐 <a href="http://tgood.com">tgood.com</a> / <a href="http://tgood.com.cn">tgood.com.cn</a> · ✉ <a href="mailto:info@tgood.com">info@tgood.com</a> · 🔴 <code>tgood.com.cn/en</code> returned <code>ERR_CONNECTION_REFUSED</code> during 27 Jul 2026 verification; <strong>no direct live evidence captured</strong> this round — premise comes from Office-Ready 01.</li>
@@ -1084,6 +762,7 @@ Verified 27 July 2026 against live vendor sites: <strong>7 of 11 OEMs CONFIRMED<
 <li><strong>Cons:</strong> Premium pricing; less elegant software stack; primarily project-quoted; site was unreachable from this vantage point 27 Jul 2026.</li>
 <li><strong>Status:</strong> <strong>BACKSTOP ONLY — Phase 3 / government-tender backup; treat as lowest-priority DC candidate until a live fetch comes back clean.</strong></li>
 </ul>
+</div>
 <h3 id="-top-3-picks-for-category-3">🏆 Top 3 Picks for Category 3</h3>
 <ol>
 <li><strong>Iocharger</strong> ✅ — DLB + OCPP 2.0.1 + Eichrecht proxy (full cert stack confirmed).</li>
@@ -1196,13 +875,15 @@ Verified 27 July 2026 against live vendor sites: <strong>7 of 11 OEMs CONFIRMED<
 <li>Bangladesh market context: <code>Office-Ready/05_EV_Charging_Bangladesh_Competitive_Intelligence_Report_v2.html</code> (32 BERC-approved stations, 9 built, 669 BRTA-registered EVs, 0% duty FY 2026-27)</li>
 <li>Manufacturer directory: <code>Chinese_EV_Charger_Manufacturer_Directory.md</code></li>
 </ul>
-<blockquote>
+<div class="callout">
 <p><strong>Confidence grading:</strong> Vendor pricing reflects publicly listed FOB ranges or 2025–2026 trade-press RFQ surveys. Where unverified, this report flags the figure as <strong>&quot;vendor-claimed&quot;</strong> or <strong>&quot;no public pricing.&quot;</strong></p>
-</blockquote>
+</div>
 <hr>
-<p><em>Prepared July 2026 for Bangladesh EV-charging Phase 1 procurement. Next review at first RFQ cycle close.</em></p>
+</div>
+<div class="page-footer"><p><em>Prepared July 2026 for Bangladesh EV-charging Phase 1 procurement. Next review at first RFQ cycle close.</em></p></div>
 
             <script async src="https://cdn.jsdelivr.net/npm/katex-copytex@latest/dist/katex-copytex.min.js"></script>
-            
-        </body>
+
+        </div>
+</body>
         </html>
