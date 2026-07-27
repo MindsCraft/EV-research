@@ -1,0 +1,749 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Xfusion International — Vendor Watch Profile</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+
+  *{box-sizing:border-box;margin:0;padding:0;}
+  body{font-family:'Inter',sans-serif;background:#f8f9fb;color:#1e293b;line-height:1.7;}
+
+  /* === LAYOUT === */
+  .page{max-width:1040px;margin:0 auto;padding:40px 24px 80px;}
+
+  /* === COVER === */
+  .cover{background:linear-gradient(135deg,#021F3A 0%,#032C4F 60%,#013A45 100%);border-radius:16px;padding:56px 60px;margin-bottom:40px;position:relative;overflow:hidden;}
+  .cover::before{content:'';position:absolute;right:-80px;top:-80px;width:400px;height:400px;border-radius:50%;background:radial-gradient(circle,rgba(2,195,154,0.15),transparent 70%);}
+  .cover-badge{display:inline-block;background:rgba(2,195,154,0.15);border:1px solid rgba(2,195,154,0.4);color:#02C39A;font-family:'Inter',sans-serif;font-size:11px;letter-spacing:0.18em;padding:6px 14px;border-radius:20px;margin-bottom:20px;}
+  .cover h1{font-family:'Inter',sans-serif;font-size:38px;color:#fff;line-height:1.1;margin-bottom:12px;}
+  .cover h1 span{color:#02C39A;}
+  .cover .sub{font-size:15.5px;color:rgba(255,255,255,0.65);margin-bottom:28px;max-width:780px;}
+  .cover-meta{display:flex;gap:32px;flex-wrap:wrap;}
+  .cover-meta-item{font-size:12px;font-family:'Inter',sans-serif;}
+  .cover-meta-item .label{color:rgba(255,255,255,0.4);display:block;margin-bottom:2px;letter-spacing:0.06em;}
+  .cover-meta-item .val{color:#fff;font-weight:500;}
+
+  /* === RECOMMENDATION BANNER === */
+  .rec-banner{background:linear-gradient(135deg,#7C5800,#021F3A);border:1px solid rgba(217,119,6,0.45);border-radius:14px;padding:24px 30px;margin-bottom:40px;}
+  .rec-banner .rtag{font-size:11px;color:#FBBF24;letter-spacing:0.15em;text-transform:uppercase;font-weight:700;margin-bottom:10px;}
+  .rec-banner h2{color:#fff;font-size:21px;margin-bottom:10px;}
+  .rec-banner p{color:rgba(255,255,255,0.85);font-size:13.5px;line-height:1.7;}
+  .rec-banner strong{color:#FBBF24;}
+
+  /* === TOC === */
+  .toc{background:#fff;border-radius:12px;padding:24px 30px;margin-bottom:40px;border:1px solid #e2e8f0;}
+  .toc h3{font-size:13px;color:#64748b;font-family:'Inter',sans-serif;letter-spacing:0.12em;text-transform:uppercase;margin-bottom:14px;}
+  .toc ol{padding-left:20px;}
+  .toc li{font-size:13.5px;color:#334155;margin-bottom:5px;}
+  .toc li a{color:#028090;text-decoration:none;font-weight:500;}
+  .toc li a:hover{text-decoration:underline;}
+
+  /* === SECTION === */
+  .section{margin-bottom:52px;}
+  .section-header{display:flex;align-items:center;gap:14px;margin-bottom:22px;padding-bottom:14px;border-bottom:2px solid #e2e8f0;}
+  .section-num{font-family:'Inter',sans-serif;font-size:11px;color:#02C39A;background:#f0fdf4;border:1px solid #bbf7d0;padding:4px 10px;border-radius:6px;flex-shrink:0;font-weight:700;}
+  .section-title{font-family:'Inter',sans-serif;font-size:24px;color:#021F3A;font-weight:800;}
+  p.intro{font-size:14.5px;color:#334155;line-height:1.75;margin-bottom:18px;}
+
+  /* === COMPANY CARD === */
+  .company{background:#fff;border-radius:14px;border:1px solid #e2e8f0;margin-bottom:24px;overflow:hidden;}
+  .company-header{padding:22px 28px;border-bottom:1px solid #f1f5f9;display:flex;align-items:flex-start;justify-content:space-between;gap:20px;}
+  .company-name{font-family:'Inter',sans-serif;font-size:22px;color:#021F3A;margin-bottom:4px;font-weight:800;}
+  .company-type{font-size:12px;color:#64748b;font-family:'Inter',sans-serif;letter-spacing:0.06em;}
+  .company-body{padding:24px 28px;}
+  .company-body p{font-size:14px;color:#334155;margin-bottom:14px;line-height:1.7;}
+
+  /* === WATCH / STATUS BADGES === */
+  .status-badge{display:inline-flex;align-items:center;gap:6px;padding:6px 14px;border-radius:20px;font-size:12px;font-weight:700;white-space:nowrap;flex-shrink:0;}
+  .status-watch{background:#fffbeb;color:#d97706;border:1px solid #fde68a;}
+  .status-add{background:#f0fdf4;color:#16a34a;border:1px solid #bbf7d0;}
+  .status-pass{background:#fef2f2;color:#dc2626;border:1px solid #fecaca;}
+
+  /* === FACT GRID === */
+  .facts{display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:12px;margin:16px 0;}
+  .fact{background:#f8f9fb;border-radius:10px;padding:14px 16px;border:1px solid #e2e8f0;}
+  .fact .flabel{font-size:10px;color:#94a3b8;font-family:'Inter',sans-serif;letter-spacing:0.1em;text-transform:uppercase;margin-bottom:4px;}
+  .fact .fval{font-size:13px;color:#1e293b;font-weight:600;line-height:1.4;}
+  .fact .fval.mint{color:#028090;}
+  .fact .fval.red{color:#dc2626;}
+  .fact .fval.amber{color:#d97706;}
+  .fact .fval.green{color:#16a34a;}
+
+  /* === TABLES === */
+  .comp-wrap{background:#fff;border-radius:14px;border:1px solid #e2e8f0;overflow:hidden;overflow-x:auto;margin:16px 0;}
+  .comp-wrap table{width:100%;border-collapse:collapse;min-width:580px;}
+  .comp-wrap th{background:#021F3A;color:#fff;padding:12px 14px;font-size:11.5px;font-family:'Inter',sans-serif;letter-spacing:0.06em;text-align:left;text-transform:uppercase;}
+  .comp-wrap th.us{background:#028090;}
+  .comp-wrap td{padding:11px 14px;font-size:13px;border-bottom:1px solid #f1f5f9;color:#334155;vertical-align:top;}
+  .comp-wrap td:first-child{font-weight:600;color:#1e293b;}
+  .comp-wrap tr:last-child td{border-bottom:none;}
+  .comp-wrap tr:nth-child(even) td{background:rgba(0,0,0,0.015);}
+  .yes{color:#16a34a;font-weight:700;}
+  .no{color:#dc2626;font-weight:700;}
+  .part{color:#d97706;font-weight:700;}
+
+  /* === SWOT === */
+  .swot{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:14px;}
+  .swot-q{border-radius:10px;padding:16px 18px;}
+  .swot-q.s{background:#f0fdf4;border:1px solid #bbf7d0;}
+  .swot-q.w{background:#fef2f2;border:1px solid #fecaca;}
+  .swot-q.o{background:#eff6ff;border:1px solid #bfdbfe;}
+  .swot-q.t{background:#fffbeb;border:1px solid #fde68a;}
+  .swot-q h5{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:0.1em;margin-bottom:8px;}
+  .swot-q.s h5{color:#16a34a;}
+  .swot-q.w h5{color:#dc2626;}
+  .swot-q.o h5{color:#2563eb;}
+  .swot-q.t h5{color:#d97706;}
+  .swot-q ul{padding-left:16px;}
+  .swot-q li{font-size:12.5px;color:#334155;margin-bottom:4px;line-height:1.55;}
+
+  /* === SOURCES === */
+  .sources{margin-top:16px;padding:16px 18px;background:#f8f9fb;border-radius:10px;border:1px solid #e2e8f0;}
+  .sources h5{font-size:11px;color:#94a3b8;font-family:'Inter',sans-serif;letter-spacing:0.1em;text-transform:uppercase;margin-bottom:10px;}
+  .src-list{display:flex;flex-wrap:wrap;gap:8px;}
+  .src-pill{display:inline-flex;align-items:center;gap:5px;padding:4px 10px;background:#fff;border:1px solid #cbd5e1;border-radius:20px;font-size:11.5px;color:#028090;text-decoration:none;font-weight:500;}
+  .src-pill:hover{background:#f0fdf4;border-color:#02C39A;}
+  .src-pill::before{content:'🔗';}
+
+  /* === CALLOUTS === */
+  .callout{background:#f0fdf4;border-left:4px solid #02C39A;padding:14px 18px;border-radius:0 10px 10px 0;margin:16px 0;}
+  .callout p{font-size:13.5px;color:#1e293b;line-height:1.65;}
+  .callout strong{color:#028090;}
+  .warn-box{background:#fffbeb;border-left:4px solid #d97706;padding:14px 18px;border-radius:0 10px 10px 0;margin:16px 0;}
+  .warn-box p{font-size:13.5px;color:#1e293b;line-height:1.65;}
+  .warn-box strong{color:#d97706;}
+  .info-box{background:#eff6ff;border-left:4px solid #2563eb;padding:14px 18px;border-radius:0 10px 10px 0;margin:16px 0;}
+  .info-box p{font-size:13.5px;color:#1e293b;line-height:1.65;}
+  .info-box strong{color:#2563eb;}
+
+  /* === CHECKLIST === */
+  .checklist{background:#fff;border-radius:12px;border:1px solid #e2e8f0;overflow:hidden;margin:16px 0;}
+  .checklist-item{display:flex;gap:14px;padding:14px 18px;border-bottom:1px solid #f1f5f9;align-items:flex-start;}
+  .checklist-item:last-child{border-bottom:none;}
+  .check-num{flex-shrink:0;width:26px;height:26px;border-radius:50%;background:#021F3A;color:#02C39A;font-size:13px;font-weight:800;display:flex;align-items:center;justify-content:center;}
+  .check-text{font-size:13.5px;color:#334155;line-height:1.6;}
+  .check-text strong{color:#1e293b;}
+
+  /* === SUBSECTION HEADERS === */
+  h2.subsection{font-family:'Inter',sans-serif;font-size:18px;color:#021F3A;margin:28px 0 12px;font-weight:700;}
+  h3.subsubsection{font-family:'Inter',sans-serif;font-size:14px;color:#028090;margin:18px 0 8px;font-weight:700;letter-spacing:0.04em;text-transform:uppercase;}
+
+  /* === TAG PILL === */
+  .tag{display:inline-block;font-size:11px;padding:2px 8px;border-radius:6px;font-weight:600;margin:2px 4px 2px 0;}
+  .tag.new{background:#eff6ff;color:#2563eb;}
+  .tag.active{background:#f0fdf4;color:#16a34a;}
+  .tag.watch{background:#fffbeb;color:#d97706;}
+  .tag.oem{background:#faf5ff;color:#7c3aed;}
+  .tag.accent{background:rgba(2,195,154,0.12);color:#02C39A;border:1px solid rgba(2,195,154,0.4);}
+
+  /* === FOOTER === */
+  .footer{text-align:center;padding:24px 0;border-top:1px solid #e2e8f0;margin-top:32px;}
+  .footer p{font-size:12px;color:#94a3b8;}
+  .footer p.foot-sub{font-size:11px;color:#cbd5e1;margin-top:6px;}
+
+  /* === MOBILE === */
+  @media (max-width: 768px){
+    .page{padding:20px 14px 60px;}
+    .cover{padding:32px 22px;border-radius:12px;}
+    .cover h1{font-size:24px;line-height:1.2;}
+    .cover .sub{font-size:13.5px;}
+    .cover-meta{gap:14px 22px;}
+    .section{margin-bottom:36px;}
+    .section-title{font-size:19px;}
+    .company-header{flex-direction:column;padding:16px 18px;}
+    .company-name{font-size:18px;}
+    .company-body{padding:18px;}
+    .facts{grid-template-columns:repeat(2,1fr);}
+    .swot{grid-template-columns:1fr;}
+    .comp-wrap{overflow-x:auto;-webkit-overflow-scrolling:touch;}
+    .comp-wrap table{min-width:580px;}
+    .rec-banner{padding:18px 22px;}
+    .toc{padding:18px 20px;}
+    [style*="grid-template-columns:1fr 1fr"],
+    [style*="grid-template-columns: 1fr 1fr"]{grid-template-columns:1fr !important;}
+  }
+  @media (max-width: 480px){
+    .cover h1{font-size:20px;}
+    .facts{grid-template-columns:1fr;}
+    .cover-meta{flex-direction:column;gap:10px;}
+  }
+</style>
+</head>
+<body>
+<div class="page">
+
+<!-- COVER -->
+<div class="cover">
+  <div class="cover-badge">VENDOR RESEARCH · CONFIDENTIAL</div>
+  <h1>Xfusion International<br><span>Vendor Watch Profile</span></h1>
+  <p class="sub">An adjacent-line OEM out of Singapore / Zhengzhou / Penang — primarily a server and AI compute vendor that has just (2026) added an Integrated DC Charger family. Should it be on our shortlist? This brief sizes the opportunity and the risk against our existing Phase-1 picks.</p>
+  <div class="cover-meta">
+    <div class="cover-meta-item"><span class="label">RESEARCH DATE</span><span class="val">July 27, 2026</span></div>
+    <div class="cover-meta-item"><span class="label">STATUS</span><span class="val">🟡 Watch</span></div>
+    <div class="cover-meta-item"><span class="label">RECOMMENDATION</span><span class="val">Hold for Phase 2</span></div>
+    <div class="cover-meta-item"><span class="label">PRIMARY SOURCES</span><span class="val">xfusion.com product pages, LinkedIn, trade press</span></div>
+    <div class="cover-meta-item"><span class="label">COMPANION DOCS</span><span class="val">Office-Ready 04, 05</span></div>
+  </div>
+</div>
+
+<!-- RECOMMENDATION BANNER -->
+<div class="rec-banner">
+  <div class="rtag">🟡 Bottom Line — Hold for Phase 2</div>
+  <h2>xFusion does not displace any Phase-1 supplier. It's a credible second-source candidate for highway DC — but only after five verification gates clear.</h2>
+  <p>xFusion has strong industrial DNA — power electronics, IP55 outdoor cabinets, liquid cooling — and a spec-compliant CCS2-friendly DC family (60–400 kW). But the EV-charger line is brand-new (mid-2026), there are <strong>zero reference installs</strong>, no Bangladesh channel partner, and no public pricing. The TÜV / Intertek / EPEAT badges on xfusion.com belong to <strong>server products</strong>, not chargers. Before reclassifying from WATCH to ADD, demand (1) a demo unit, (2) written CE/IEC certificates with numbers, (3) an independent OCPP 2.0.1 attestation, (4) at least one SEA reference install, and (5) a Penang production capacity reservation in writing. If those five come back clean, escalate to a pilot order on a BEZA or highway rest-stop site within two quarters.</p>
+</div>
+
+<!-- TOC -->
+<div class="toc">
+  <h3>Contents</h3>
+  <ol>
+    <li><a href="#s1">Disambiguation — Which Xfusion?</a></li>
+    <li><a href="#s2">Company Snapshot</a></li>
+    <li><a href="#s3">EV Charging Product Line</a></li>
+    <li><a href="#s4">Certifications — What Is Verified</a></li>
+    <li><a href="#s5">Scale &amp; Footprint</a></li>
+    <li><a href="#s6">Pricing</a></li>
+    <li><a href="#s7">Bangladesh / South Asia Presence</a></li>
+    <li><a href="#s8">SWOT — Bangladesh Lens</a></li>
+    <li><a href="#s9">Fit Against the Existing Shortlist</a></li>
+    <li><a href="#s10">Recommendation — 5 Verification Gates</a></li>
+    <li><a href="#s11">Source Provenance</a></li>
+    <li><a href="#s12">Open Questions for the Buyer</a></li>
+  </ol>
+</div>
+
+<!-- SECTION 1: DISAMBIGUATION -->
+<div class="section" id="s1">
+  <div class="section-header">
+    <span class="section-num">01</span>
+    <h2 class="section-title">Disambiguation — Which Xfusion?</h2>
+  </div>
+  <p class="intro">There is more than one company with this name. Confirm any counterparty you speak to is the Singapore entity before signing anything.</p>
+
+  <div class="company">
+    <div class="company-header">
+      <div style="flex:1;">
+        <div class="company-name">XFusion International Pte. Ltd. <span class="tag active">✅ Target entity</span></div>
+        <div class="company-type">SINGAPORE (LEGAL HQ) · ZHENGZHOU (OPERATING HQ) · PENANG (MANUFACTURING)</div>
+      </div>
+      <span class="status-badge status-watch">TARGET</span>
+    </div>
+    <div class="company-body">
+      <div class="facts">
+        <div class="fact"><div class="flabel">Legal Entity</div><div class="fval">XFUSION INTERNATIONAL PTE. LTD.</div></div>
+        <div class="fact"><div class="flabel">Chinese Operating Entity</div><div class="fval">xFusion Digital Technologies Co., Ltd. (超聚变数字技术有限公司)</div></div>
+        <div class="fact"><div class="flabel">Legal HQ Address</div><div class="fval">Mapletree Business City, Singapore — 20E Pasir Panjang Rd #06-24</div></div>
+        <div class="fact"><div class="flabel">Operating HQ</div><div class="fval">Zhengzhou, Henan, China</div></div>
+        <div class="fact"><div class="flabel">Manufacturing</div><div class="fval">Penang, Malaysia — Global Supply Center</div></div>
+        <div class="fact"><div class="flabel">Stock Listing</div><div class="fval red">Not publicly disclosed</div></div>
+        <div class="fact"><div class="flabel">Reported Origin</div><div class="fval amber">2021 carve-out of Huawei's x86-server business (unverified at primary-source level)</div></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="warn-box">
+    <p><strong>⚠️ Name-collision risk.</strong> A separate, unrelated US-based "Xfusion Technologies Inc." exists in a different industry. Distributors, customs brokers, and BD trade press can confuse the entities — especially in English-language media. Confirm any counterparty is the Singapore Pte. Ltd. entity before sharing commercially sensitive information.</p>
+  </div>
+</div>
+
+<!-- SECTION 2: COMPANY SNAPSHOT -->
+<div class="section" id="s2">
+  <div class="section-header">
+    <span class="section-num">02</span>
+    <h2 class="section-title">Company Snapshot</h2>
+  </div>
+  <p class="intro">xFusion's primary business is <strong>servers, AI compute infrastructure (FusionServer, FusionPoD, HCI, HPC), and "smart energy solutions."</strong> EV charging — branded <strong>Integrated DC Charger</strong> — is a 2026 product-line extension under the "Energy Smart Solution" banner, not a pivot from core business.</p>
+
+  <div class="info-box">
+    <p><strong>How to position this in a board meeting:</strong> Treat xFusion as a <strong>credible Tier-2 OEM that recently added a charger SKU</strong>, leveraging its server-cabinet and power-electronics IP. Not a dedicated charger specialist. Their server business has 10,000+ customers, 100+ countries, 2,000+ patents — but none of those numbers are validated against the charger line.</p>
+  </div>
+</div>
+
+<!-- SECTION 3: PRODUCT LINE -->
+<div class="section" id="s3">
+  <div class="section-header">
+    <span class="section-num">03</span>
+    <h2 class="section-title">EV Charging Product Line</h2>
+  </div>
+  <p class="intro">All three product families on xfusion.com are <strong>DC fast chargers.</strong> There is <strong>no AC product</strong> on the English site. All SKUs are marked "NEW" (mid-2026 spec-sheet dates).</p>
+
+  <h2 class="subsection">Product family overview</h2>
+
+  <div class="comp-wrap">
+    <table>
+      <tr>
+        <th>Family</th>
+        <th>Power Range</th>
+        <th>Models</th>
+        <th>Key Differentiator</th>
+      </tr>
+      <tr>
+        <td><span class="tag active">Standard</span></td>
+        <td>60 – 240 kW</td>
+        <td>YT60-12 → YT240-12</td>
+        <td>IP55, fully potted modules, 96% efficiency, dual CCS2 / GB/T</td>
+      </tr>
+      <tr>
+        <td><span class="tag watch">Premium</span></td>
+        <td>160 – 240 kW</td>
+        <td>YT160-11 → YT240-11</td>
+        <td>Liquid-cooled, 600 A output, 24" smart screen, OCPP 2.0</td>
+      </tr>
+      <tr>
+        <td><span class="tag oem">Elite</span></td>
+        <td>60 – 400 kW</td>
+        <td>YT60-13 → YT400-13</td>
+        <td>Modular cabinet, parallel-cabinet scaling, IP55 / IK10</td>
+      </tr>
+    </table>
+  </div>
+
+  <h2 class="subsection">Common specifications across the line</h2>
+
+  <div class="facts">
+    <div class="fact"><div class="flabel">Connectors</div><div class="fval">Dual CCS2 + GB/T, 5 m cable</div></div>
+    <div class="fact"><div class="flabel">Authentication</div><div class="fval">RFID + APP + POS payments</div></div>
+    <div class="fact"><div class="flabel">Networking</div><div class="fval">Ethernet / 4G</div></div>
+    <div class="fact"><div class="flabel">Ingress Protection</div><div class="fval">IP55</div></div>
+    <div class="fact"><div class="flabel">Operating Temp</div><div class="fval">–30°C to +50°C</div></div>
+    <div class="fact"><div class="flabel">Voltage Platform</div><div class="fval">400V / 800V</div></div>
+    <div class="fact"><div class="flabel">Standards Compliance</div><div class="fval">IEC 61851-1/-23/-24, DIN 70121, ISO 15118-2/-20</div></div>
+    <div class="fact"><div class="flabel">OCPP</div><div class="fval">1.6J (Premium adds 2.0)</div></div>
+  </div>
+
+  <div class="callout">
+    <p><strong>Bangladesh connector fit:</strong> CCS2 is the Bangladesh standard, so the dual CCS2 + GB/T configuration is good. Confirm with sales that <strong>CCS2 ships as default</strong> for our SKU, not GB/T-only.</p>
+  </div>
+</div>
+
+<!-- SECTION 4: CERTIFICATIONS -->
+<div class="section" id="s4">
+  <div class="section-header">
+    <span class="section-num">04</span>
+    <h2 class="section-title">Certifications — What Is Actually Verified</h2>
+  </div>
+  <p class="intro">Most claims on xfusion.com are spec-sheet self-declarations, not third-party certificates. Be careful with badges inherited from server products.</p>
+
+  <div class="comp-wrap">
+    <table>
+      <tr>
+        <th>Cert / Standard</th>
+        <th style="text-align:center;">Verified?</th>
+        <th>Source</th>
+        <th>Notes</th>
+      </tr>
+      <tr>
+        <td>CE</td>
+        <td style="text-align:center;"><span class="part">Self-declared</span></td>
+        <td>xfusion.com spec sheets</td>
+        <td>Stated on all three product pages; no cert number public</td>
+      </tr>
+      <tr>
+        <td>IEC 61851-1:2019 / EN 61851-23:2014 / EN 61851-24:2014</td>
+        <td style="text-align:center;"><span class="part">Self-declared</span></td>
+        <td>xfusion.com spec sheets</td>
+        <td>Certificate numbers not public</td>
+      </tr>
+      <tr>
+        <td>ISO 15118-2 / ISO 15118-20</td>
+        <td style="text-align:center;"><span class="part">Self-declared</span></td>
+        <td>xfusion.com spec sheets</td>
+        <td>Plug &amp; Charge readiness claimed; not independently attested</td>
+      </tr>
+      <tr>
+        <td>OCPP 1.6J</td>
+        <td style="text-align:center;"><span class="part">Self-declared</span></td>
+        <td>Standard + Elite spec sheets</td>
+        <td>Basic compliance</td>
+      </tr>
+      <tr>
+        <td>OCPP 2.0 (Premium line)</td>
+        <td style="text-align:center;"><span class="part">Self-declared</span></td>
+        <td>Premium spec sheet</td>
+        <td><strong>Verify OCA / Hubject attestation before relying</strong></td>
+      </tr>
+      <tr>
+        <td>TÜV Rheinland / TÜV SÜD</td>
+        <td style="text-align:center;"><span class="no">⚠ Not for chargers</span></td>
+        <td>xfusion.com /about (corporate)</td>
+        <td>Badge belongs to <strong>server / AI infrastructure</strong>, not chargers</td>
+      </tr>
+      <tr>
+        <td>Intertek / EPEAT</td>
+        <td style="text-align:center;"><span class="no">⚠ Not for chargers</span></td>
+        <td>xfusion.com /about</td>
+        <td>Server product certs</td>
+      </tr>
+      <tr>
+        <td>UL / Energy Star (chargers)</td>
+        <td style="text-align:center;"><span class="no">Not verified</span></td>
+        <td>—</td>
+        <td><strong>Do not claim</strong></td>
+      </tr>
+      <tr>
+        <td>BSTI / BTRC (Bangladesh)</td>
+        <td style="text-align:center;"><span class="no">Not addressed</span></td>
+        <td>—</td>
+        <td>Importer must handle locally</td>
+      </tr>
+      <tr>
+        <td>Eichrecht (Germany metering)</td>
+        <td style="text-align:center;"><span class="no">Not stated</span></td>
+        <td>—</td>
+        <td>Likely not obtained</td>
+      </tr>
+    </table>
+  </div>
+
+  <div class="warn-box">
+    <p><strong>Don't transfer server badges to chargers.</strong> The TÜV / Intertek / EPEAT badges on xfusion.com belong to server products. Do not cite them against the charger line in a board brief — they are not the same certification path.</p>
+  </div>
+</div>
+
+<!-- SECTION 5: SCALE & FOOTPRINT -->
+<div class="section" id="s5">
+  <div class="section-header">
+    <span class="section-num">05</span>
+    <h2 class="section-title">Scale &amp; Footprint</h2>
+  </div>
+  <p class="intro">All portfolio-wide numbers below come from xfusion.com /about and are <strong>vendor-self-reported</strong>. Treat them as background context, not as charger-line validation.</p>
+
+  <div class="facts">
+    <div class="fact"><div class="flabel">Singapore HQ</div><div class="fval mint">Mapletree Business City</div></div>
+    <div class="fact"><div class="flabel">Manufacturing</div><div class="fval mint">Penang, Malaysia Global Supply Center</div></div>
+    <div class="fact"><div class="flabel">R&amp;D Centers</div><div class="fval">8</div></div>
+    <div class="fact"><div class="flabel">Regional Offices</div><div class="fval">7</div></div>
+    <div class="fact"><div class="flabel">GTACs (Global Tech Assistance)</div><div class="fval">6</div></div>
+    <div class="fact"><div class="flabel">Innovation Labs</div><div class="fval">12</div></div>
+    <div class="fact"><div class="flabel">Customers (portfolio-wide)</div><div class="fval mint">10,000+</div></div>
+    <div class="fact"><div class="flabel">Partners</div><div class="fval">30,000+</div></div>
+    <div class="fact"><div class="flabel">Countries Served</div><div class="fval">100+</div></div>
+    <div class="fact"><div class="flabel">Patents (portfolio-wide)</div><div class="fval">2,000+</div></div>
+    <div class="fact"><div class="flabel">Server Capacity (designed)</div><div class="fval">200,000 units/year</div></div>
+    <div class="fact"><div class="flabel">EV Charger Installed Base</div><div class="fval red">No evidence found</div></div>
+    <div class="fact"><div class="flabel">EV Charger Reference Installs</div><div class="fval red">No evidence found</div></div>
+    <div class="fact"><div class="flabel">EV Charger Mfg Capacity</div><div class="fval red">Not separately disclosed</div></div>
+  </div>
+</div>
+
+<!-- SECTION 6: PRICING -->
+<div class="section" id="s6">
+  <div class="section-header">
+    <span class="section-num">06</span>
+    <h2 class="section-title">Pricing</h2>
+  </div>
+
+  <div class="warn-box">
+    <p><strong>No public pricing.</strong> xFusion operates an inquiry-gated form at <code>https://form.xfusion.com/en/get-information/pricing-info</code> that locks all commercial terms behind "Request Consultation or Pricing." EV-charger FOB / EXW numbers are not published. <strong>No public pricing available</strong> at the time of this brief — request formal RFQ pricing with target MOQ before drawing comparisons to Joint Tech or EVB.</p>
+  </div>
+</div>
+
+<!-- SECTION 7: BANGLADESH / SOUTH ASIA PRESENCE -->
+<div class="section" id="s7">
+  <div class="section-header">
+    <span class="section-num">07</span>
+    <h2 class="section-title">Bangladesh / South Asia Presence</h2>
+  </div>
+  <p class="intro">The honest finding: xFusion has <strong>no Bangladesh or broader South-Asia EV-charger footprint</strong> to evaluate. Any supplier evaluation must begin with a direct conversation.</p>
+
+  <div class="comp-wrap">
+    <table>
+      <tr>
+        <th>Geography</th>
+        <th>EV-Charger Status</th>
+        <th>Source</th>
+      </tr>
+      <tr>
+        <td>Bangladesh — distributor</td>
+        <td><span class="no">No evidence found</span></td>
+        <td>—</td>
+      </tr>
+      <tr>
+        <td>Bangladesh — project / tender</td>
+        <td><span class="no">No evidence found</span></td>
+        <td>—</td>
+      </tr>
+      <tr>
+        <td>Bangladesh — media mention</td>
+        <td><span class="no">No evidence found</span></td>
+        <td>—</td>
+      </tr>
+      <tr>
+        <td>India</td>
+        <td><span class="no">No evidence found</span></td>
+        <td>—</td>
+      </tr>
+      <tr>
+        <td>Pakistan</td>
+        <td><span class="no">No evidence found</span></td>
+        <td>—</td>
+      </tr>
+      <tr>
+        <td>Sri Lanka</td>
+        <td><span class="part">Indirect — Partner Summit (Mar 2026) covers AI infrastructure only</span></td>
+        <td>xfusion.com/news</td>
+      </tr>
+      <tr>
+        <td>Nepal</td>
+        <td><span class="no">No evidence found</span></td>
+        <td>—</td>
+      </tr>
+    </table>
+  </div>
+</div>
+
+<!-- SECTION 8: SWOT -->
+<div class="section" id="s8">
+  <div class="section-header">
+    <span class="section-num">08</span>
+    <h2 class="section-title">SWOT — Bangladesh Deployment Lens</h2>
+  </div>
+
+  <div class="swot">
+    <div class="swot-q s">
+      <h5>Strengths</h5>
+      <ul>
+        <li>Strong industrial DNA in <strong>power electronics, liquid cooling, IP55 outdoor cabinets</strong> — directly transferable to EV charging</li>
+        <li><strong>CCS2 + GB/T dual-connector</strong> standard matches Bangladesh's CCS2-leaning policy direction</li>
+        <li><strong>OCPP 1.6J / 2.0</strong> alignment fits any Monta, Iocharger, or generic OCPP back-office stack</li>
+        <li><strong>Penang manufacturing</strong> offers a non-China single-source for buyers hedging geopolitical supply-chain risk</li>
+        <li>Financial scale (10,000+ server customers) implies multi-year staying power for warranty support</li>
+        <li><strong>Cross-sell potential</strong> to Bangladesh data-center operators already specifying xFusion-class server rooms</li>
+      </ul>
+    </div>
+    <div class="swot-q w">
+      <h5>Weaknesses</h5>
+      <ul>
+        <li><strong>EV charging is brand-new (2026)</strong> with no reference installs — buyer assumes all integration and OCPP-interop risk</li>
+        <li><strong>No BSTI / Bangladesh-specific certification</strong> surfaced; CE ≠ local regulatory acceptance</li>
+        <li><strong>No AC product</strong> — leaves a gap that Joint Tech / EVB / Iocharger fill better</li>
+        <li><strong>No published warranty, SLT, or spare-parts pricing</strong> for the charger line</li>
+        <li><strong>No Bangladesh channel partner, no local service footprint</strong> — importer must build full service stack</li>
+        <li>Trade-press coverage of the charger line is essentially zero — only xfusion.com as evidence</li>
+      </ul>
+    </div>
+    <div class="swot-q o">
+      <h5>Opportunities</h5>
+      <ul>
+        <li><strong>60–240 kW Standard</strong> and <strong>60–400 kW Elite</strong> brackets match BEZA / highway-corridor demand profiles for Phase 2</li>
+        <li>Penang manufacturing is geographically and culturally closer than inland-China competitors — <strong>lower lead time + SEA logistics</strong></li>
+        <li>Cross-sell to data-center / cloud operators in Bangladesh (server + DC charger bundle)</li>
+        <li>"Non-China" framing is a politically useful positioning if buyer narrative emphasises diversification</li>
+      </ul>
+    </div>
+    <div class="swot-q t">
+      <h5>Threats</h5>
+      <ul>
+        <li><strong>Name-collision risk</strong> with the unrelated US "Xfusion Technologies Inc." Distributors and BD press can confuse entities</li>
+        <li>Established Bangladeshi importers already stock <strong>StarCharge, Siemens (Ekhon), BYD-aligned, Beny, Joint Tech, Sigenergy, Iocharger</strong> — incumbent churn is hard</li>
+        <li>Geopolitical framing: Singapore-domiciled + Malaysia-made, but origin story (widely reported as 2021 Huawei server spin-off) <strong>may invite scrutiny</strong> under BD's emerging Chinese-vendor regulatory lens</li>
+        <li>Server-business competition (Dell, HPE, Lenovo, Inspur) may pressure pricing and capacity on shared power-electronics components</li>
+        <li>Spec-sheet ↔ deployment gap: xFusion's published standards-compliance is broad but paper-thin — if a BD regulator audits, proveability becomes your problem</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<!-- SECTION 9: FIT AGAINST EXISTING SHORTLIST -->
+<div class="section" id="s9">
+  <div class="section-header">
+    <span class="section-num">09</span>
+    <h2 class="section-title">Fit Against the Existing Shortlist</h2>
+  </div>
+  <p class="intro">xFusion does <strong>not displace</strong> any Phase-1 recommendation in <code>Office-Ready/04_EV_Charger_Vendor_Comparison_Board_Brief.md</code>. It is a potential Phase-2 second-source for highway DC variety, not a Phase-1 supplier.</p>
+
+  <div class="comp-wrap">
+    <table>
+      <tr>
+        <th>Deployment Scenario</th>
+        <th>Existing Pick (Phase 1)</th>
+        <th>xFusion Delta</th>
+      </tr>
+      <tr>
+        <td>Home &amp; apartment AC wallboxes</td>
+        <td>Joint Tech</td>
+        <td><span class="no">No fit — no AC product</span></td>
+      </tr>
+      <tr>
+        <td>Office / mall grid-constrained DC</td>
+        <td>Iocharger (DLB)</td>
+        <td><span class="no">Not competitive — no DLB feature</span></td>
+      </tr>
+      <tr>
+        <td>Highway / BEZA 60–240 kW DC</td>
+        <td>EVB, Iocharger, StarCharge</td>
+        <td><span class="part">Potential Phase-2 second-source</span></td>
+      </tr>
+      <tr>
+        <td>Premium flagship hotels</td>
+        <td>Autel (Bangkok proof)</td>
+        <td><span class="no">Not competitive — no OEM branding programme surface</span></td>
+      </tr>
+      <tr>
+        <td>Luxury V2H residential</td>
+        <td>Sigenergy</td>
+        <td><span class="no">No fit — no V2H product</span></td>
+      </tr>
+      <tr>
+        <td>Worst-grid sites (battery buffered)</td>
+        <td>XCharge GridLink</td>
+        <td><span class="no">Not competitive — no battery buffer</span></td>
+      </tr>
+    </table>
+  </div>
+</div>
+
+<!-- SECTION 10: RECOMMENDATION -->
+<div class="section" id="s10">
+  <div class="section-header">
+    <span class="section-num">10</span>
+    <h2 class="section-title">Recommendation — 5 Verification Gates</h2>
+  </div>
+  <p class="intro">🟡 <strong>WATCH</strong> — escalate to <span class="tag active">✅ ADD</span> only after all five conditions below are met in writing.</p>
+
+  <div class="checklist">
+    <div class="checklist-item">
+      <div class="check-num">1</div>
+      <div class="check-text"><strong>Demo unit received.</strong> Request a 60 kW or 120 kW YT-series unit for bench + on-site testing.</div>
+    </div>
+    <div class="checklist-item">
+      <div class="check-num">2</div>
+      <div class="check-text"><strong>Written certificate set delivered.</strong> CE, IEC 61851-1, IEC 61851-23, IEC 61851-24 — with actual certificate numbers, dates, and issuing body. Not just spec-sheet assertions.</div>
+    </div>
+    <div class="checklist-item">
+      <div class="check-num">3</div>
+      <div class="check-text"><strong>OCPP 2.0.1 compliance attestation</strong> from an independent test house (Hubject, OCA, or CharIN Testival report), not just "supports OCPP 2.0" marketing copy.</div>
+    </div>
+    <div class="checklist-item">
+      <div class="check-num">4</div>
+      <div class="check-text"><strong>At least one Southeast-Asia reference install.</strong> A real customer site with operational data — name, location, uptime, payload. If zero, downgrade to <span class="tag watch">PASS</span>.</div>
+    </div>
+    <div class="checklist-item">
+      <div class="check-num">5</div>
+      <div class="check-text"><strong>Penang production capacity reservation</strong> for 2026 Q4 / 2027 Q1 in writing, with shipment slot date and binding unit commitment.</div>
+    </div>
+  </div>
+
+  <div class="callout">
+    <p><strong>If all five are met cleanly:</strong> escalate to a pilot order on a highway rest-stop or BEZA site within two quarters. Otherwise, leave on WATCH and re-verify in 90 days.</p>
+  </div>
+</div>
+
+<!-- SECTION 11: SOURCE PROVENANCE -->
+<div class="section" id="s11">
+  <div class="section-header">
+    <span class="section-num">11</span>
+    <h2 class="section-title">Source Provenance</h2>
+  </div>
+
+  <h2 class="subsection">Primary — corporate site</h2>
+  <div class="sources">
+    <h5>xfusion.com</h5>
+    <div class="src-list">
+      <a class="src-pill" href="https://www.xfusion.com/en/" target="_blank">Company homepage</a>
+      <a class="src-pill" href="https://www.xfusion.com/en/about" target="_blank">About Us</a>
+      <a class="src-pill" href="https://www.xfusion.com/en/product/integrated-dc-charger" target="_blank">DC Charger family overview</a>
+      <a class="src-pill" href="https://www.xfusion.com/en/product/integrated-dc-60-240kw" target="_blank">Standard 60–240 kW spec</a>
+      <a class="src-pill" href="https://www.xfusion.com/en/product/integrated-dc-60-400kw" target="_blank">Elite 60–400 kW spec</a>
+      <a class="src-pill" href="https://www.xfusion.com/en/product/integrated-dc-160-240kw" target="_blank">Premium 160–240 kW spec</a>
+      <a class="src-pill" href="https://form.xfusion.com/en/get-information/pricing-info" target="_blank">Pricing-gated enquiry form</a>
+      <a class="src-pill" href="https://www.xfusion.com/en/news" target="_blank">News / press releases</a>
+    </div>
+  </div>
+
+  <h2 class="subsection">Standards references (cited inside xFusion spec sheets, not fetched as primary documents)</h2>
+  <div class="sources">
+    <h5>Standards (third-party bodies)</h5>
+    <div class="src-list">
+      <span class="src-pill">IEC 61851-1:2019</span>
+      <span class="src-pill">EN 61851-23:2014</span>
+      <span class="src-pill">EN 61851-24:2014</span>
+      <span class="src-pill">ISO 15118-2</span>
+      <span class="src-pill">ISO 15118-20</span>
+      <span class="src-pill">DIN 70121</span>
+      <span class="src-pill">OCPP 1.6J</span>
+      <span class="src-pill">OCPP 2.0 (Premium only)</span>
+    </div>
+  </div>
+
+  <h2 class="subsection">Trade press</h2>
+  <div class="sources">
+    <h5>Third-party coverage</h5>
+    <div class="src-list">
+      <span class="src-pill">Wikipedia — no "XFusion" page exists</span>
+      <a class="src-pill" href="https://www.linkedin.com/company/xfusion-global" target="_blank">LinkedIn — xFusion Global</a>
+      <span class="src-pill">The Register / Light Reading — searches returned 404s</span>
+      <span class="src-pill">No third-party article on the EV-charger line</span>
+    </div>
+  </div>
+
+  <h2 class="subsection">Bangladesh-specific</h2>
+  <div class="sources">
+    <h5>Local presence</h5>
+    <div class="src-list">
+      <span class="src-pill">None — no distributor / tender / press mention for xFusion EV chargers</span>
+      <a class="src-pill" href="https://www.xfusion.com/en/news" target="_blank">Sri Lanka Partner Summit (Mar 2026) — AI infrastructure only</a>
+    </div>
+  </div>
+
+  <h2 class="subsection">Unverified background</h2>
+  <div class="warn-box">
+    <p>The widely-reported <strong>2021 Huawei x86-server carve-out origin</strong> could not be confirmed against a primary source during this research pass. Mention only as background context, not as a confirmed fact.</p>
+  </div>
+</div>
+
+<!-- SECTION 12: OPEN QUESTIONS -->
+<div class="section" id="s12">
+  <div class="section-header">
+    <span class="section-num">12</span>
+    <h2 class="section-title">Open Questions for the Buyer</h2>
+  </div>
+  <p class="intro">Send these to xFusion sales before requesting a demo unit. Each one corresponds to a specific risk in the SWOT.</p>
+
+  <div class="checklist">
+    <div class="checklist-item">
+      <div class="check-num">1</div>
+      <div class="check-text"><strong>Charger SKU map vs. our connector standard.</strong> Confirm all SKUs ship with <strong>CCS2 default</strong> (Bangladesh standard) and not GB/T-only.</div>
+    </div>
+    <div class="checklist-item">
+      <div class="check-num">2</div>
+      <div class="check-text"><strong>OCPP conformance certificate.</strong> Premium line mentions OCPP 2.0; ask which conformance test house ran it and on what date.</div>
+    </div>
+    <div class="checklist-item">
+      <div class="check-num">3</div>
+      <div class="check-text"><strong>Liquid-cooled cable spec.</strong> Premium uses liquid cooling — ask for coolant type, refill interval, and BD-climate operating data at +35 to +45°C ambient.</div>
+    </div>
+    <div class="checklist-item">
+      <div class="check-num">4</div>
+      <div class="check-text"><strong>Spare-parts lead time.</strong> Are power modules, PCBs, and cable assemblies stocked in Penang for swap-out, or shipped from China on-demand?</div>
+    </div>
+    <div class="checklist-item">
+      <div class="check-num">5</div>
+      <div class="check-text"><strong>Parallel-cabinet scaling (Elite line).</strong> Confirm max power when 2, 3, 4 cabinets are paralleled, and the cable/fiber interconnect between cabinets.</div>
+    </div>
+    <div class="checklist-item">
+      <div class="check-num">6</div>
+      <div class="check-text"><strong>RCD / Type-B leakage detection.</strong> Confirm 30 mA AC + 6 mA DC residual current detection — critical for grid-constrained, monsoon-prone sites.</div>
+    </div>
+    <div class="checklist-item">
+      <div class="check-num">7</div>
+      <div class="check-text"><strong>Service training.</strong> Does xFusion offer regional training for our installation + O&amp;M technicians, or only remote support?</div>
+    </div>
+    <div class="checklist-item">
+      <div class="check-num">8</div>
+      <div class="check-text"><strong>Malaysia-origin paperwork for BSTI.</strong> Confirm any Bangladesh-specific paperwork they already hold for Penang-manufactured equipment.</div>
+    </div>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<div class="footer">
+  <p>Xfusion International — Vendor Watch Profile · July 27, 2026 · Confidential · For Internal Use Only</p>
+  <p class="foot-sub">All figures sourced from xfusion.com product pages, xfusion.com /about, and standards bodies referenced in xFusion's own spec sheets. Vendor-claimed scale figures are self-reported and not independently audited. No third-party trade-press article on the EV-charger line was found at the time of this brief.</p>
+</div>
+
+</div>
+</body>
+</html>
