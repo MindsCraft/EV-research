@@ -1,0 +1,933 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>OEM Partner Shortlist — Bangladesh EV Charging Rollout 2026</title>
+<meta name="description" content="Board presentation: Recommended OEM partners for Bangladesh EV Charging Rollout Phase 1. 3 product categories, ranked by Bangladesh market fit.">
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+
+  *{box-sizing:border-box;margin:0;padding:0;}
+  body{font-family:'Inter',sans-serif;background:#f0f4f8;color:#1e293b;line-height:1.7;}
+
+  .page{max-width:1060px;margin:0 auto;padding:40px 24px 100px;}
+
+  /* === COVER === */
+  .cover{background:linear-gradient(135deg,#021F3A 0%,#032C4F 55%,#013A45 100%);border-radius:18px;padding:60px 64px;margin-bottom:48px;position:relative;overflow:hidden;}
+  .cover::before{content:'';position:absolute;right:-100px;top:-100px;width:480px;height:480px;border-radius:50%;background:radial-gradient(circle,rgba(2,195,154,0.12),transparent 70%);}
+  .cover::after{content:'';position:absolute;left:-60px;bottom:-60px;width:320px;height:320px;border-radius:50%;background:radial-gradient(circle,rgba(2,144,195,0.08),transparent 70%);}
+  .cover-badge{display:inline-flex;align-items:center;gap:8px;background:rgba(2,195,154,0.12);border:1px solid rgba(2,195,154,0.35);color:#02C39A;font-size:11px;letter-spacing:0.18em;padding:6px 16px;border-radius:20px;margin-bottom:22px;text-transform:uppercase;}
+  .cover h1{font-size:38px;color:#fff;line-height:1.1;margin-bottom:10px;font-weight:800;}
+  .cover h1 span{color:#02C39A;}
+  .cover .sub{font-size:15px;color:rgba(255,255,255,0.55);margin-bottom:36px;}
+  .cover-meta{display:flex;gap:36px;flex-wrap:wrap;border-top:1px solid rgba(255,255,255,0.08);padding-top:28px;}
+  .cover-meta-item .label{color:rgba(255,255,255,0.38);font-size:10px;letter-spacing:0.12em;text-transform:uppercase;display:block;margin-bottom:3px;}
+  .cover-meta-item .val{color:#fff;font-weight:600;font-size:13px;}
+
+  /* === TOC === */
+  .toc-card{background:#fff;border-radius:14px;border:1px solid #e2e8f0;padding:24px 28px;margin-bottom:40px;}
+  .toc-card h3{font-size:12px;color:#64748b;text-transform:uppercase;letter-spacing:0.12em;margin-bottom:14px;font-weight:700;}
+  .toc-grid{display:grid;grid-template-columns:1fr 1fr;gap:8px;}
+  @media(max-width:500px){.toc-grid{grid-template-columns:1fr;}}
+  .toc-link{display:flex;align-items:center;gap:10px;padding:10px 14px;border-radius:10px;background:#f8fafc;text-decoration:none;color:#334155;font-size:13.5px;font-weight:500;transition:background 0.15s;}
+  .toc-link:hover{background:#e0f2fe;color:#0369a1;}
+  .toc-link .toc-icon{font-size:16px;}
+
+  /* === SECTION HEADER === */
+  .section-header{display:flex;align-items:center;gap:14px;margin:48px 0 20px;}
+  .section-header .num{background:linear-gradient(135deg,#02C39A,#028090);color:#fff;width:40px;height:40px;border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:18px;flex-shrink:0;}
+  .section-header h2{font-size:22px;font-weight:700;color:#021F3A;}
+  .section-header .badge{font-size:11px;background:#e0f2fe;color:#0369a1;padding:3px 10px;border-radius:20px;font-weight:600;letter-spacing:0.05em;}
+
+  /* === SPECS BOX === */
+  .specs-box{background:#fff;border-radius:12px;padding:20px 24px;border:1px solid #e2e8f0;margin-bottom:24px;}
+  .specs-box h4{font-size:11px;color:#64748b;text-transform:uppercase;letter-spacing:0.12em;margin-bottom:10px;font-weight:600;}
+  .spec-list{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:14px;}
+  .spec-tag{background:#f1f5f9;color:#334155;font-size:12px;padding:4px 10px;border-radius:20px;font-weight:500;}
+  .spec-tag.highlight{background:#dcfce7;color:#166534;}
+  .spec-tag.warning{background:#fef9c3;color:#854d0e;}
+  .bd-criteria ul{list-style:none;padding:0;display:flex;flex-wrap:wrap;gap:6px;}
+  .bd-criteria li{font-size:12px;color:#475569;background:#f8fafc;border:1px solid #e2e8f0;padding:4px 12px;border-radius:20px;}
+
+  /* === GLANCE TABLE === */
+  .rec-table-wrap{background:#fff;border-radius:14px;border:1px solid #e2e8f0;overflow:hidden;margin-bottom:32px;}
+  .rec-table-wrap h3{padding:18px 22px 14px;font-size:14px;color:#64748b;text-transform:uppercase;letter-spacing:0.12em;border-bottom:1px solid #f1f5f9;font-weight:700;}
+  table.rec-table{width:100%;border-collapse:collapse;}
+  table.rec-table th{background:#f8fafc;font-size:12px;color:#64748b;text-transform:uppercase;letter-spacing:0.08em;padding:12px 18px;text-align:left;font-weight:600;border-bottom:1px solid #e2e8f0;}
+  table.rec-table td{padding:13px 18px;font-size:13.5px;border-bottom:1px solid #f1f5f9;vertical-align:middle;}
+  table.rec-table tr:last-child td{border-bottom:none;}
+  table.rec-table tr:hover td{background:#f8fafc;}
+  .cat-label{font-weight:700;color:#0f172a;}
+  .pick-cell .confirmed{color:#059669;font-weight:600;}
+  .pick-cell .partial{color:#d97706;font-weight:600;}
+  .pick-cell .watch{color:#64748b;font-weight:500;}
+
+  /* === OEM CARDS === */
+  .oem-card{background:#fff;border-radius:14px;border:1px solid #e2e8f0;margin-bottom:20px;overflow:hidden;transition:box-shadow 0.2s;}
+  .oem-card:hover{box-shadow:0 8px 30px rgba(2,128,144,0.1);}
+  .oem-card.top-pick{border-left:4px solid #02C39A;}
+  .oem-card.second{border-left:4px solid #6366f1;}
+  .oem-card.third{border-left:4px solid #f59e0b;}
+  .oem-card.watch{border-left:4px solid #94a3b8;}
+
+  .oem-card-header{padding:18px 22px 14px;display:flex;align-items:flex-start;gap:14px;border-bottom:1px solid #f1f5f9;}
+  .oem-rank{width:34px;height:34px;border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:700;flex-shrink:0;margin-top:2px;}
+  .rank-1{background:linear-gradient(135deg,#02C39A,#028090);color:#fff;}
+  .rank-2{background:linear-gradient(135deg,#6366f1,#4338ca);color:#fff;}
+  .rank-3{background:linear-gradient(135deg,#f59e0b,#d97706);color:#fff;}
+  .rank-w{background:#94a3b8;color:#fff;}
+  .oem-card-title{flex:1;}
+  .oem-card-title h3{font-size:16px;font-weight:700;color:#0f172a;margin-bottom:4px;}
+  .oem-card-title .hq{font-size:12px;color:#64748b;}
+  .oem-card-title .hq a{color:#028090;text-decoration:none;}
+  .oem-card-title .hq a:hover{text-decoration:underline;}
+  .rank-label{flex-shrink:0;font-size:11px;font-weight:700;padding:4px 12px;border-radius:20px;white-space:nowrap;align-self:flex-start;}
+  .label-primary{background:#dcfce7;color:#166534;}
+  .label-secondary{background:#ede9fe;color:#4338ca;}
+  .label-third{background:#fef3c7;color:#92400e;}
+  .label-watch{background:#f1f5f9;color:#64748b;}
+  .label-premium{background:#fff7ed;color:#9a3412;}
+
+  .oem-card-body{padding:18px 22px;}
+  .oem-row{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:14px;}
+  @media(max-width:600px){.oem-row{grid-template-columns:1fr;}}
+  .oem-field label{font-size:10px;color:#94a3b8;text-transform:uppercase;letter-spacing:0.1em;display:block;margin-bottom:4px;font-weight:600;}
+  .oem-field p{font-size:13px;color:#334155;line-height:1.55;}
+
+  .cert-tags{display:flex;flex-wrap:wrap;gap:6px;margin-top:4px;}
+  .cert-tag{font-size:11px;padding:3px 8px;border-radius:6px;font-weight:600;}
+  .cert-confirmed{background:#dcfce7;color:#166534;}
+  .cert-partial{background:#fef9c3;color:#854d0e;}
+
+  .price-band{font-size:14px;font-weight:700;color:#021F3A;}
+  .price-note{font-size:11px;color:#94a3b8;margin-top:2px;}
+
+  .pros-cons{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:14px;}
+  @media(max-width:600px){.pros-cons{grid-template-columns:1fr;}}
+  .pros-cons-box{background:#f8fafc;border-radius:10px;padding:12px 14px;}
+  .pros-cons-box h5{font-size:10px;color:#64748b;text-transform:uppercase;letter-spacing:0.1em;margin-bottom:8px;font-weight:700;}
+  .pros-cons-box ul{list-style:none;padding:0;}
+  .pros-cons-box ul li{font-size:12.5px;color:#475569;margin-bottom:5px;padding-left:18px;position:relative;}
+  .pros-cons-box.pros ul li::before{content:'✓';position:absolute;left:0;color:#02C39A;font-weight:700;}
+  .pros-cons-box.cons ul li::before{content:'✗';position:absolute;left:0;color:#ef4444;font-weight:700;}
+
+  /* === HIGHLIGHT BANNER === */
+  .highlight-banner{background:linear-gradient(135deg,#021F3A,#032C4F);border-radius:12px;padding:16px 20px;margin-bottom:16px;display:flex;gap:12px;align-items:flex-start;}
+  .highlight-banner .icon{font-size:18px;flex-shrink:0;}
+  .highlight-banner p{font-size:13px;color:rgba(255,255,255,0.8);line-height:1.6;}
+  .highlight-banner p strong{color:#02C39A;}
+  .highlight-banner.gold p strong{color:#fbbf24;}
+
+  /* === INSIGHT BOX === */
+  .insight-box{border-radius:12px;padding:16px 20px;margin-bottom:16px;font-size:13.5px;line-height:1.65;display:flex;gap:12px;align-items:flex-start;}
+  .insight-box .icon{flex-shrink:0;font-size:16px;}
+  .insight-box.info{background:rgba(2,144,195,0.06);border:1px solid rgba(2,144,195,0.18);color:#0e5a8a;}
+  .insight-box.success{background:rgba(2,195,154,0.06);border:1px solid rgba(2,195,154,0.2);color:#065f46;}
+
+  /* === PODIUM === */
+  .podium{display:flex;gap:12px;margin:20px 0 32px;flex-wrap:wrap;}
+  .podium-card{flex:1;min-width:180px;background:#fff;border-radius:12px;padding:16px 18px;border:1px solid #e2e8f0;position:relative;overflow:hidden;}
+  .podium-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;}
+  .podium-card.p1::before{background:linear-gradient(90deg,#02C39A,#028090);}
+  .podium-card.p2::before{background:linear-gradient(90deg,#6366f1,#4338ca);}
+  .podium-card.p3::before{background:linear-gradient(90deg,#f59e0b,#d97706);}
+  .podium-card .pos{font-size:11px;color:#94a3b8;font-weight:600;text-transform:uppercase;letter-spacing:0.1em;margin-bottom:6px;}
+  .podium-card .vendor{font-size:15px;font-weight:700;color:#0f172a;}
+  .podium-card .why{font-size:12px;color:#64748b;margin-top:4px;}
+
+  /* === CONSOLIDATION TABLE === */
+  table.consol-table{width:100%;border-collapse:collapse;}
+  table.consol-table th{background:#021F3A;color:rgba(255,255,255,0.7);font-size:11px;text-transform:uppercase;letter-spacing:0.1em;padding:11px 16px;text-align:left;font-weight:600;}
+  table.consol-table th:first-child{color:#02C39A;}
+  table.consol-table td{padding:11px 16px;font-size:13px;border-bottom:1px solid #f1f5f9;vertical-align:middle;}
+  table.consol-table tr:last-child td{border-bottom:none;}
+  table.consol-table tr:hover td{background:#f8fafc;}
+  table.consol-table td:first-child{font-weight:700;color:#0f172a;}
+
+  /* === STRATEGY === */
+  .strategy-list{list-style:none;padding:0;}
+  .strategy-list li{background:#fff;border-radius:12px;border:1px solid #e2e8f0;padding:16px 20px;margin-bottom:12px;display:flex;gap:14px;font-size:13.5px;color:#334155;line-height:1.6;}
+  .strategy-list li .step-num{background:linear-gradient(135deg,#021F3A,#032C4F);color:#02C39A;width:28px;height:28px;border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:700;flex-shrink:0;margin-top:1px;}
+
+  /* === RISKS === */
+  .risk-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:32px;}
+  @media(max-width:620px){.risk-grid{grid-template-columns:1fr;}}
+  .risk-card{background:#fff;border-radius:12px;border:1px solid #fde68a;border-left:4px solid #f59e0b;padding:16px 18px;}
+  .risk-card h4{font-size:13px;font-weight:700;color:#92400e;margin-bottom:6px;}
+  .risk-card p{font-size:12.5px;color:#78350f;line-height:1.55;}
+
+  /* === SOURCES === */
+  .source-list{list-style:none;padding:0;display:flex;flex-wrap:wrap;gap:8px;}
+  .source-list li{background:#f1f5f9;border-radius:8px;padding:5px 12px;font-size:12px;color:#475569;}
+  .source-list li a{color:#028090;text-decoration:none;}
+
+  /* === DIVIDER === */
+  hr.section-div{border:none;border-top:1px solid #e2e8f0;margin:40px 0;}
+
+  /* === FOOTER === */
+  footer{text-align:center;margin-top:60px;font-size:12px;color:#94a3b8;padding-top:24px;border-top:1px solid #e2e8f0;}
+  footer strong{color:#028090;}
+
+  @media print {
+    body{background:#fff;}
+    .page{padding:20px;}
+    .oem-card:hover{box-shadow:none;}
+  }
+</style>
+</head>
+<body>
+<div class="page">
+
+  <!-- COVER -->
+  <div class="cover">
+    <div class="cover-badge">🏭 Board Presentation — Procurement</div>
+    <h1>OEM Partner Shortlist<br><span>Bangladesh EV Charging Rollout</span></h1>
+    <p class="sub">3 Product Categories · Recommended Partners · Ranked by Bangladesh Market Fit</p>
+    <div class="cover-meta">
+      <div class="cover-meta-item"><span class="label">Prepared For</span><span class="val">Board Review</span></div>
+      <div class="cover-meta-item"><span class="label">Phase</span><span class="val">CPO Phase 1 · Jul 2026 → Dec 2027</span></div>
+      <div class="cover-meta-item"><span class="label">Standards</span><span class="val">Type 2 (AC) + CCS2 (DC) · OCPP 1.6J+</span></div>
+      <div class="cover-meta-item"><span class="label">Import Duty</span><span class="val">0% FY 2026-27</span></div>
+      <div class="cover-meta-item"><span class="label">Date</span><span class="val">July 2026</span></div>
+    </div>
+  </div>
+
+  <!-- TOC -->
+  <div class="toc-card">
+    <h3>Contents</h3>
+    <div class="toc-grid">
+      <a href="#glance" class="toc-link"><span class="toc-icon">📊</span> Recommendations at a Glance</a>
+      <a href="#cat1" class="toc-link"><span class="toc-icon">🔌</span> Category 1 — 7 kW Wall-Mount Home Kit</a>
+      <a href="#cat2" class="toc-link"><span class="toc-icon">🔋</span> Category 2 — 3-Pin Universal Cable</a>
+      <a href="#cat3" class="toc-link"><span class="toc-icon">⚡</span> Category 3 — DC Fast Charging Station</a>
+      <a href="#consolidation" class="toc-link"><span class="toc-icon">🔗</span> Cross-Category Consolidation</a>
+      <a href="#strategy" class="toc-link"><span class="toc-icon">🎯</span> Phase Deployment Strategy</a>
+      <a href="#risks" class="toc-link"><span class="toc-icon">⚠️</span> Key Risks</a>
+      <a href="#sources" class="toc-link"><span class="toc-icon">📌</span> Source Provenance</a>
+    </div>
+  </div>
+
+  <!-- GLANCE TABLE -->
+  <div id="glance" class="rec-table-wrap">
+    <h3>📊 Recommended Partners at a Glance</h3>
+    <table class="rec-table">
+      <thead>
+        <tr><th>Category</th><th>Primary Recommendation</th><th>Alternative #2</th><th>Alternative #3</th><th>Contingency</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="cat-label">1. 7 kW Wall-Mount Home Kit</td>
+          <td class="pick-cell"><span class="confirmed">Joint Tech</span></td>
+          <td class="pick-cell"><span class="partial">EVB / Beny</span></td>
+          <td class="pick-cell"><span class="partial">Autel Energy</span></td>
+          <td class="pick-cell"><span class="watch">BESEN Group</span></td>
+        </tr>
+        <tr>
+          <td class="cat-label">2. 3-Pin Universal Cable (Mode 2)</td>
+          <td class="pick-cell"><span class="confirmed">Pheilix</span></td>
+          <td class="pick-cell"><span class="partial">BESEN Group</span></td>
+          <td class="pick-cell"><span class="partial">ZECONEX</span></td>
+          <td class="pick-cell"><span class="watch">Joint Tech (cross-sell)</span></td>
+        </tr>
+        <tr>
+          <td class="cat-label">3. DC Fast Charging Station</td>
+          <td class="pick-cell"><span class="confirmed">Iocharger</span></td>
+          <td class="pick-cell"><span class="partial">EVB / Beny</span></td>
+          <td class="pick-cell"><span class="partial">StarCharge</span></td>
+          <td class="pick-cell"><span class="watch">Autel Energy</span></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="insight-box success">
+    <span class="icon">💡</span>
+    <span><strong>Recommended consolidation:</strong> Joint Tech + Pheilix + Iocharger cover all three categories from three factories (Xiamen + Shanghai + Xiamen) — one shipping route through Shanghai/Xiamen port, three purchase orders, three warranty pools. <strong>Optimal configuration for Q3 2026 launch.</strong></span>
+  </div>
+
+  <hr class="section-div">
+
+  <!-- CAT 1 -->
+  <div class="section-header" id="cat1">
+    <div class="num">1</div>
+    <h2>7 kW Wall-Mount Home Charging Kit</h2>
+    <div class="badge">AC · Single-phase</div>
+  </div>
+
+  <div class="specs-box">
+    <h4>Procurement Specification</h4>
+    <div class="spec-list">
+      <span class="spec-tag highlight">AC Single-phase ~7 kW (32A)</span>
+      <span class="spec-tag">Type 2 socket / tethered cable</span>
+      <span class="spec-tag highlight">OCPP 1.6J minimum (2.0.1 preferred)</span>
+      <span class="spec-tag">IP65/66 rated</span>
+      <span class="spec-tag">Smart-app + RFID</span>
+      <span class="spec-tag">OEM white-label</span>
+      <span class="spec-tag warning">Target FOB: $150–450/unit</span>
+    </div>
+    <div class="bd-criteria"><ul>
+      <li>35–45 °C + 95% humidity tolerance</li>
+      <li>Surge protection ≥ Class II</li>
+      <li>Phase-loss / brown-out tolerant (DESCO/DPDC grid)</li>
+      <li>CE + UKCA certification</li>
+      <li>MOQ ≤ 50 units</li>
+    </ul></div>
+  </div>
+
+  <!-- Joint Tech Cat1 -->
+  <div class="oem-card top-pick">
+    <div class="oem-card-header">
+      <div class="oem-rank rank-1">#1</div>
+      <div class="oem-card-title">
+        <h3>Joint Tech · Xiamen Joint Technology</h3>
+        <div class="hq">Xiamen, Fujian, China · <a href="https://jointcharging.com" target="_blank">jointcharging.com</a></div>
+      </div>
+      <span class="rank-label label-primary">Primary Recommendation</span>
+    </div>
+    <div class="oem-card-body">
+      <div class="oem-row">
+        <div class="oem-field">
+          <label>Strategic Rationale</label>
+          <p>Most competitive price point on the Phase 1 shortlist. Bangladesh features in their 70-country export portal. Active distributor programme reduces time-to-market.</p>
+        </div>
+        <div class="oem-field">
+          <label>Product Specification</label>
+          <p>7.4 kW single-phase · Type 2 · OCPP 1.6J &amp; 2.0.1 · App + RFID + Dynamic Load Balancing · OEM/white-label available</p>
+        </div>
+      </div>
+      <div class="oem-row">
+        <div class="oem-field">
+          <label>Indicative FOB Price Range</label>
+          <p class="price-band">$150 – $450 per unit</p>
+          <p class="price-note">$150 basic · $250–380 OCPP smart · $350–450 (22 kW) · Subject to formal quotation</p>
+        </div>
+        <div class="oem-field">
+          <label>Certifications</label>
+          <div class="cert-tags">
+            <span class="cert-tag cert-confirmed">CE</span><span class="cert-tag cert-confirmed">CB</span><span class="cert-tag cert-confirmed">UKCA</span><span class="cert-tag cert-confirmed">FCC</span><span class="cert-tag cert-confirmed">ETL</span><span class="cert-tag cert-confirmed">UL</span><span class="cert-tag cert-confirmed">RoHS</span><span class="cert-tag cert-confirmed">TR25</span><span class="cert-tag cert-confirmed">OCPP 1.6J</span><span class="cert-tag cert-confirmed">OCPP 2.0.1</span><span class="cert-tag cert-confirmed">Energy Star</span><span class="cert-tag cert-confirmed">ISO 15118</span><span class="cert-tag cert-confirmed">ISO 9001</span><span class="cert-tag cert-confirmed">ISO 14001</span><span class="cert-tag cert-confirmed">SEDEX</span><span class="cert-tag cert-confirmed">EcoVadis</span>
+          </div>
+        </div>
+      </div>
+      <div class="pros-cons">
+        <div class="pros-cons-box pros"><h5>Strengths</h5><ul>
+          <li>Most cost-effective compliant wallbox</li>
+          <li>Open &amp; customisable firmware</li>
+          <li>Full OCPP 2.0.1 stack</li>
+          <li>Clean OTA firmware upgrade path</li>
+        </ul></div>
+        <div class="pros-cons-box cons"><h5>Considerations</h5><ul>
+          <li>Limited brand recognition outside Southeast Asia / EU</li>
+          <li>Sample-test lead time 3–4 weeks during peak season</li>
+        </ul></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- EVB Cat1 -->
+  <div class="oem-card second">
+    <div class="oem-card-header">
+      <div class="oem-rank rank-2">#2</div>
+      <div class="oem-card-title">
+        <h3>EVB / Beny New Energy</h3>
+        <div class="hq">Zhejiang, China · <a href="https://evb.com" target="_blank">evb.com</a> / beny.com</div>
+      </div>
+      <span class="rank-label label-secondary">Alternative #2</span>
+    </div>
+    <div class="oem-card-body">
+      <div class="oem-row">
+        <div class="oem-field">
+          <label>Strategic Rationale</label>
+          <p>Single vendor relationship covers both Category 1 (AC wallbox) and Category 3 (DC station), reducing procurement complexity. Dynamic Load Balancing built-in — directly addresses Bangladesh apartment grid constraints.</p>
+        </div>
+        <div class="oem-field">
+          <label>Product Specification</label>
+          <p>3.7–22 kW Type 2 · Dynamic Load Balancing · OCPP 1.6J (2.0.1 on newer SKUs) · IP65/66 · Operating range −25 °C to +55 °C</p>
+        </div>
+      </div>
+      <div class="oem-row">
+        <div class="oem-field">
+          <label>Indicative FOB Price Range</label>
+          <p class="price-band">$200 – $500 per unit</p>
+          <p class="price-note">AC wallbox · Subject to formal quotation</p>
+        </div>
+        <div class="oem-field">
+          <label>Certifications (Claimed)</label>
+          <div class="cert-tags">
+            <span class="cert-tag cert-partial">CE</span><span class="cert-tag cert-partial">TÜV</span><span class="cert-tag cert-partial">UL</span><span class="cert-tag cert-partial">SAA</span><span class="cert-tag cert-partial">CB</span><span class="cert-tag cert-partial">UKCA</span><span class="cert-tag cert-partial">RoHS</span><span class="cert-tag cert-partial">OCPP 1.6J</span>
+          </div>
+        </div>
+      </div>
+      <div class="pros-cons">
+        <div class="pros-cons-box pros"><h5>Strengths</h5><ul>
+          <li>Consolidates AC &amp; DC under one vendor relationship</li>
+          <li>Highly rated value-for-money among Chinese AC charger brands</li>
+          <li>Proven IP66 weatherproofing for monsoon conditions</li>
+        </ul></div>
+        <div class="pros-cons-box cons"><h5>Considerations</h5><ul>
+          <li>OCPP 2.0.1 available only on newer SKUs — specify at order</li>
+          <li>Quality variance reported across production lines</li>
+        </ul></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Autel Cat1 -->
+  <div class="oem-card third">
+    <div class="oem-card-header">
+      <div class="oem-rank rank-3">#3</div>
+      <div class="oem-card-title">
+        <h3>Autel Energy</h3>
+        <div class="hq">Shenzhen, China + IMEA Office Dubai · <a href="https://autelenergy.com" target="_blank">autelenergy.com</a></div>
+      </div>
+      <span class="rank-label label-premium">Premium Segment</span>
+    </div>
+    <div class="oem-card-body">
+      <div class="oem-row">
+        <div class="oem-field">
+          <label>Strategic Rationale</label>
+          <p>Best-in-class hardware build quality with full custom OEM branding. Recommended as the premium-tier option for luxury residential estates and 5-star hotels where brand value justifies a price premium.</p>
+        </div>
+        <div class="oem-field">
+          <label>Product Specification</label>
+          <p>MaxiCharger AC 7–22 kW · Dual-RFID · ISO 15118 Plug &amp; Charge · OCPP 1.6J + 2.0.1</p>
+        </div>
+      </div>
+      <div class="oem-row">
+        <div class="oem-field">
+          <label>Indicative FOB Price Range</label>
+          <p class="price-band">$280 – $650 per unit</p>
+          <p class="price-note">AC wallbox · Subject to formal quotation</p>
+        </div>
+        <div class="oem-field">
+          <label>Certifications (Claimed)</label>
+          <div class="cert-tags">
+            <span class="cert-tag cert-partial">CE</span><span class="cert-tag cert-partial">UL</span><span class="cert-tag cert-partial">FCC</span><span class="cert-tag cert-partial">TÜV</span><span class="cert-tag cert-partial">RoHS</span><span class="cert-tag cert-partial">OCPP 2.0.1</span>
+          </div>
+        </div>
+      </div>
+      <div class="pros-cons">
+        <div class="pros-cons-box pros"><h5>Strengths</h5><ul>
+          <li>Lowest reported warranty return rate on this shortlist</li>
+          <li>Full white-label and custom branding programme</li>
+          <li>IMEA Dubai office provides South Asia regional support</li>
+        </ul></div>
+        <div class="pros-cons-box cons"><h5>Considerations</h5><ul>
+          <li>1.7–2× the unit cost of Joint Tech</li>
+          <li>Viable only where brand and reliability command a margin premium</li>
+        </ul></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- BESEN Cat1 -->
+  <div class="oem-card watch">
+    <div class="oem-card-header">
+      <div class="oem-rank rank-w">B</div>
+      <div class="oem-card-title">
+        <h3>BESEN Group</h3>
+        <div class="hq">Nanjing, Jiangsu, China · <a href="https://besen-group.com" target="_blank">besen-group.com</a></div>
+      </div>
+      <span class="rank-label label-watch">Volume / Contingency</span>
+    </div>
+    <div class="oem-card-body">
+      <div class="oem-row">
+        <div class="oem-field">
+          <label>Strategic Rationale</label>
+          <p>Lowest MOQ and unit cost — suitable for high-volume bundling strategies (e.g., bundled with BYD dealership sales). CE-only certification positions this at the value tier only.</p>
+        </div>
+        <div class="oem-field">
+          <label>Indicative FOB Price Range</label>
+          <p class="price-band">Below $150/unit</p>
+          <p class="price-note">At 500+ unit order quantity · Subject to formal quotation</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Electrly Cat1 -->
+  <div class="oem-card watch">
+    <div class="oem-card-header">
+      <div class="oem-rank rank-w">5</div>
+      <div class="oem-card-title">
+        <h3>Electrly</h3>
+        <div class="hq">Shenzhen, China · <a href="https://electrly.com" target="_blank">electrly.com</a></div>
+      </div>
+      <span class="rank-label label-watch">Standby</span>
+    </div>
+    <div class="oem-card-body">
+      <div class="oem-row">
+        <div class="oem-field">
+          <label>Strategic Rationale</label>
+          <p>OEM/white-label specialist — suitable as a secondary source if primary vendor capacity is constrained. Same freight lane as Joint Tech (Shenzhen port).</p>
+        </div>
+        <div class="oem-field">
+          <label>Indicative FOB Price Range</label>
+          <p class="price-band">$180 – $280 per unit</p>
+          <p class="price-note">7 kW AC · Subject to formal quotation</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="podium">
+    <div class="podium-card p1"><div class="pos">🥇 Primary</div><div class="vendor">Joint Tech</div><div class="why">Best value · Full OCPP 2.0.1 · BD export portal</div></div>
+    <div class="podium-card p2"><div class="pos">🥈 Alternative</div><div class="vendor">EVB / Beny</div><div class="why">Single-vendor consolidation with Cat 3 · DLB included</div></div>
+    <div class="podium-card p3"><div class="pos">🥉 Premium</div><div class="vendor">Autel Energy</div><div class="why">Hotel &amp; luxury residential segment</div></div>
+  </div>
+
+  <hr class="section-div">
+
+  <!-- CAT 2 -->
+  <div class="section-header" id="cat2">
+    <div class="num">2</div>
+    <h2>3-Pin Universal Charging Cable (Mode 2 EVSE)</h2>
+    <div class="badge">Portable · Mode 2</div>
+  </div>
+
+  <div class="specs-box">
+    <h4>Procurement Specification</h4>
+    <div class="spec-list">
+      <span class="spec-tag highlight">Portable Mode 2 EVSE</span>
+      <span class="spec-tag">5–6 m cable length</span>
+      <span class="spec-tag">UK 3-pin BS 1363 plug</span>
+      <span class="spec-tag">Type 2 vehicle inlet</span>
+      <span class="spec-tag highlight">6 / 8 / 10 / 13 / 16A current selector</span>
+      <span class="spec-tag">Type A RCD + 30 mA trip</span>
+      <span class="spec-tag highlight">IP67 control box</span>
+      <span class="spec-tag warning">CE / UKCA / TÜV certified</span>
+      <span class="spec-tag">OEM/white-label</span>
+    </div>
+    <div class="bd-criteria"><ul>
+      <li>BS 1363 — universal Bangladesh mains plug</li>
+      <li>Type 2 inlet — compatible with BYD Atto 3 / Dolphin / Sealion 06</li>
+      <li>IP67 — monsoon moisture &amp; outdoor parking</li>
+      <li>Type A RCD — grounding protection for Bangladesh residential</li>
+      <li>Cross-border warranty &amp; returns support</li>
+    </ul></div>
+  </div>
+
+  <!-- Pheilix Cat2 -->
+  <div class="oem-card top-pick">
+    <div class="oem-card-header">
+      <div class="oem-rank rank-1">#1</div>
+      <div class="oem-card-title">
+        <h3>Pheilix Technology</h3>
+        <div class="hq">Shanghai, China · <a href="https://pheilix.com" target="_blank">pheilix.com</a></div>
+      </div>
+      <span class="rank-label label-primary">Primary Recommendation</span>
+    </div>
+    <div class="oem-card-body">
+      <div class="oem-row">
+        <div class="oem-field">
+          <label>Strategic Rationale</label>
+          <p>Mature export OEM operating across 28 markets worldwide (EN, ZH, FR, DE, PT, ES, RU, JA, KO, AR and 18 further locales) — strong evidence of cross-channel export experience to Europe, Latin America and Asia. OCPP 1.6J platform confirmed.</p>
+        </div>
+        <div class="oem-field">
+          <label>Product Specification</label>
+          <p>Mode 2 portable cable · BS 1363 plug variants · OCPP 1.6J platform · Residential &amp; commercial AC charger range · Solar-ESS-EV integrated portfolio</p>
+        </div>
+      </div>
+      <div class="oem-row">
+        <div class="oem-field">
+          <label>Indicative FOB Price Range</label>
+          <p class="price-band">$40 – $80 per unit</p>
+          <p class="price-note">Mode 2 cable estimate · Subject to formal quotation</p>
+        </div>
+        <div class="oem-field">
+          <label>Certifications</label>
+          <div class="cert-tags">
+            <span class="cert-tag cert-confirmed">OCPP 1.6J</span><span class="cert-tag cert-partial">CE</span><span class="cert-tag cert-partial">UKCA</span><span class="cert-tag cert-partial">TÜV</span>
+          </div>
+        </div>
+      </div>
+      <div class="pros-cons">
+        <div class="pros-cons-box pros"><h5>Strengths</h5><ul>
+          <li>Proven export capability across 28 markets</li>
+          <li>Live, content-rich website with active product catalogue</li>
+          <li>Can serve as Category 1 secondary source if required</li>
+          <li>OCPP 1.6J platform — above CE-only tier</li>
+        </ul></div>
+        <div class="pros-cons-box cons"><h5>Considerations</h5><ul>
+          <li>OCPP 1.6J only — 2.0.1 not yet listed on public pages</li>
+          <li>Bangladesh-specific export confirmation required at order stage</li>
+        </ul></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- BESEN Cat2 -->
+  <div class="oem-card second">
+    <div class="oem-card-header">
+      <div class="oem-rank rank-2">#2</div>
+      <div class="oem-card-title">
+        <h3>BESEN Group</h3>
+        <div class="hq">Nanjing, Jiangsu, China · <a href="https://besen-group.com" target="_blank">besen-group.com</a></div>
+      </div>
+      <span class="rank-label label-secondary">Category Specialist</span>
+    </div>
+    <div class="oem-card-body">
+      <div class="oem-row">
+        <div class="oem-field">
+          <label>Strategic Rationale</label>
+          <p>Category specialist for portable Mode 2 EVSE. UK 3-pin plug with Type 2 inlet is an in-stock SKU — not a custom build. Lowest minimum order quantity (50–100 units) of any suitable factory.</p>
+        </div>
+        <div class="oem-field">
+          <label>Product Specification</label>
+          <p>Mode 2 · 6/8/10/13/16A current selector · Type 2 vehicle plug · IP67 control box · Type A RCD · 5–6 m cable · LCD display (premium SKU)</p>
+        </div>
+      </div>
+      <div class="oem-row">
+        <div class="oem-field">
+          <label>Indicative FOB Price Range</label>
+          <p class="price-band">$35 – $75 per unit</p>
+          <p class="price-note">At 500-unit order quantity · Subject to formal quotation</p>
+        </div>
+        <div class="oem-field">
+          <label>Certifications (Claimed)</label>
+          <div class="cert-tags">
+            <span class="cert-tag cert-partial">CE</span><span class="cert-tag cert-partial">RoHS</span><span class="cert-tag cert-partial">TÜV (premium SKU only)</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ZECONEX Cat2 -->
+  <div class="oem-card third">
+    <div class="oem-card-header">
+      <div class="oem-rank rank-3">#3</div>
+      <div class="oem-card-title">
+        <h3>ZECONEX</h3>
+        <div class="hq">Shenzhen, Guangdong, China · <a href="https://zeconex.com" target="_blank">zeconex.com</a></div>
+      </div>
+      <span class="rank-label label-third">Compliance Specialist</span>
+    </div>
+    <div class="oem-card-body">
+      <div class="oem-row">
+        <div class="oem-field">
+          <label>Strategic Rationale</label>
+          <p>Differentiator is export-compliance documentation — their team prepares customs and CE paperwork accurately. Valuable for a Bangladesh importer new to EV charging SKUs during the first import cycle. Active export to South &amp; Southeast Asia.</p>
+        </div>
+        <div class="oem-field">
+          <label>Indicative FOB Price Range</label>
+          <p class="price-band">$40 – $80 per unit</p>
+          <p class="price-note">Mode 2 cable · Subject to formal quotation</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Joint Tech cross-sell Cat2 -->
+  <div class="oem-card watch">
+    <div class="oem-card-header">
+      <div class="oem-rank rank-w">X</div>
+      <div class="oem-card-title">
+        <h3>Joint Tech — Cross-sell Option</h3>
+        <div class="hq">Already recommended in Category 1 · Complementary 5 m Mode 2 portable cable SKU available</div>
+      </div>
+      <span class="rank-label label-watch">Bundling Option</span>
+    </div>
+    <div class="oem-card-body">
+      <p style="font-size:13px;color:#475569;">Full certification stack: CE, CB, UKCA, FCC, ETL, UL, RoHS, TR25, OCPP 1.6J &amp; 2.0.1, Energy Star, ISO 15118. 5 m · UK/EU 3-pin plug · Type 2 inlet · Current selector · Type A RCD. Indicative FOB $55–90/unit. Purchasing Category 2 cables alongside Category 1 wallboxes from Joint Tech simplifies the warranty and returns process.</p>
+    </div>
+  </div>
+
+  <div class="podium">
+    <div class="podium-card p1"><div class="pos">🥇 Primary</div><div class="vendor">Pheilix</div><div class="why">28-market exporter · Live catalogue · OCPP 1.6J</div></div>
+    <div class="podium-card p2"><div class="pos">🥈 Category Specialist</div><div class="vendor">BESEN Group</div><div class="why">In-stock BS 1363 variants · Lowest MOQ</div></div>
+    <div class="podium-card p3"><div class="pos">🥉 Compliance Strength</div><div class="vendor">ZECONEX</div><div class="why">Export documentation expertise · SEA coverage</div></div>
+  </div>
+
+  <hr class="section-div">
+
+  <!-- CAT 3 -->
+  <div class="section-header" id="cat3">
+    <div class="num">3</div>
+    <h2>Station-Type DC Fast Charging Setup</h2>
+    <div class="badge">60 / 120 / 180 / 240 kW</div>
+  </div>
+
+  <div class="specs-box">
+    <h4>Procurement Specification</h4>
+    <div class="spec-list">
+      <span class="spec-tag highlight">60–240 kW CCS2</span>
+      <span class="spec-tag">Standalone pedestal</span>
+      <span class="spec-tag highlight">OCPP 1.6J + 2.0.1</span>
+      <span class="spec-tag highlight">Dynamic Load Balancing</span>
+      <span class="spec-tag">TFT / LED status display</span>
+      <span class="spec-tag">NFC / QR / card payment terminal</span>
+      <span class="spec-tag">Modular power cabinet</span>
+      <span class="spec-tag highlight">IP55 minimum</span>
+      <span class="spec-tag warning">Surge Class I + II</span>
+      <span class="spec-tag warning">Grid soft-start (BERC / DPDC)</span>
+      <span class="spec-tag">0–55 °C ambient operation</span>
+    </div>
+    <div class="bd-criteria"><ul>
+      <li>Grid-friendly — soft-start + reactive power (BERC requirement)</li>
+      <li>Tropicalised cooling — derated above 40 °C ambient</li>
+      <li>Modular PCBs — low total cost of ownership</li>
+      <li>Shenzhen ↔ Chittagong shipping lane (14–21 day RMA target)</li>
+      <li>DLB — 3–4 chargers on a single 100–200 kW grid connection</li>
+    </ul></div>
+  </div>
+
+  <!-- Iocharger Cat3 -->
+  <div class="oem-card top-pick">
+    <div class="oem-card-header">
+      <div class="oem-rank rank-1">#1</div>
+      <div class="oem-card-title">
+        <h3>Iocharger · Xiamen Luobin Technology</h3>
+        <div class="hq">Xiamen, Fujian, China · <a href="https://iocharger.com" target="_blank">iocharger.com</a></div>
+      </div>
+      <span class="rank-label label-primary">Primary Recommendation</span>
+    </div>
+    <div class="oem-card-body">
+      <div class="highlight-banner">
+        <div class="icon">🏆</div>
+        <p><strong>World's first OCPP 2.0.1 Full Profiles</strong> certified by Open Charge Alliance · <strong>World's first ISO 15118</strong> approved · <strong>Eichrecht</strong> legal metering approval (Germany — the strictest measuring-instrument standard globally)</p>
+      </div>
+      <div class="oem-row">
+        <div class="oem-field">
+          <label>Strategic Rationale</label>
+          <p>Dynamic Load Balancing is the defining feature for Bangladesh deployment — 3 or 4 Iocharger pedestals can share a single 100 kW sanctioned grid connection, matching the exact commercial-site ratio required. Eichrecht approval provides the most credible technical proxy for future BSTI metering compliance.</p>
+        </div>
+        <div class="oem-field">
+          <label>Product Specification</label>
+          <p>DC 30 kW single-gun · 60 kW dual-gun · 120 kW dual-gun (2026 release) · ISO 15118 Plug &amp; Charge · OCPP 1.6J + 2.0.1 · Integrated DLB controller</p>
+        </div>
+      </div>
+      <div class="oem-row">
+        <div class="oem-field">
+          <label>Indicative FOB Price Range</label>
+          <p class="price-band">$2,650 – $12,000+ per unit</p>
+          <p class="price-note">30 kW: $2,650–3,500 · 60 kW dual: $4,000–5,500 · 120 kW (est.): $9,000–12,000 · Subject to formal quotation</p>
+        </div>
+        <div class="oem-field">
+          <label>Certifications (Full Stack Verified)</label>
+          <div class="cert-tags">
+            <span class="cert-tag cert-confirmed">Eichrecht</span><span class="cert-tag cert-confirmed">OCPP 2.0.1 Full</span><span class="cert-tag cert-confirmed">ISO 15118</span><span class="cert-tag cert-confirmed">VDE</span><span class="cert-tag cert-confirmed">TÜV SÜD</span><span class="cert-tag cert-confirmed">TÜV Rheinland</span><span class="cert-tag cert-confirmed">UKCA</span><span class="cert-tag cert-confirmed">CE</span><span class="cert-tag cert-confirmed">ETL</span><span class="cert-tag cert-confirmed">SGS</span><span class="cert-tag cert-confirmed">FCC</span><span class="cert-tag cert-confirmed">Energy Star</span><span class="cert-tag cert-confirmed">OCPI</span><span class="cert-tag cert-confirmed">Hubject EVSE-CHECK</span>
+          </div>
+        </div>
+      </div>
+      <div class="pros-cons">
+        <div class="pros-cons-box pros"><h5>Strengths</h5><ul>
+          <li>Dynamic Load Balancing directly addresses Bangladesh grid constraints</li>
+          <li>Only mid-tier DC charger with OCPP 2.0.1 full compliance</li>
+          <li>ISO 15118 future-proofs Plug &amp; Charge capability</li>
+          <li>Modular power modules — field-serviceable without full unit replacement</li>
+        </ul></div>
+        <div class="pros-cons-box cons"><h5>Considerations</h5><ul>
+          <li>120 kW SKU is new (2026) — limited deployment track record</li>
+          <li>No Bangladesh distributor established yet</li>
+        </ul></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- EVB Cat3 -->
+  <div class="oem-card second">
+    <div class="oem-card-header">
+      <div class="oem-rank rank-2">#2</div>
+      <div class="oem-card-title">
+        <h3>EVB / Beny New Energy</h3>
+        <div class="hq">Zhejiang, China · <a href="https://evb.com" target="_blank">evb.com</a> / beny.com</div>
+      </div>
+      <span class="rank-label label-secondary">Alternative #2</span>
+    </div>
+    <div class="oem-card-body">
+      <div class="oem-row">
+        <div class="oem-field">
+          <label>Strategic Rationale</label>
+          <p>DC 60–600 kW product range covers the entire Bangladesh deployment profile — mall (60 kW), highway (120 kW), heavy transport (240 kW) — from a single supplier. Combined with Category 1 wallbox procurement, EVB enables full vendor consolidation.</p>
+        </div>
+        <div class="oem-field">
+          <label>Indicative FOB Price Range</label>
+          <p class="price-band">$3,500 – $12,000+ per unit</p>
+          <p class="price-note">DC 60–120 kW: $3,500–9,000 · 180 kW+: $12,000+ · Subject to formal quotation</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- StarCharge Cat3 -->
+  <div class="oem-card third">
+    <div class="oem-card-header">
+      <div class="oem-rank rank-3">#3</div>
+      <div class="oem-card-title">
+        <h3>StarCharge · Wanbang Digital Energy</h3>
+        <div class="hq">Changzhou, Jiangsu, China · <a href="https://starcharge.com" target="_blank">starcharge.com</a></div>
+      </div>
+      <span class="rank-label label-third">Quality Pedigree</span>
+    </div>
+    <div class="oem-card-body">
+      <div class="oem-row">
+        <div class="oem-field">
+          <label>Strategic Rationale</label>
+          <p>China's most proven DC charging vendor — operates 100,000+ charging stations and serves as OEM partner to Mercedes-Benz, Porsche, BMW, Jaguar Land Rover and VW. 2026 Southeast Asia expansion makes Bangladesh a credible target market.</p>
+        </div>
+        <div class="oem-field">
+          <label>Indicative FOB Price Range</label>
+          <p class="price-band">$3,000 – $35,000 per unit</p>
+          <p class="price-note">30–120 kW: $3,000–12,000 · 180–360 kW: $15,000–35,000 · Project-quoted</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Autel Cat3 -->
+  <div class="oem-card watch">
+    <div class="oem-card-header">
+      <div class="oem-rank rank-w">4</div>
+      <div class="oem-card-title">
+        <h3>Autel Energy — Premium DC</h3>
+        <div class="hq">Shenzhen, China + IMEA Office Dubai · <a href="https://autelenergy.com" target="_blank">autelenergy.com</a></div>
+      </div>
+      <span class="rank-label label-premium">Premium City-Hub</span>
+    </div>
+    <div class="oem-card-body">
+      <div class="oem-row">
+        <div class="oem-field">
+          <label>Product Specification</label>
+          <p>DC Compact 50 kW · DC Fast 60–120 kW · OCPP 1.6J + 2.0.1 · OEM/white-label available</p>
+        </div>
+        <div class="oem-field">
+          <label>Indicative FOB Price Range</label>
+          <p class="price-band">$4,500 – $22,000 per unit</p>
+          <p class="price-note">DC 50 kW: $4,500–7,000 · DC 60–120 kW: $7,000–22,000 · Subject to formal quotation</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- TGOOD Cat3 -->
+  <div class="oem-card watch" style="opacity:0.7;">
+    <div class="oem-card-header">
+      <div class="oem-rank rank-w">5</div>
+      <div class="oem-card-title">
+        <h3>TGOOD / TELD</h3>
+        <div class="hq">Hong Kong + Qingdao, China · tgood.com</div>
+      </div>
+      <span class="rank-label label-watch">Phase 3 / Government Tender</span>
+    </div>
+    <div class="oem-card-body">
+      <p style="font-size:13px;color:#475569;">Government-grade DC fast infrastructure specialist. Suitable for Phase 3 highway deployment and formal government or utility tenders where vendor financial grade and government track record are critical criteria. Capacity up to 480 kW. English-language support via Hong Kong office.</p>
+    </div>
+  </div>
+
+  <div class="podium">
+    <div class="podium-card p1"><div class="pos">🥇 Primary</div><div class="vendor">Iocharger</div><div class="why">DLB + OCPP 2.0.1 certified + Eichrecht metering</div></div>
+    <div class="podium-card p2"><div class="pos">🥈 Alternative</div><div class="vendor">EVB / Beny</div><div class="why">Full power range from single vendor</div></div>
+    <div class="podium-card p3"><div class="pos">🥉 Flagship Hubs</div><div class="vendor">StarCharge</div><div class="why">Proven at scale · OEM pedigree with European brands</div></div>
+  </div>
+
+  <hr class="section-div">
+
+  <!-- CONSOLIDATION -->
+  <div id="consolidation" style="margin-bottom:24px;">
+    <h2 style="font-size:20px;font-weight:700;color:#021F3A;margin-bottom:16px;">🔗 Cross-Category Vendor Consolidation</h2>
+  </div>
+
+  <div class="rec-table-wrap" style="margin-bottom:24px;">
+    <table class="consol-table">
+      <thead>
+        <tr><th>Vendor</th><th>Cat 1: 7 kW Wallbox</th><th>Cat 2: 3-Pin Cable</th><th>Cat 3: DC Station</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Joint Tech</td><td>✅ Primary</td><td>⚪ Bundling option</td><td>—</td></tr>
+        <tr><td>EVB / Beny</td><td>✅ Alternative #2</td><td>—</td><td>✅ Alternative #2</td></tr>
+        <tr><td>Pheilix</td><td>—</td><td>✅ Primary</td><td>—</td></tr>
+        <tr><td>BESEN Group</td><td>⚪ Contingency</td><td>✅ Alternative #2</td><td>—</td></tr>
+        <tr><td>Iocharger</td><td>—</td><td>—</td><td>✅ Primary</td></tr>
+        <tr><td>Autel Energy</td><td>✅ Premium segment</td><td>—</td><td>⚪ Premium city-hub</td></tr>
+        <tr><td>StarCharge</td><td>—</td><td>—</td><td>✅ Alternative #3</td></tr>
+        <tr><td>ZECONEX</td><td>—</td><td>✅ Alternative #3</td><td>—</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="insight-box info" style="margin-bottom:12px;"><span class="icon">1️⃣</span><span><strong>Single-vendor play:</strong> EVB / Beny is the only vendor on this shortlist capable of credibly supplying all three categories under one supplier relationship. Slightly weaker on Mode 2 portable cables, but the consolidation benefit may outweigh this trade-off.</span></div>
+  <div class="insight-box success"><span class="icon">2️⃣</span><span><strong>Two-vendor play (recommended approach):</strong><br><strong>Value &amp; Volume Set:</strong> Joint Tech (Cat 1) + Pheilix / BESEN (Cat 2) + Iocharger (Cat 3)<br><strong>Premium Segment Add-on:</strong> Autel Energy for flagship hotels and premium residential estates</span></div>
+
+  <hr class="section-div">
+
+  <!-- STRATEGY -->
+  <div id="strategy" style="margin-bottom:24px;">
+    <h2 style="font-size:20px;font-weight:700;color:#021F3A;margin-bottom:16px;">🎯 Phase Deployment Strategy</h2>
+  </div>
+  <ul class="strategy-list">
+    <li><div class="step-num">1</div><div><strong>Initiate vendor engagement immediately</strong> — Joint Tech (Cat 1), Pheilix / BESEN (Cat 2), and Iocharger (Cat 3) as the three primary partners. Request formal quotations, product samples, and certification documentation.</div></li>
+    <li><div class="step-num">2</div><div><strong>Request a parallel quotation from EVB / Beny</strong> covering both Category 1 and Category 3 together. Compare the consolidation pricing against the two-vendor primary path before final commitment.</div></li>
+    <li><div class="step-num">3</div><div><strong>Reserve Autel Energy for the premium segment only.</strong> Do not lead with Autel on price-sensitive residential rollouts. Allocate to luxury hotels and premium residential estates where brand and reliability command a margin premium.</div></li>
+    <li><div class="step-num">4</div><div><strong>Engage StarCharge for Phase 2 / flagship DC hubs</strong> (180 kW+ sites) after confirming their CharIN membership and Bangladesh / Southeast Asia regional coverage.</div></li>
+    <li><div class="step-num">5</div><div><strong>Phase 1 (Jul–Dec 2026):</strong> Joint Tech AC wallboxes + Pheilix portable cables + Iocharger DC stations — single freight corridor out of Xiamen and Shanghai, three purchase orders, three warranty pools.</div></li>
+    <li><div class="step-num">6</div><div><strong>Phase 2 (Jan–Jun 2027):</strong> Add EVB as a second-source DC supplier. Introduce StarCharge for 180 kW+ flagship highway and commercial sites. Evaluate TGOOD for any government or utility tender requirements.</div></li>
+    <li><div class="step-num">7</div><div><strong>Commission 2–5 sample units per vendor</strong> before placing any bulk purchase order. Budget approximately $1,500–3,500 per vendor for samples and inbound freight.</div></li>
+    <li><div class="step-num">8</div><div><strong>Confirm OCPP 2.0.1 firmware</strong> at sample-unit stage. Request a live CPMS integration demonstration — several vendors market 2.0.1 capability but ship with 1.6J firmware in production units.</div></li>
+  </ul>
+
+  <hr class="section-div">
+
+  <!-- RISKS -->
+  <div id="risks" style="margin-bottom:24px;">
+    <h2 style="font-size:20px;font-weight:700;color:#021F3A;margin-bottom:16px;">⚠️ Key Risks</h2>
+  </div>
+  <div class="risk-grid">
+    <div class="risk-card">
+      <h4>Import Duty — SRO Confirmation</h4>
+      <p>The 0% duty waiver requires a Statutory Regulatory Order (SRO) number on the customs entry form (HS 8504.40.55.00). No vendor has yet supplied SRO-trackable documentation. Request a sample commercial invoice and Bangladesh customs clearance history from each shortlisted supplier before placing orders.</p>
+    </div>
+    <div class="risk-card">
+      <h4>BSTI Product Clearance</h4>
+      <p>Bangladesh Standards &amp; Testing Institution (BSTI) review for EV charging equipment remains informal. Vendors should be asked whether they hold any prior BSTI acceptance correspondence for equivalent SKUs to reduce clearance risk at the port.</p>
+    </div>
+    <div class="risk-card">
+      <h4>Foreign Exchange Rate</h4>
+      <p>All price indications in this document use 1 USD ≈ 117 BDT (June 2026 reference). Spot rates at time of purchase are likely closer to 119 BDT/USD. All purchase contracts should use vendor-quoted rates at the time of order confirmation.</p>
+    </div>
+    <div class="risk-card">
+      <h4>Sample Order Requirement</h4>
+      <p>Board approval should include a provision for 2–5 sample units per shortlisted vendor prior to bulk commitment. Indicative cost: $1,500–3,500 per vendor including inbound freight. Sample testing is essential before any large-scale procurement.</p>
+    </div>
+    <div class="risk-card">
+      <h4>OCPP 2.0.1 Firmware Discrepancy</h4>
+      <p>Several vendors list OCPP 2.0.1 capability in marketing materials but currently ship 1.6J firmware in production units. A live CPMS integration demonstration and firmware version documentation must be required at the sample stage.</p>
+    </div>
+    <div class="risk-card">
+      <h4>Pricing Basis</h4>
+      <p>All price indications are based on vendor-published FOB ranges and 2025–2026 trade-press RFQ surveys. No vendor publishes binding FOB prices on their public website. Formal quotations are required before any procurement decision.</p>
+    </div>
+  </div>
+
+  <hr class="section-div">
+
+  <!-- SOURCES -->
+  <div id="sources" style="margin-bottom:18px;">
+    <h2 style="font-size:20px;font-weight:700;color:#021F3A;margin-bottom:16px;">📌 Source Provenance</h2>
+  </div>
+  <ul class="source-list">
+    <li><a href="https://jointcharging.com" target="_blank">jointcharging.com</a></li>
+    <li><a href="https://evb.com" target="_blank">evb.com / beny.com</a></li>
+    <li><a href="https://iocharger.com" target="_blank">iocharger.com</a></li>
+    <li><a href="https://autelenergy.com" target="_blank">autelenergy.com</a></li>
+    <li><a href="https://starcharge.com" target="_blank">starcharge.com</a></li>
+    <li><a href="https://besen-group.com" target="_blank">besen-group.com</a></li>
+    <li><a href="https://zeconex.com" target="_blank">zeconex.com</a></li>
+    <li><a href="https://electrly.com" target="_blank">electrly.com</a></li>
+    <li><a href="https://pheilix.com" target="_blank">pheilix.com</a></li>
+    <li><a href="https://tgood.com" target="_blank">tgood.com</a></li>
+    <li>Open Charge Alliance certification directory</li>
+    <li>EV Charger Vendor Comparison — Board Brief (June 2026)</li>
+    <li>OEM Partners Verification Report (July 2026)</li>
+    <li>EV Charging Bangladesh Competitive Intelligence Report v2 (2026)</li>
+    <li>Chinese EV Charger Manufacturer Directory</li>
+  </ul>
+
+  <footer>
+    <p>Prepared <strong>July 2026</strong> · Bangladesh EV Charging Phase 1 Procurement · <strong>MindsCraft / EV-research</strong></p>
+    <p style="margin-top:6px;">All prices are indicative FOB ranges subject to formal quotation · Standards: Type 2 (AC) + CCS2 (DC) · OCPP 1.6J minimum · OCPP 2.0.1 preferred</p>
+  </footer>
+
+</div>
+</body>
+</html>
